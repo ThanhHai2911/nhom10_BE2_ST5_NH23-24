@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 @extends('app')
 	@section('content')
+=======
+@extends('menu')
+	@section('content1')
+>>>>>>> f7be5aac53c2cd1fe756a7b35395357be5e78c7b
 	<div id="body">
 		<div class="content">
 			<div>
@@ -39,6 +44,7 @@
 				</div>
 			</div>
 		</div>
+<<<<<<< HEAD
 		<div class="sidebar">
 			<h1>Menu</h1>
 			<ul class="navigation">
@@ -58,3 +64,6 @@
 			<a href="breakfast" class="download">&nbsp;</a> </div>
 	</div>
 	@endsection
+=======
+	@endsection	
+>>>>>>> f7be5aac53c2cd1fe756a7b35395357be5e78c7b

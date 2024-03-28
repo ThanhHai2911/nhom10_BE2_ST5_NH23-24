@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- Website template by freewebsitetemplates.com -->
 <head>
-	<title>Retro Diner</title>
+	<title>Breakfast Menu - Retro Diner</title>
 	<meta charset="utf-8">
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
@@ -12,49 +12,42 @@
 			<a href="index"><img  src="images/waitress.png" width="332" height="205" alt="" title=""></a>
 			<ul class="navigation">
 				<li>
-<<<<<<< HEAD
-					<a class="active" href="{{url('index')}}">Home</a>
-				</li>
-				<li>
-					<a href="{{url('about')}}">About</a>
-				</li>
-				<li>
-					<a href="{{url('burger')}}">Menu</a>
-				</li>
-				<li>
-					<a href="{{url('contact')}}">Contact</a>
-				</li>
-				<li>
-					<a href="{{url('blog')}}">Blog</a>
-=======
-					<a class="active" href="index">Home</a>
+					<a href="index">Home</a>
 				</li>
 				<li>
 					<a href="about">About</a>
 				</li>
 				<li>
-					<a href="burger">Menu</a>
+					<a class="active" href="burger">Menu</a>
 				</li>
 				<li>
 					<a href="contact">Contact</a>
 				</li>
 				<li>
 					<a href="blog">Blog</a>
->>>>>>> f7be5aac53c2cd1fe756a7b35395357be5e78c7b
 				</li>
 			</ul>
 		</div>
 	</div>
-<<<<<<< HEAD
-	@yield('content')
-	
-	<div id="footer">
-		<div>
-			<ul>
-				
-=======
-	
-	@yield('content')
+	@yield('content1')
+		<div class="sidebar">
+			<h1>Menu</h1>
+			<ul class="navigation">
+				<li class="first">
+					<a href="burger">BURGERS</a>
+				</li>
+				<li>
+					<a href="hotdog">HOTDOGS</a>
+				</li>
+				<li>
+					<a href="shake">SHAKES</a>
+				</li>
+				<li>
+					<a class="active" href="breakfast">BREAKFAST</a>
+				</li>
+			</ul>
+			<a href="breakfast" class="download">&nbsp;</a> </div>
+	</div>
 	<div id="footer">
 		<div>
 			<ul>
@@ -73,7 +66,6 @@
 						</li>
 					</ul>
 				</li>
->>>>>>> f7be5aac53c2cd1fe756a7b35395357be5e78c7b
 				<li>
 					<a href="index"><img class="logo" src="images/logo-footer.png" alt=""></a>
 					<ul class="navigation">

@@ -18,9 +18,12 @@ use App\Http\Controllers\WelcomeController;
 */
 
 // Route::get('/signup',[WelcomeController::class,'signup']);
+<<<<<<< HEAD
 Route::get('/{page?}', [WelcomeController::class,"index"]);
 
 
+=======
+>>>>>>> f7be5aac53c2cd1fe756a7b35395357be5e78c7b
 // Route::get('/exe1/{name}',function ($name){
 //     return view($name);
 // })->name('exe1');
@@ -39,3 +42,6 @@ Route::get('/{page?}', [WelcomeController::class,"index"]);
 
 // Route::post('process',[WelcomeController::class,'process_signup']);
 // Route::resource('/product',ProductController::class);
+
+
+Route::get('/{page?}', [WelcomeController::class,'index']);

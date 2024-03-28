@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> f7be5aac53c2cd1fe756a7b35395357be5e78c7b
 @extends('app')
 	@section('content')
 	<div id="body">

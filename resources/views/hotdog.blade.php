@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 
 	@extends('app')
 	@section('content')
+=======
+@extends('menu')
+	@section('content1')
+>>>>>>> f7be5aac53c2cd1fe756a7b35395357be5e78c7b
 	<div id="body">
 		<div class="content">
 			<div>
@@ -40,4 +45,9 @@
 				</div>
 			</div>
 		</div>
+<<<<<<< HEAD
 		@endsection
+=======
+		
+	@endsection
+>>>>>>> f7be5aac53c2cd1fe756a7b35395357be5e78c7b

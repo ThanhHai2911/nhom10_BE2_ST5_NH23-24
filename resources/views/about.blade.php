@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 
 	@extends('app')
+=======
+@extends('app')
+>>>>>>> f7be5aac53c2cd1fe756a7b35395357be5e78c7b
 	@section('content')
 	<div id="body">
 		<div id="content">
