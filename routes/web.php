@@ -18,7 +18,8 @@ use App\Http\Controllers\WelcomeController;
 */
 
 // Route::get('/signup',[WelcomeController::class,'signup']);
-Route::get('/', [WelcomeController::class,'index']);
+Route::get('/{page?}', [WelcomeController::class,"index"]);
+
 
 // Route::get('/exe1/{name}',function ($name){
 //     return view($name);
