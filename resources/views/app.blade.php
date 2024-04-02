@@ -88,7 +88,7 @@
                         <li><a href="index">Home</a></li>
                         <li class="active"><a href="shop">Shop page</a></li>
                         <li><a href="single-product">Single product</a></li>
-                        <li><a href="cart">Cart</a></li>   
+                        <li><a href="cart">Cart</a></li>    
                         <li><a href="#">Categories</a></li>   
 
                         <!--Thêm Nav -->    
