@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('product_type');
             $table->integer('product_quantity');
             $table->double('product_price');
-            $table->string('product_detail');
+            $table->string('product_detail',1000);
             $table->string('product_image');
             $table->timestamps();
         });

@@ -1,4 +1,4 @@
-@extends    ('home')
+@extends('home')
     @section('content-index')
     <div class="promo-area">
         <div class="zigzag-bottom"></div>
@@ -31,32 +31,32 @@
             </div>
         </div>
     </div> <!-- End promo area -->
-    
+  
     <div class="maincontent-area">
         <div class="zigzag-bottom"></div>
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="latest-product">
-                        <h2 class="section-title">Latest Products</h2>
+                        <h2 class="section-title">Latest Products</h2> 
+                                     
                         <div class="product-carousel">
+                        @foreach($data_products as $data )       
                             <div class="single-product">
                                 <div class="product-f-image">
-                                    <img src="img/product-1.jpg" alt="">
+                                    <img src="{{asset('img/' . $data->product_image)}}" alt="">
                                     <div class="product-hover">
                                         <a href="cart" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
                                         <a href="single-product" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                     </div>
-                                </div>
-                                
-                                <h2><a href="single-product">Samsung Galaxy s5- 2015</a></h2>
-                                
+                                </div> 
+                                <h2><a href="single-product">{{$data->product_name}}</a></h2>               
                                 <div class="product-carousel-price">
-                                    <ins>$700.00</ins> <del>$100.00</del>
+                                   {{$data->product_price}}
                                 </div> 
                             </div>
-                            
-                        </div>
+                            @endforeach
+                        </div>                      
                     </div>
                 </div>
             </div>
