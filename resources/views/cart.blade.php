@@ -1,4 +1,4 @@
-@extends('app')
+@extends('home')
     @section('content')
     <div class="product-big-title-area">
         <div class="container">
