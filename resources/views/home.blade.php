@@ -9,7 +9,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Shop Page- Ustora Demo</title>
+    <title>Ustora Demo</title>
     
     <!-- Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
@@ -42,14 +42,14 @@
                 <div class="col-md-8">
                     <div class="user-menu">
                         <ul>
-                            <li><a href="#"><i class="fa fa-user"></i> My Account</a></li>                         
-                            <li><a href="cart"><i class="fa fa-user"></i> My Cart</a></li>
+                            <li><a href="#"><i class="fa fa-user"></i> My Account</a></li>
+                            <li><a href="cart"><i class="fa fa-user"></i> My Cart</a></li>                         
                             <li><a href="formLogin"><i class="fa fa-user"></i> Login</a></li>
                         </ul>
                     </div>
                 </div>
                 
-                
+               
             </div>
         </div>
     </div> <!-- End header area -->
@@ -65,7 +65,7 @@
                 
                 <div class="col-sm-6">
                     <div class="shopping-item">
-                        <a href="cart">Cart - <span class="cart-amunt">$100</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
+                        <a href="cart">Cart - <span class="cart-amunt">$1000</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
                     </div>
                 </div>
             </div>
@@ -85,23 +85,42 @@
                 </div> 
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="index">Home</a></li>
-                        <li class="active"><a href="shop">Shop page</a></li>
+                        <li class="active"><a href="index">Home</a></li>
+                        <li><a href="shop">Shop page</a></li>
                         <li><a href="single-product">Single product</a></li>
-                        <li><a href="cart">Cart</a></li>    
-                        <li><a href="#">Categories</a></li>   
-
-                        <!--Thêm Nav -->    
-
+                        <li><a href="cart">Cart</a></li>     
+                        <li><a href="#">Categories</a></li>                     
                     </ul>
                 </div>  
             </div>
         </div>
-    </div> <!-- End mainmenu area --> 
-      
-   @yield('content')
-   
+    </div> <!-- End mainmenu area -->
+    
+    <div class="slider-area">
+        	<!-- Slider -->
+			<div class="block-slider block-slider4">
+				<ul class="" id="bxslider-home4">
+					<li>
+						<img src="img/h4-slide.png" alt="Slide">
+						<div class="caption-group">
+							<h2 class="caption title">
+								iPhone <span class="primary">6 <strong>Plus</strong></span>
+							</h2>
+							<h4 class="caption subtitle">Dual SIM</h4>
+							<a class="caption button-radius" href="shop"><span class="icon"></span>Shop now</a>
+						</div>
+					</li>
+					
+				</ul>
+			</div>
+			<!-- ./Slider -->
+    </div> <!-- End slider area -->
+    
+    
+    @yield('content-index')
 
+
+    
     <div class="footer-top-area">
         <div class="zigzag-bottom"></div>
         <div class="container">
@@ -117,19 +136,13 @@
                             <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
                         </div>
                     </div>
-                </div>
-                
-              
-                
+                </div>                                              
                 <div class="col-md-4 col-sm-6">
                     <div class="footer-menu">
                         <h2 class="footer-wid-title">Categories</h2>
                         <ul>
-                            <li><a href="">Mobile Phone</a></li>
-                            <li><a href="">Home accesseries</a></li>
-                            <li><a href="">LED TV</a></li>
-                            <li><a href="">Computer</a></li>
-                            <li><a href="">Gadets</a></li>
+                            <li><a href="#">Mobile Phone</a></li>
+                            
                         </ul>                        
                     </div>
                 </div>
@@ -139,20 +152,23 @@
                         <h2 class="footer-wid-title">Newsletter</h2>
                         <p>Sign up to our newsletter and get exclusive deals you wont find anywhere else straight to your inbox!</p>
                         <div class="newsletter-form">
-                            <input type="email" placeholder="Type your email">
-                            <input type="submit" value="Subscribe">
+                            <form action="#">
+                                <input type="email" placeholder="Type your email">
+                                <input type="submit" value="Subscribe">
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div> <!-- End footer top area -->
+    
     <div class="footer-bottom-area">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
                     <div class="copyright">
-                       <p>&copy; 2015 uCommerce. All Rights Reserved. <a href="http://www.freshdesignweb.com" target="_blank">freshDesignweb.com</a></p>
+                        <p>&copy; 2015 uCommerce. All Rights Reserved. <a href="http://www.freshdesignweb.com" target="_blank">freshDesignweb.com</a></p>
                     </div>
                 </div>
                 
@@ -166,7 +182,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> <!-- End footer bottom area -->
    
     <!-- Latest jQuery form server -->
     <script src="https://code.jquery.com/jquery.min.js"></script>
@@ -183,5 +199,9 @@
     
     <!-- Main Script -->
     <script src="js/main.js"></script>
+    
+    <!-- Slider -->
+    <script type="text/javascript" src="js/bxslider.min.js"></script>
+	<script type="text/javascript" src="js/script.slider.js"></script>
   </body>
 </html>
