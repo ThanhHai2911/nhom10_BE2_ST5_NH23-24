@@ -94,8 +94,8 @@
                         <h2 class="product-wid-title">Top Sellers</h2>
                         <a href="" class="wid-view-more">View All</a>
                         <div class="single-wid-product">
-                            <a href="single-product"><img src="img/product-thumb-1.jpg" alt="" class="product-thumb"></a>
-                            <h2><a href="single-product">Sony Smart TV - 2015</a></h2>
+                            <a href="single-product"><img src="{{asset('img/' . $data->product_image)}}" alt="" class="product-thumb"></a>
+                            <h2><a href="single-product">{{$data->product_name}}</a></h2>
                             <div class="product-wid-rating">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
@@ -104,7 +104,7 @@
                                 <i class="fa fa-star"></i>
                             </div>
                             <div class="product-wid-price">
-                                <ins>$400.00</ins> <del>$425.00</del>
+                                {{$data->product_price}}
                             </div>                            
                         </div>
                     </div>
@@ -114,8 +114,8 @@
                         <h2 class="product-wid-title">Recently Viewed</h2>
                         <a href="shop" class="wid-view-more">View All</a>
                         <div class="single-wid-product">
-                            <a href="single-product"><img src="img/product-thumb-4.jpg" alt="" class="product-thumb"></a>
-                            <h2><a href="single-product">Sony playstation microsoft</a></h2>
+                            <a href="single-product"><img src="{{asset('img/' . $data->product_image)}}" alt="" class="product-thumb"></a>
+                            <h2><a href="single-product">{{$data->product_name}}</a></h2>
                             <div class="product-wid-rating">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
@@ -124,7 +124,7 @@
                                 <i class="fa fa-star"></i>
                             </div>
                             <div class="product-wid-price">
-                                <ins>$400.00</ins> <del>$425.00</del>
+                            {{$data->product_price}}
                             </div>                            
                         </div>
                         
@@ -135,8 +135,8 @@
                         <h2 class="product-wid-title">Top New</h2>
                         <a href="shop" class="wid-view-more">View All</a>
                         <div class="single-wid-product">
-                            <a href="single-product"><img src="img/product-thumb-3.jpg" alt="" class="product-thumb"></a>
-                            <h2><a href="single-product">Apple new i phone 6</a></h2>
+                            <a href="single-product"><img src="{{asset('img/' . $data->product_image)}}" alt="" class="product-thumb"></a>
+                            <h2><a href="single-product">{{$data->product_name}}</a></h2>
                             <div class="product-wid-rating">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
@@ -145,7 +145,7 @@
                                 <i class="fa fa-star"></i>
                             </div>
                             <div class="product-wid-price">
-                                <ins>$400.00</ins> <del>$425.00</del>
+                            {{$data->product_price}}
                             </div>                            
                         </div>
                                           

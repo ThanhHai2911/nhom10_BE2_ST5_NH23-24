@@ -1,4 +1,4 @@
-@extends('app')
+@extends('home')
     @section('content')
         @yield('content-products')
     <div class="single-product-area">
