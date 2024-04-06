@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('latestproduct', function (Blueprint $table) {
+        Schema::create('latestproducts', function (Blueprint $table) {
             $table->increments('id');
             $table->string('latestproduct_name');
             $table->string('latestproduct_type');
@@ -32,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('latestproduct');
+        Schema::dropIfExists('latestproducts');
     }
 };

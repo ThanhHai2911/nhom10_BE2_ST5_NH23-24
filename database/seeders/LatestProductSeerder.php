@@ -14,7 +14,7 @@ class LatestProductSeerder extends Seeder
      */
     public function run()
     {
-        DB::table('latestproduct')->insert([
+        DB::table('latestproducts')->insert([
             [
                 'latestproduct_name' => 'Sony Xperia 5 IV',
                 'latestproduct_type' => '1',

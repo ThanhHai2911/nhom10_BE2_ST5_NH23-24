@@ -25,6 +25,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="style.css">
+
     <link rel="stylesheet" href="css/responsive.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -89,7 +90,16 @@
                         <li><a href="shop">Shop page</a></li>
                         <li><a href="single-product">Single product</a></li>
                         <li><a href="cart">Cart</a></li>     
-                        <li><a href="#">Categories</a></li>                     
+                        <li>
+                        <div class="dropdown">
+                                    <button class="dropbtn">Categories</button>
+                                    <div class="dropdown-content">
+                                    @foreach($category as $data)                                  
+                                   <a href="shop?id={{$data->id}}" class="menu_categories">{{$data->name}}</a>
+                                   @endforeach
+                                    </div>
+                        </div>    
+                        </li>                     
                     </ul>
                 </div>  
             </div>
