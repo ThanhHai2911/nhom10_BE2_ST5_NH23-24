@@ -16,20 +16,14 @@ class CategorySeeder extends Seeder
     {
         DB::table('category')->insert([
             [
-                'Phone' => 'Iphone',
-                'Tablet' => 'IPad',
-                'Laptop' => 'Mac'
+                'name' => 'Iphone'
             ],
             [
-                'Phone' => 'SamSung',
-                'Tablet' => 'SamSung',
-                'Laptop' => 'Asus'
+                'name' => 'Tablet'
             ],
             [
-                'Phone' => 'Xiaomi',
-                'Tablet' => 'Xiaomi',
-                'Laptop' => 'Acer'
-            ],
+                'name' => 'Laptop'
+            ]
             
         ]);
     }
