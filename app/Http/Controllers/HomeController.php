@@ -1,0 +1,24 @@
+<?php
+
+namespace App\Http\Controllers;
+use App\Models\Category;
+use App\Models\Latestproduct;
+use App\Models\Product;
+use Illuminate\Http\Request;
+
+
+class HomeController extends Controller
+{
+    public function index($page = "index"){
+        $product = Product::all();
+        $data_category = Category::all(); 
+        $data_latestproduct=Latestproduct::all();
+        return view($page,compact('product','data_category','data_latestproduct'));
+    }
+    
+    public function product(Product $product){
+        $data_category = Category::all(); 
+        $data_latestproduct=Latestproduct::all();
+        return view('single-product',compact('product','data_category','data_latestproduct'));
+    }
+}

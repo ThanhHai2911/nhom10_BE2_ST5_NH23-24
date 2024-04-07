@@ -6,13 +6,13 @@
         <div class="container">
             <div class="row">
 
-                @foreach($data_products as $data)
+                @foreach($product as $data)
                 <div class="col-md-3 col-sm-6">
                     <div class="single-shop-product">
                         <div class="product-upper">
                             <img src="{{asset('img/' . $data->product_image)}}" alt="">
                         </div>
-                        <h2><a href="single-product?id={{$data->id}}">{{$data->product_name}}</a></h2>
+                        <h2><a href="{{route('single.product',$data->id)}}">{{$data->product_name}}</a></h2>
                         <div class="product-carousel-price">
                            {{$data->product_price}}
                         </div>  

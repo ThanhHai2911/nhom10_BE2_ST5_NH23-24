@@ -88,13 +88,12 @@
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="index">Home</a></li>
                         <li><a href="shop">Shop page</a></li>
-                        <li><a href="single-product">Single product</a></li>
                         <li><a href="cart">Cart</a></li>     
                         <li>
                         <div class="dropdown">
                                     <button class="dropbtn">Categories</button>
                                     <div class="dropdown-content">
-                                    @foreach($category as $data)                                  
+                                    @foreach($data_category as $data)                                  
                                    <a href="shop?id={{$data->id}}" class="menu_categories">{{$data->name}}</a>
                                    @endforeach
                                     </div>

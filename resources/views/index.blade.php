@@ -41,10 +41,10 @@
                         <h2 class="section-title">Latest Products</h2> 
                                      
                         <div class="product-carousel">
-                        @foreach($data_products as $data )       
+                        @foreach($data_latestproduct as $data )       
                             <div class="single-product">
                                 <div class="product-f-image">
-                                    <img src="{{asset('img/' . $data->latestproduct__image)}}" alt="" class="img-product">
+                                    <img src="{{asset('img/' . $data->latestproduct_image)}}" alt="" class="img-product">
                                     <div class="product-hover">
                                         <a href="cart" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
                                         <a href="single-product" class="view-details-link"><i class="fa fa-link"></i> See details</a>

@@ -6,6 +6,7 @@
 -->
 <html lang="en">
   <head>
+    <base href="/">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -88,13 +89,12 @@
                     <ul class="nav navbar-nav">
                         <li><a href="index">Home</a></li>
                         <li class="active"><a href="shop">Shop page</a></li>
-                        <li><a href="single-product">Single product</a></li>
                         <li><a href="cart">Cart</a></li>    
                          <li>
                          <div class="dropdown">
                                     <button class="dropbtn">Categories</button>
                                     <div class="dropdown-content">
-                                    @foreach($category as $data)                                  
+                                    @foreach($data_category as $data)                                  
                                    <a href="shop?id={{$data->id}}" class="menu_categories">{{$data->name}}</a>
                                    @endforeach
                                     </div>
