@@ -21,4 +21,10 @@ class HomeController extends Controller
         $data_latestproduct=Latestproduct::all();
         return view('single-product',compact('product','data_category','data_latestproduct'));
     }
+
+    public function latestproducts(Latestproduct $latestproducts){
+        $data_category = Category::all(); 
+        $data_latestproduct=Latestproduct::all();
+        return view('latest-product',compact('latestproducts','data_category','data_latestproduct'));
+    }
 }

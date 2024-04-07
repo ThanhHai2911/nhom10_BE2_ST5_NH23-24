@@ -47,10 +47,10 @@
                                     <img src="{{asset('img/' . $data->latestproduct_image)}}" alt="" class="img-product">
                                     <div class="product-hover">
                                         <a href="cart" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                        <a href="single-product" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                        <a href="{{route('latest.product',$data->id)}}" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                     </div>
                                 </div> 
-                                <h2><a href="single-product">{{$data->latestproduct_name}}</a></h2>               
+                                <h2><a href="{{route('latest.product',$data->id)}}">{{$data->latestproduct_name}}</a></h2>               
                                 <div class="product-carousel-price">
                                    {{$data->latestproduct_price}}
                                 </div> 
@@ -135,8 +135,8 @@
                         <h2 class="product-wid-title">Top New</h2>
                         <a href="shop" class="wid-view-more">View All</a>
                         <div class="single-wid-product">
-                            <a href="single-product"><img src="{{asset('img/' . $data->product_image)}}" alt="" class="product-thumb"></a>
-                            <h2><a href="single-product">{{$data->product_name}}</a></h2>
+                            <a href="single-product"><img src="{{asset('img/' . $data->latestproduct_image)}}" alt="" class="product-thumb"></a>
+                            <h2><a href="single-product">{{$data->latestproduct_name}}</a></h2>
                             <div class="product-wid-rating">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
@@ -145,7 +145,7 @@
                                 <i class="fa fa-star"></i>
                             </div>
                             <div class="product-wid-price">
-                            {{$data->product_price}}
+                            {{$data->latestproduct_price}}
                             </div>                            
                         </div>
                                           

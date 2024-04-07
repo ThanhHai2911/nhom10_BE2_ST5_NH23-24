@@ -55,14 +55,14 @@
                         <div class="product-breadcroumb">
                             <a href="">Home</a>
                             <a href="">Category Name</a>
-                            <a href="">{{$product->product_name}}</a>
+                            <a href="">{{$latestproducts->latestproduct_name}}</a>
                         </div>
                         
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="product-images">
                                     <div class="product-main-img">
-                                        <img src="{{asset('img/' . $product->product_image)}}" alt="">
+                                        <img src="{{asset('img/' . $latestproducts->latestproduct_image)}}" alt="">
                                     </div>
                                     
                                     <!-- <div class="product-gallery">
@@ -75,9 +75,9 @@
                             
                             <div class="col-sm-6">
                                 <div class="product-inner">
-                                    <h2 class="product-name">{{$product->product_name}}</h2>
+                                    <h2 class="product-name">{{$latestproducts->latestproduct_name}}</h2>
                                     <div class="product-inner-price">
-                                       {{$product->product_price}}
+                                    {{$latestproducts->latestproduct_price}}
                                     </div>    
                                     
                                     <form action="" class="cart">
@@ -99,7 +99,7 @@
                                         <div class="tab-content">
                                             <div role="tabpanel" class="tab-pane fade in active" id="home">
                                                 <h2>Product Description</h2>  
-                                               <p>   {{$product->product_detail}}</p>
+                                               <p>   {{$latestproducts->latestproduct_detail}}</p>
                                             </div>
                                             <div role="tabpanel" class="tab-pane fade" id="profile">
                                                 <h2>Reviews</h2>
@@ -135,17 +135,17 @@
                             
                                 <div class="single-product">
                                     <div class="product-f-image">
-                                        <img src="{{asset('img/' . $product->product_image)}}" alt="" class="img-product">
+                                        <img src="{{asset('img/' . $latestproducts->latestproduct_image)}}" alt="" class="img-product">
                                         <div class="product-hover">
                                             <a href="" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
                                             <a href="" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                         </div>
                                     </div>
 
-                                    <h2><a href="">{{$product->product_name}}</a></h2>
+                                    <h2><a href="">{{$latestproducts->latestproduct_name}}</a></h2>
 
                                     <div class="product-carousel-price">
-                                    {{$product->product_price}}
+                                    {{$latestproducts->latestproduct_price}}
                                     </div> 
                                 </div>
                                                             

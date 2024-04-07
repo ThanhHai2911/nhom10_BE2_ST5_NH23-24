@@ -30,7 +30,7 @@ class UserSeeder extends Seeder
                 'user_name' => 'DucKhanh',
                 'user_email' => 'duckhanh@gmail.com',
                 'user_password' => '123456'
-            ],
+            ]
         ]);
     }
 }

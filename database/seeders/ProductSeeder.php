@@ -138,7 +138,7 @@ class ProductSeeder extends Seeder
 
             [
                 'product_name' => 'Laptop ASUS Zenbook 14 OLED',
-                'product_type' => '3',
+                'product_type' => '2',
                 'product_quantity' => 10,
                 'product_price' => 32040000,
                 'product_detail' => 'Laptop Asus Zenbook 14 OLED UX3405MA PP152W có kích thước nhỏ gọn 14 inch, độ phân giải 3K cùng màn hình OLED Lumia cho chất lượng hiển thị chi tiết. Bên cạnh đó, sản phẩm laptop Asus Zenbook còn trang bị chipset Intel Core Ultra 7 125H, GPU Intel Arc Graphics cùng bộ nhớ RAM 32GB và SSD 1TB, mang đến hiệu năng ưu việt với các tác vụ đồ họa nặng cùng không gian lưu trữ rộng lớn. ',
@@ -147,7 +147,7 @@ class ProductSeeder extends Seeder
             
             [
                 'product_name' => 'Laptop Lenovo LOQ',
-                'product_type' => '3',
+                'product_type' => '2',
                 'product_quantity' => 10,
                 'product_price' => 30000000,
                 'product_detail' => 'Laptop Lenovo LOQ 15IAX9 83GS000RVN sở hữu một hiệu năng mạnh mẽ khi được trang bị bộ vi xử lý Intel Core i5 12450HX cùng card đồ hoạ rời RTX 4050. Đi kèm là 16GB RAM cùng ổ cứng SSD 512GB để có được khả năng đa nhiệm mượt mà, tốc độ đọc/ghi dữ liệu nhanh chóng. Màn hình 15,6 inch Full HD 144Hz tích hợp công nghệ G-Sync được tối ưu để mang tới khả năng hiển thị ấn tượng cho mục đích giải trí.',
@@ -156,7 +156,7 @@ class ProductSeeder extends Seeder
 
             [
                 'product_name' => 'Laptop HP Zbook Firefly 14 G8',
-                'product_type' => '3',
+                'product_type' => '2',
                 'product_quantity' => 10,
                 'product_price' => 21400000,
                 'product_detail' => 'Laptop HP Zbook Firefly 14 G8 1A2F1AV sở hữu một thiết kế sang trọng cùng với cấu hình ổn định hứa hẹn mang lại cho người dùng trải nghiệm mượt mà và ổn định.',
@@ -165,7 +165,7 @@ class ProductSeeder extends Seeder
 
             [
                 'product_name' => 'Laptop Gaming Acer Nitro 5 Tiger',
-                'product_type' => '3',
+                'product_type' => '2',
                 'product_quantity' => 10,
                 'product_price' => 23070000,
                 'product_detail' => 'Laptop Acer Nitro 5 Tiger AN515-58-52SP mang vẻ ngoài phong thái sắc sảo, tích hợp hàng loạt công nghệ phần mềm đời mới và đặc biệt là bộ vi xử lý Intel ổn định. Chứa đựng hiệu năng siêu vượt trội đã góp phần làm nên chiếc laptop Acer Nitro 5 dẫn đầu phân khúc.',
@@ -174,7 +174,7 @@ class ProductSeeder extends Seeder
 
             [
                 'product_name' => 'Laptop Acer Aspire 7',
-                'product_type' => '3',
+                'product_type' => '2',
                 'product_quantity' => 10,
                 'product_price' => 19500000,
                 'product_detail' => 'Laptop Acer Aspire 7 A715 76G 5806 được trang bị bộ vi xử lý i5 12450H cùng card màn hình rời 4GB RTX3050 và dung lượng RAM 16GB, ổ cứng SSD 512 GB. Máy sở hữu màn hình 15.6 inch FHD với tần số 144Hz. Ngoài ra, sản phẩm laptop Acer Aspire còn nổi bật với thiết kế tối giản, bền bỉ nhờ vỏ nhựa cùng nắp lưng kim loại cứng cáp.',
@@ -183,7 +183,7 @@ class ProductSeeder extends Seeder
 
             [
                 'product_name' => 'Laptop LG Gram 2023 ',
-                'product_type' => '3',
+                'product_type' => '2',
                 'product_quantity' => 10,
                 'product_price' => 23760000,
                 'product_detail' => 'Laptop LG gram 2023 14Z90R-G.AH75A5 – Một siêu phẩm công nghệ táo bạo, đầy hiện đại mà ông lớn LG mang đến cho người dùng của mình. Với tất cả sự hoàn hảo cao nhất từ cấu hình, thiết kế đến hiệu năng và mọi hoạt động của laptop LG Gram 2023 thì đây đích thị là lựa chọn hàng đầu mà nhiều người.',
@@ -192,7 +192,7 @@ class ProductSeeder extends Seeder
 
             [
                 'product_name' => 'iPad Pro 11 inch 2022 M2 Wifi 128GB',
-                'product_type' => '4',
+                'product_type' => '3',
                 'product_quantity' => 10,
                 'product_price' => 21040000,
                 'product_detail' => 'Sự thay đổi lớn về thiết kế và cấu hình chính là những yếu tố giúp cho iPad Pro 2022 chiếc máy tính bảng mới nhất từ Apple - hứa hẹn sẽ là một trong những mẫu máy tính bảng cực kỳ hấp dẫn trong năm 2022.',
@@ -201,7 +201,7 @@ class ProductSeeder extends Seeder
 
             [
                 'product_name' => 'iPad mini 6 WiFi 64GB',
-                'product_type' => '4',
+                'product_type' => '3',
                 'product_quantity' => 10,
                 'product_price' => 9000000,
                 'product_detail' => 'iPad Mini 6 được Apple thiết kế với hình dáng nhỏ gọn cân đối chiều dài và ngang giúp bạn có thể mang theo bên mình mọi lúc mọi nơi để hỗ trợ cho quá trình học tập, làm việc hay giải trí một cách dễ dàng.',
@@ -210,7 +210,7 @@ class ProductSeeder extends Seeder
             
             [
                 'product_name' => 'iPad Pro 11 inch 2022 M2',
-                'product_type' => '4',
+                'product_type' => '3',
                 'product_quantity' => 10,
                 'product_price' => 25400000,
                 'product_detail' => 'iPad Pro 11 2022 M2 Wifi 5G 128GB vừa qua đã được hãng Apple cho ra mắt với nhiều tính năng cao cấp. Cùng với những cải tiến mới như trang bị dòng chip xịn sò, kết hợp với viên pin có dung lượng ổn định, chiếc iPad Pro thế hệ mới này hứa hẹn sẽ mang đến sự trải nghiệm thú vị cho bạn.',
@@ -219,7 +219,7 @@ class ProductSeeder extends Seeder
 
             [
                 'product_name' => 'Samsung Galaxy Tab S9 Ultra 12GB 512GB',
-                'product_type' => '4',
+                'product_type' => '3',
                 'product_quantity' => 10,
                 'product_price' => 21400000,
                 'product_detail' => 'Samsung Galaxy Tab S9 Ultra là thế hệ tablet mới của nhà Samsung với thiết kế đẹp mắt, thanh lịch, màn hình Dynamic AMOLED 2X cùng với chipset Snapdragon 8 gen 2 mạnh mẽ cân mọi tác vụ. Bên cạnh đó, thời lượng pin của Galaxy Tab S9 Ultra cũng được cải thiện so với người tiền nhiệm để mang đến trải nghiệm lâu hơn cho người dùng.',
@@ -228,7 +228,7 @@ class ProductSeeder extends Seeder
 
             [
                 'product_name' => 'Xiaomi Pad 6s Pro 8GB 256GB',
-                'product_type' => '4',
+                'product_type' => '3',
                 'product_quantity' => 10,
                 'product_price' => 10000000,
                 'product_detail' => 'Xiaomi Pad 6S Pro sở hữu màn hình 12.4 inch kích thước lớn cùng độ phân giải 3K hiển thị sống động, tần số quét 144Hz. Máy tính bảng với cấu hình từ con chip được sản xuất trên tiến trình 4nm - Snapdragon® 8 thế hệ 2. Cùng với đó, thiết bị sở hữu viên pin dung lượng lớn 10000 mah cùng sạc nhanh công suất 120W.',
@@ -237,7 +237,7 @@ class ProductSeeder extends Seeder
             
             [
                 'product_name' => 'iPad Pro 11 2021 M1 WiFi 128GB',
-                'product_type' => '4',
+                'product_type' => '3',
                 'product_quantity' => 10,
                 'product_price' => 21000000,
                 'product_detail' => 'iPad Pro 11 inch 2021 sở hữu ngoại hình mang nhiều điểm tương tự về ngoại hình với chiếc iPad Pro trước đó. Apple iPad Pro 2021 sử dụng màn hình kích thước 11 inch và sử dụng màn hình LCD truyền thống.  Màn hình trên iPad Pro 2021 này với công nghệ màu ProMotion cùng độ phân giải cao 264 pixel mỗi inch. Màn hình này cũng được trang bị lớp phủ chống bám vân tay và chống phản xạ, nâng cao trải nghiệm cho người dùng.',
