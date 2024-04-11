@@ -10,7 +10,7 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="single-shop-product">
                         <div class="product-upper">
-                            <img src="{{asset('img/' . $data->product_image)}}" alt="">
+                           <a href="{{route('single.product',$data->id)}}"> <img src="{{asset('img/' . $data->product_image)}}" alt=""></a> 
                         </div>
                         <h2><a href="{{route('single.product',$data->id)}}">{{$data->product_name}}</a></h2>
                         <div class="product-carousel-price">
