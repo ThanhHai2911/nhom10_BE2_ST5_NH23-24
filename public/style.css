@@ -148,7 +148,7 @@ z-index: 999;}
     padding: 20px;
 }
 
-.mainmenu-area ul.navbar-nav li:hover a, .mainmenu-area ul.navbar-nav li.active a {background: #5a88ca; color:#FFF;}
+.mainmenu-area ul.navbar-nav li:hover a, .mainmenu-area ul.navbar-nav li.active a {background: #7daff5; color:#FFF;}
 .mainmenu-area .nav > li > a:focus {color: #FFF;}
 
 .slider-area { width:80%; position:relative; margin:0 auto; padding:5px;}
@@ -414,11 +414,11 @@ z-index: 999;}
   background: #000;
   text-decoration: none;border-color: #444;
 }
-.product-carousel-price ins {
-  color: #5a88ca;
+.product-carousel-price{
+  color: #e70a19;
   font-weight: 700;
-  margin-right: 5px;
   text-decoration: none;
+  text-align: center;
 }
 .product-hover a i.fa {
     margin-right: 5px;
@@ -430,6 +430,7 @@ z-index: 999;}
     line-height: 25px;
     margin-bottom: 10px;
     margin-top: 15px;
+    text-align: center;
 }
 
 
@@ -445,8 +446,8 @@ z-index: 999;}
   overflow: hidden;
 }
 .single-product:hover {}
-.single-product:hover .product-hover a.add-to-cart-link {top: 32%;}
-.single-product:hover .product-hover a.view-details-link {bottom: 32%;}
+.single-product:hover .product-hover a.add-to-cart-link {top: 32%; border-radius: 10px;}
+.single-product:hover .product-hover a.view-details-link {bottom: 32%;border-radius: 10px;}
 .single-product:hover .product-hover:after{left: 0}
 
 
@@ -502,6 +503,7 @@ z-index: 999;}
 .single-wid-product {
     margin-bottom: 31px;
     overflow: hidden;
+    text-align: center;
 }
 .product-thumb {
     float: left;
@@ -517,11 +519,12 @@ z-index: 999;}
     color: #ffc808;
     margin-bottom: 10px;
 }
-.product-wid-price ins {
-    color: #5a88ca;
+.product-wid-price {
+    color: #ea0b0b;
     font-weight: 700;
     margin-right: 10px;
     text-decoration: none;
+    text-align: center;
 }
 .single-wid-product h2 a {
     color: #222;
@@ -536,6 +539,7 @@ z-index: 999;}
     position: absolute;
     right: 10px;
     top: 3px;
+    border-radius: 10px;
 }
 .wid-view-more:hover {color: #fff;background-color: #222;text-decoration: none}
 .single-product-widget {
@@ -549,10 +553,12 @@ z-index: 999;}
 .footer-top-area .zigzag-bottom{background: #f4f4f4}
 .footer-top-area {background: none repeat scroll 0 0 #333;
 color: #999;
-padding: 35px 0 180px;}
+padding: 35px 0 70px;}
 
 
-.footer-bottom-area {background: #000;color: #fff}
+.footer-bottom-area {
+    background: #000;color: #fff;
+}
 .footer-about-us span {
   color: #5a88ca;
 }
@@ -623,7 +629,7 @@ a:hover, a:focus {color: #17a78b}
 .footer-bottom-area {
   background: none repeat scroll 0 0 #000;
   color: #fff;
-  padding-bottom: 40px;
+  padding-bottom: 10px;
 }
 
 
@@ -707,6 +713,7 @@ width: 10px;
 }
 .single-sidebar {
     margin-bottom: 50px;
+
 }
 input[type="text"], input[type="password"], input[type="email"], textarea {
     border: 1px solid #ddd;
@@ -722,7 +729,8 @@ input[type="submit"], button[type=submit] {
 input[type="submit"]:hover, button[type=submit]:hover {background-color: #222}
 .single-sidebar input[type="text"] {
     margin-bottom: 10px;
-    width: 100%;
+    width: 70%;
+    border-radius: 10px;
 }
 .thubmnail-recent {
     margin-bottom: 30px;
@@ -741,8 +749,8 @@ input[type="submit"]:hover, button[type=submit]:hover {background-color: #222}
 .thubmnail-recent > h2 a {
     color: #222;
 }
-.product-sidebar-price > ins {
-    color: #5a88ca;
+.product-sidebar-price{
+    color: #dd1323;
     font-weight: 700;
     margin-right: 10px;
     text-decoration: none;
@@ -760,17 +768,18 @@ input[type="submit"]:hover, button[type=submit]:hover {background-color: #222}
     display: block;
 }
 .product-breadcroumb {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 20px;
 }
 .product-breadcroumb > a {
-    margin-right: 31px;
+    margin-right: 12px;
     position: relative;
 }
 .product-breadcroumb > a::before {
     content: "/";
     position: absolute;
-    right: -20px;
-    top: 2px;
+    right: -10px;   
 }
 .product-breadcroumb > a:last-child::before {
     display: none;
@@ -814,7 +823,10 @@ input[type="submit"]:hover, button[type=submit]:hover {background-color: #222}
     background: none repeat scroll 0 0 #5a88ca;
     border: medium none;
     color: #fff;
-    padding: 6px 25px;display: inline-block
+    padding: 6px 20px;display: inline-block;
+    border-radius: 10px;
+    margin-left: 10px;
+
 }
 .add_to_cart_button:hover {background-color: #222;color: #fff;text-decoration: none}
 form.cart {
@@ -929,6 +941,7 @@ div.quantity input.plus, div.quantity input.minus {
 td.product-quantity div.quantity {
     float: none;
     margin: 0;
+    
 }
 td.actions div.coupon {
     float: left;
@@ -1112,9 +1125,11 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button{background
 .single-shop-product h2 {
     font-size: 20px;
     margin: 10px 0;
+    text-align: center;
 }
 .product-option-shop {
     margin-top: 15px;
+    margin-left: 30px;
 }
 
 .single-shop-product {margin-bottom: 50px}
@@ -1150,19 +1165,20 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button{background
   }
   
   .dropdown-content {
-    
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
+    min-width: 100px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    text-align: center;
   }
   
   .dropdown-content a {
-    color: #333; 
     text-decoration: none;
     display: block;
+    width: 121px;
+    border-radius: 10px;
+    margin-top: 5px;
 }
 
 .dropdown-content a:hover {

@@ -19,10 +19,10 @@ class CategorySeeder extends Seeder
                 'name' => 'Phone'
             ],
             [
-                'name' => 'Tablet'
+                'name' => 'Laptop'
             ],
             [
-                'name' => 'Laptop'
+                'name' => 'Tablet'
             ]
             
         ]);

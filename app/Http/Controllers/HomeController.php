@@ -26,5 +26,12 @@ class HomeController extends Controller
         $data_category = Category::all(); 
         $data_latestproduct=Latestproduct::all();
         return view('latest-product',compact('latestproducts','data_category','data_latestproduct'));
+    } 
+
+    public function categoryproducts($categoryproducts){
+        $data_category = Category::where('id',$categoryproducts)->first(); 
+        $product = Product::where('product_type',$data_category->id)->get();
+        return view('category-product',compact('product','data_category'));
     }
+    
 }

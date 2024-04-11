@@ -14,7 +14,6 @@
     
     
     <div class="single-product-area">
-        <div class="zigzag-bottom"></div>
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
@@ -22,7 +21,7 @@
                         <h2 class="sidebar-title">Search Products</h2>
                         <form action="">
                             <input type="text" placeholder="Search products...">
-                            <input type="submit" value="Search">
+                            <input style="border-radius: 10px;" type="submit" value="Search">
                         </form>
                     </div>
                     

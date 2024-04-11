@@ -6,10 +6,11 @@
 -->
 <html lang="en">
   <head>
+    <base href="/">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ustora</title>
+    <title>Shop Page- Ustora</title>
     
     <!-- Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
@@ -25,7 +26,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="style.css">
-
+   
     <link rel="stylesheet" href="css/responsive.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -43,13 +44,13 @@
                 <div class="col-md-8">
                     <div class="user-menu">
                         <ul>
-                            <li><a href="#"><i class="fa fa-user"></i> My Account</a></li>
-                            <li><a href="#"><i class="fa fa-user"></i> My Cart</a></li>                         
+                            <li><a href="#"><i class="fa fa-user"></i> My Account</a></li>                         
+                            <li><a href="#"><i class="fa fa-user"></i> My Cart</a></li>
                         </ul>
                     </div>
                 </div>
                 
-               
+                
             </div>
         </div>
     </div> <!-- End header area -->
@@ -65,7 +66,7 @@
                 
                 <div class="col-sm-6">
                     <div class="shopping-item">
-                        <a href="cart">Cart - <span class="cart-amunt">$1000</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
+                        <a href="cart">Cart - <span class="cart-amunt">$100</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
                     </div>
                 </div>
             </div>
@@ -85,53 +86,21 @@
                 </div> 
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index">Home</a></li>
-                        <li><a href="shop">Shop page</a></li>
-                        <li><a href="cart">Cart</a></li>     
-                        <li>
-                        <div class="dropdown">
-                                    <button class="dropbtn">Categories</button>
-                                    <div class="dropdown-content">
-                                    @foreach($data_category as $data)                                  
-                                        <a href="{{route('category',$data->id)}}" class="menu_categories">{{$data->name}}</a>
-                                    @endforeach
-                                    </div>
-                        </div>    
-                        </li>                     
+                        <li><a href="index">Home</a></li>
+                        <li class="active"><a href="shop">Shop page</a></li>
+                        <li><a href="cart">Cart</a></li>    
+                         
+                       <!--Thêm Nav -->    
+
                     </ul>
                 </div>  
             </div>
         </div>
-    </div> <!-- End mainmenu area -->
-    
-    <div class="slider-area">
-        	<!-- Slider -->
-			<div class="block-slider block-slider4">
-				<ul class="" id="bxslider-home4">
-					<li>
-						<img src="img/samsunggalaxyslidings24.png" alt="Slide">
-					</li>
-                    <li>
-						<img src="img/iphone_15.png" alt="Slide">
-					</li>
-                    <li>
-						<img src="img/Macair13.png" alt="Slide">
-					</li>
-                    <li>
-						<img src="img/xiaomi_14.png" alt="Slide">
-					</li>
-                    
-					
-				</ul>
-			</div>
-			<!-- ./Slider -->
-    </div> <!-- End slider area -->
-    
-    
-    @yield('content-index')
+    </div> <!-- End mainmenu area --> 
+      
+   @yield('content')
+   
 
-
-    
     <div class="footer-top-area">
         <div class="zigzag-bottom"></div>
         <div class="container">
@@ -147,13 +116,16 @@
                             <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
                         </div>
                     </div>
-                </div>                                              
+                </div>
+                
+              
+                
                 <div class="col-md-4 col-sm-6">
                     <div class="footer-menu">
                         <h2 class="footer-wid-title">Categories</h2>
                         <ul>
-                            <li><a href="#">Mobile Phone</a></li>
-                            
+                            <li><a href="">Mobile Phone</a></li>
+                          
                         </ul>                        
                     </div>
                 </div>
@@ -163,23 +135,20 @@
                         <h2 class="footer-wid-title">Newsletter</h2>
                         <p>Sign up to our newsletter and get exclusive deals you wont find anywhere else straight to your inbox!</p>
                         <div class="newsletter-form">
-                            <form action="#">
-                                <input type="email" placeholder="Type your email">
-                                <input type="submit" value="Subscribe">
-                            </form>
+                            <input type="email" placeholder="Type your email">
+                            <input type="submit" value="Subscribe">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div> <!-- End footer top area -->
-    
+    </div>
     <div class="footer-bottom-area">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
                     <div class="copyright">
-                        <p>&copy; 2015 uCommerce. All Rights Reserved. <a href="http://www.freshdesignweb.com" target="_blank">freshDesignweb.com</a></p>
+                       <p>&copy; 2015 uCommerce. All Rights Reserved. <a href="http://www.freshdesignweb.com" target="_blank">freshDesignweb.com</a></p>
                     </div>
                 </div>
                 
@@ -193,7 +162,7 @@
                 </div>
             </div>
         </div>
-    </div> <!-- End footer bottom area -->
+    </div>
    
     <!-- Latest jQuery form server -->
     <script src="https://code.jquery.com/jquery.min.js"></script>
@@ -210,9 +179,5 @@
     
     <!-- Main Script -->
     <script src="js/main.js"></script>
-    
-    <!-- Slider -->
-    <script type="text/javascript" src="js/bxslider.min.js"></script>
-	<script type="text/javascript" src="js/script.slider.js"></script>
   </body>
 </html>

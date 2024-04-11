@@ -5,28 +5,29 @@
 	URL: https://www.freshdesignweb.com/ustora/
 -->
 <html lang="en">
-  <head>
+
+<head>
     <base href="/">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Shop Page- Ustora Demo</title>
-    
+    <title>Shop Page- Ustora</title>
+
     <!-- Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
-    
+
     <!-- Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="style.css">
-   
+
     <link rel="stylesheet" href="css/responsive.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -35,26 +36,27 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
-  <body>
-   
+</head>
+
+<body>
+
     <div class="header-area">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
                     <div class="user-menu">
                         <ul>
-                            <li><a href="#"><i class="fa fa-user"></i> My Account</a></li>                         
+                            <li><a href="#"><i class="fa fa-user"></i> My Account</a></li>
                             <li><a href="#"><i class="fa fa-user"></i> My Cart</a></li>
                         </ul>
                     </div>
                 </div>
-                
-                
+
+
             </div>
         </div>
     </div> <!-- End header area -->
-    
+
     <div class="site-branding-area">
         <div class="container">
             <div class="row">
@@ -63,7 +65,7 @@
                         <h1><a href="./"><img src="img/logo.png"></a></h1>
                     </div>
                 </div>
-                
+
                 <div class="col-sm-6">
                     <div class="shopping-item">
                         <a href="cart">Cart - <span class="cart-amunt">$100</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
@@ -72,7 +74,7 @@
             </div>
         </div>
     </div> <!-- End site branding area -->
-    
+
     <div class="mainmenu-area">
         <div class="container">
             <div class="row">
@@ -83,32 +85,32 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                </div> 
+                </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a href="index">Home</a></li>
                         <li class="active"><a href="shop">Shop page</a></li>
-                        <li><a href="cart">Cart</a></li>    
-                         <li>
-                         <div class="dropdown">
-                                    <button class="dropbtn">Categories</button>
-                                    <div class="dropdown-content">
+                        <li><a href="cart">Cart</a></li>
+                        <li>
+                            <div class="dropdown">
+                                <button class="dropbtn">Categories</button>
+                                <div class="dropdown-content">
                                     @foreach($data_category as $data)                                  
-                                   <a href="shop?id={{$data->id}}" class="menu_categories">{{$data->name}}</a>
-                                   @endforeach
-                                    </div>
-                        </div>    
-                         </li>
-                       <!--Thêm Nav -->    
+                                        <a href="{{route('category',$data->id)}}" class="menu_categories">{{$data->name}}</a>
+                                    @endforeach
+                                </div>
+                            </div>
+                        </li>
+                        <!--Thêm Nav -->
 
                     </ul>
-                </div>  
+                </div>
             </div>
         </div>
-    </div> <!-- End mainmenu area --> 
-      
-   @yield('content')
-   
+    </div> <!-- End mainmenu area -->
+
+    @yield('content')
+
 
     <div class="footer-top-area">
         <div class="zigzag-bottom"></div>
@@ -116,7 +118,7 @@
             <div class="row">
                 <div class="col-md-4 col-sm-6">
                     <div class="footer-about-us">
-                        <h2>u<span>Stora</span></h2>
+                        <h2><span>UStora</span></h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sunt id doloribus vero quam laborum quas alias dolores blanditiis iusto consequatur, modi aliquid eveniet eligendi iure eaque ipsam iste, pariatur omnis sint! Suscipit, debitis, quisquam. Laborum commodi veritatis magni at?</p>
                         <div class="footer-social">
                             <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
@@ -126,19 +128,19 @@
                         </div>
                     </div>
                 </div>
-                
-              
-                
+
+
+
                 <div class="col-md-4 col-sm-6">
                     <div class="footer-menu">
                         <h2 class="footer-wid-title">Categories</h2>
                         <ul>
                             <li><a href="">Mobile Phone</a></li>
-                          
-                        </ul>                        
+
+                        </ul>
                     </div>
                 </div>
-                
+
                 <div class="col-md-4 col-sm-6">
                     <div class="footer-newsletter">
                         <h2 class="footer-wid-title">Newsletter</h2>
@@ -157,10 +159,10 @@
             <div class="row">
                 <div class="col-md-8">
                     <div class="copyright">
-                       <p>&copy; 2015 uCommerce. All Rights Reserved. <a href="http://www.freshdesignweb.com" target="_blank">freshDesignweb.com</a></p>
+                        <p>&copy; 2015 uCommerce. All Rights Reserved. <a href="http://www.freshdesignweb.com" target="_blank">freshDesignweb.com</a></p>
                     </div>
                 </div>
-                
+
                 <div class="col-md-4">
                     <div class="footer-card-icon">
                         <i class="fa fa-cc-discover"></i>
@@ -172,21 +174,22 @@
             </div>
         </div>
     </div>
-   
+
     <!-- Latest jQuery form server -->
     <script src="https://code.jquery.com/jquery.min.js"></script>
-    
+
     <!-- Bootstrap JS form CDN -->
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    
+
     <!-- jQuery sticky menu -->
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.sticky.js"></script>
-    
+
     <!-- jQuery easing -->
     <script src="js/jquery.easing.1.3.min.js"></script>
-    
+
     <!-- Main Script -->
     <script src="js/main.js"></script>
-  </body>
+</body>
+
 </html>
