@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('latestproduct_name');
             $table->string('latestproduct_type');
             $table->integer('latestproduct_quantity');
-            $table->double('latestproduct_price');
+            $table->string('latestproduct_price');
             $table->string('latestproduct_detail',1000);
             $table->string('latestproduct_image');
             $table->timestamps();

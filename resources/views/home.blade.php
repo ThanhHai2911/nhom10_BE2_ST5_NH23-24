@@ -109,15 +109,18 @@
 			<div class="block-slider block-slider4">
 				<ul class="" id="bxslider-home4">
 					<li>
-						<img src="img/h4-slide.png" alt="Slide">
-						<div class="caption-group">
-							<h2 class="caption title">
-								iPhone <span class="primary">6 <strong>Plus</strong></span>
-							</h2>
-							<h4 class="caption subtitle">Dual SIM</h4>
-							<a class="caption button-radius" href="shop"><span class="icon"></span>Shop now</a>
-						</div>
+						<img src="img/samsunggalaxyslidings24.png" alt="Slide">
 					</li>
+                    <li>
+						<img src="img/iphone_15.png" alt="Slide">
+					</li>
+                    <li>
+						<img src="img/Macair13.png" alt="Slide">
+					</li>
+                    <li>
+						<img src="img/xiaomi_14.png" alt="Slide">
+					</li>
+                    
 					
 				</ul>
 			</div>
