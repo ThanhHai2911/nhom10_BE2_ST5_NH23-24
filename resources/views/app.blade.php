@@ -45,8 +45,8 @@
                     <div class="user-menu">
                         <ul>
                             <li><a href="#"><i class="fa fa-user"></i> My Account</a></li>                         
-                            <li><a href="cart"><i class="fa fa-user"></i> My Cart</a></li>
-                            <li><a href="formLogin"><i class="fa fa-user"></i> Login</a></li>
+                            <li><a href="#"><i class="fa fa-user"></i> My Cart</a></li>
+                            <li><a href="#"><i class="fa fa-user"></i> Login</a></li>
                         </ul>
                     </div>
                 </div>
