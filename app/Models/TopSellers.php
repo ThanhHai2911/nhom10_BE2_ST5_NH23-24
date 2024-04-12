@@ -5,7 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class TopSale extends Model
+class TopSellers extends Model
 {
- 
+    public function topsellers(){
+        
+       
+    }
 }

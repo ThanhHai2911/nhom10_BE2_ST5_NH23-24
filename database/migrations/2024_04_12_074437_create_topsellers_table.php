@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('topsale', function (Blueprint $table) {
+        Schema::create('topsellers', function (Blueprint $table) {
             $table->increments('id');
             $table->string('topsale_name');
             $table->string('topsale_type');
@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('topsale_detail',1000);
             $table->string('topsale_image');
             $table->timestamps();
+
         });
     }
 
@@ -32,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('topsale');
+        Schema::dropIfExists('topsellers');
     }
 };

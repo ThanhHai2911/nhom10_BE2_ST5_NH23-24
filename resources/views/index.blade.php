@@ -119,6 +119,7 @@
                 <div class="single-product-widget">
                     <h2 class="product-wid-title">Recently Viewed</h2>
                     <a href="shop" class="wid-view-more">View All</a>
+                    @foreach($data_product as $data )
                     <div class="single-wid-product">
                         <a href="single-product"><img src="{{asset('img/' . $data->product_image)}}" alt=""
                                 class="product-thumb"></a>
@@ -134,13 +135,14 @@
                             {{$data->product_price}}
                         </div>
                     </div>
-
+                    @endforeach
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="single-product-widget">
                     <h2 class="product-wid-title">Top New</h2>
                     <a href="shop" class="wid-view-more">View All</a>
+                    @foreach($latestproduct as $data )
                     <div class="single-wid-product">
                         <a href="{{route('latest.product',$data->id)}}"><img
                                 src="{{asset('img/' . $data->latestproduct_image)}}" alt="" class="product-thumb"></a>
@@ -156,7 +158,7 @@
                             {{$data->latestproduct_price}}
                         </div>
                     </div>
-
+                    @endforeach
 
                 </div>
             </div>

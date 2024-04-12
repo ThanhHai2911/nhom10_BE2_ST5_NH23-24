@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class TopsaleSeeder extends Seeder
+class TopSellersSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -60,5 +60,8 @@ class TopsaleSeeder extends Seeder
                 'product_image' => 'samsungzfold5.png'
             ]
         ]);
+
+
+
     }
 }
