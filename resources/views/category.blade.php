@@ -89,6 +89,16 @@
                         <li><a href="index">Home</a></li>
                         <li class="active"><a href="shop">Shop page</a></li>
                         <li><a href="cart">Cart</a></li>    
+                        <li>
+                            <div class="dropdown">
+                                <button class="dropbtn">Categories</button>
+                                <div class="dropdown-content">
+                                    @foreach($category as $data)                                  
+                                        <a href="{{route('category',$data->id)}}" class="menu_categories">{{$data->name}}</a>
+                                    @endforeach
+                                </div>
+                            </div>
+                        </li>
                        <!--Thêm Nav -->    
 
                     </ul>

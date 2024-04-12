@@ -29,9 +29,10 @@ class HomeController extends Controller
     } 
 
     public function categoryproducts($categoryproducts){
+        $category = Category::all();
         $data_category = Category::where('id',$categoryproducts)->first(); 
         $product = Product::where('product_type',$data_category->id)->get();
-        return view('category-product',compact('product','data_category'));
+        return view('category-product',compact('product','data_category', 'category'));
     }
     
 }
