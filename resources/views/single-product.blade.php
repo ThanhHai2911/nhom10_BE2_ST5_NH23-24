@@ -29,8 +29,8 @@
                     <h2 class="sidebar-title">Latest Products</h2>
                         @foreach($data_latestproduct as $data ) 
                         <div class="thubmnail-recent">
-                            <img src="{{asset('img/' . $data->latestproduct_image)}}" class="recent-thumb" alt="">
-                            <h2><a href="single-product.blade.php">{{$data->latestproduct_name}}</a></h2>
+                            <a href="{{route('latest.product',$data->id)}}"><img src="{{asset('img/' . $data->latestproduct_image)}}" class="recent-thumb" alt=""></a>
+                            <h2><a href="{{route('latest.product',$data->id)}}">{{$data->latestproduct_name}}</a></h2>
                             <div class="product-sidebar-price">
                             {{$data->latestproduct_price}}
                             </div>                             
@@ -137,11 +137,11 @@
                                         <img src="{{asset('img/' . $product->product_image)}}" alt="" class="img-product">
                                         <div class="product-hover">
                                             <a href="" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                            <a href="" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                            <a href="{{route('single.product',$product->id)}}  " class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                         </div>
                                     </div>
 
-                                    <h2><a href="">{{$product->product_name}}</a></h2>
+                                    <h2><a href="{{route('single.product',$product->id)}}">{{$product->product_name}}</a></h2>
 
                                     <div class="product-carousel-price">
                                     {{$product->product_price}}

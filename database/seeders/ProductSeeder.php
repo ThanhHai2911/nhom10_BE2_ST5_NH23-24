@@ -26,7 +26,7 @@ class ProductSeeder extends Seeder
             ],
 
             [
-                'product_name' => 'Iphone 15 ProMax',
+                'product_name' => 'Iphone 15 Pro Max',
                 'product_type' => '1',
                 'product_quantity' => 30,
                 'product_price' => '32.000.000 vnđ',
@@ -71,7 +71,7 @@ class ProductSeeder extends Seeder
             ],
 
             [
-                'product_name' => 'Samsung Galaxy A55 5G',
+                'product_name' => 'Samsung Galaxy A55',
                 'product_type' => '1',
                 'product_quantity' => 20,
                 'product_price' => '9.500.000 vnđ',
@@ -80,7 +80,7 @@ class ProductSeeder extends Seeder
             ],
 
             [
-                'product_name' => 'Macbook Pro 14 M3 Pro 18GB - 512GB',
+                'product_name' => 'Macbook Pro M3 Pro',
                 'product_type' => '2',
                 'product_quantity' => 20,
                 'product_price' => '50.000.000 vnđ',
@@ -89,7 +89,7 @@ class ProductSeeder extends Seeder
             ],
 
             [
-                'product_name' => 'Apple Macbook Air M2 2022 16GB 256GB',
+                'product_name' => 'Macbook Air M2',
                 'product_type' => '2',
                 'product_quantity' => 30,
                 'product_price' => '32.000.000 vnđ',
@@ -98,7 +98,7 @@ class ProductSeeder extends Seeder
             ],
 
             [
-                'product_name' => 'iMac M3 24 inch 8GB 256GB 8GPU',
+                'product_name' => 'iMac M3',
                 'product_type' => '2',
                 'product_quantity' => 10,
                 'product_price' => '34.500.000 vnđ',
@@ -107,7 +107,7 @@ class ProductSeeder extends Seeder
             ],
 
             [
-                'product_name' => 'Mac Studio 2022 M1 Max 10 CPU',
+                'product_name' => 'Mac Studio M1 Max',
                 'product_type' => '2',
                 'product_quantity' => 25,
                 'product_price' => '14.000.000 vnđ',
@@ -116,7 +116,7 @@ class ProductSeeder extends Seeder
             ],
 
             [
-                'product_name' => 'Laptop ASUS Gaming ROG Zephyrus G14',
+                'product_name' => 'Laptop ASUS Gaming',
                 'product_type' => '2',
                 'product_quantity' => 20,
                 'product_price' => '32.586.000 vnđ',
@@ -125,7 +125,7 @@ class ProductSeeder extends Seeder
             ],
 
             [
-                'product_name' => 'Laptop ASUS Gaming ROG Zephyrus G16',
+                'product_name' => 'Laptop ASUS Gaming ROG',
                 'product_type' => '2',
                 'product_quantity' => 20,
                 'product_price' => '52.300.000 vnđ',
@@ -134,25 +134,16 @@ class ProductSeeder extends Seeder
             ],
 
             [
-                'product_name' => 'Laptop ASUS Zenbook 14 OLED',
+                'product_name' => 'Laptop ASUS Zenbook',
                 'product_type' => '2',
                 'product_quantity' => 10,
                 'product_price' => '32.040.000 vnđ',
                 'product_detail' => 'Laptop Asus Zenbook 14 OLED UX3405MA PP152W có kích thước nhỏ gọn 14 inch, độ phân giải 3K cùng màn hình OLED Lumia cho chất lượng hiển thị chi tiết. Bên cạnh đó, sản phẩm laptop Asus Zenbook còn trang bị chipset Intel Core Ultra 7 125H, GPU Intel Arc Graphics cùng bộ nhớ RAM 32GB và SSD 1TB, mang đến hiệu năng ưu việt với các tác vụ đồ họa nặng cùng không gian lưu trữ rộng lớn. ',
                 'product_image' => 'asuszenbook14.png'
             ],
-            
-            [
-                'product_name' => 'Laptop Lenovo LOQ',
-                'product_type' => '2',
-                'product_quantity' => 10,
-                'product_price' => '30.000.000 vnđ',
-                'product_detail' => 'Laptop Lenovo LOQ 15IAX9 83GS000RVN sở hữu một hiệu năng mạnh mẽ khi được trang bị bộ vi xử lý Intel Core i5 12450HX cùng card đồ hoạ rời RTX 4050. Đi kèm là 16GB RAM cùng ổ cứng SSD 512GB để có được khả năng đa nhiệm mượt mà, tốc độ đọc/ghi dữ liệu nhanh chóng. Màn hình 15,6 inch Full HD 144Hz tích hợp công nghệ G-Sync được tối ưu để mang tới khả năng hiển thị ấn tượng cho mục đích giải trí.',
-                'product_image' => 'lgRog.png'
-            ],
 
             [
-                'product_name' => 'Laptop HP Zbook Firefly 14 G8',
+                'product_name' => 'Laptop HP Zbook Firefly',
                 'product_type' => '2',
                 'product_quantity' => 10,
                 'product_price' => '21.400.000 vnđ',
@@ -161,7 +152,79 @@ class ProductSeeder extends Seeder
             ],
 
             [
-                'product_name' => 'Laptop Gaming Acer Nitro 5 Tiger',
+                'product_name' => 'iPad Pro 2022 M2 Wifi',
+                'product_type' => '3',
+                'product_quantity' => 10,
+                'product_price' => '21.040.000 vnđ',
+                'product_detail' => 'Sự thay đổi lớn về thiết kế và cấu hình chính là những yếu tố giúp cho iPad Pro 2022 chiếc máy tính bảng mới nhất từ Apple - hứa hẹn sẽ là một trong những mẫu máy tính bảng cực kỳ hấp dẫn trong năm 2022.',
+                'product_image' => 'ipadpro2022.png'
+            ],
+
+            [
+                'product_name' => 'iPad mini 6 WiFi',
+                'product_type' => '3',
+                'product_quantity' => 10,
+                'product_price' => '9.000.000 vnđ',
+                'product_detail' => 'iPad Mini 6 được Apple thiết kế với hình dáng nhỏ gọn cân đối chiều dài và ngang giúp bạn có thể mang theo bên mình mọi lúc mọi nơi để hỗ trợ cho quá trình học tập, làm việc hay giải trí một cách dễ dàng.',
+                'product_image' => 'ipadmini6.png'
+            ],
+            
+            [
+                'product_name' => 'iPad Pro 2022 M2',
+                'product_type' => '3',
+                'product_quantity' => 10,
+                'product_price' => '25.400.000 vnđ',
+                'product_detail' => 'iPad Pro 11 2022 M2 Wifi 5G 128GB vừa qua đã được hãng Apple cho ra mắt với nhiều tính năng cao cấp. Cùng với những cải tiến mới như trang bị dòng chip xịn sò, kết hợp với viên pin có dung lượng ổn định, chiếc iPad Pro thế hệ mới này hứa hẹn sẽ mang đến sự trải nghiệm thú vị cho bạn.',
+                'product_image' => 'ipadpro13.png'
+            ],
+
+            [
+                'product_name' => 'Samsung Galaxy Tab S9',
+                'product_type' => '3',
+                'product_quantity' => 10,
+                'product_price' => '21.400.000 vnđ',
+                'product_detail' => 'Samsung Galaxy Tab S9 Ultra là thế hệ tablet mới của nhà Samsung với thiết kế đẹp mắt, thanh lịch, màn hình Dynamic AMOLED 2X cùng với chipset Snapdragon 8 gen 2 mạnh mẽ cân mọi tác vụ. Bên cạnh đó, thời lượng pin của Galaxy Tab S9 Ultra cũng được cải thiện so với người tiền nhiệm để mang đến trải nghiệm lâu hơn cho người dùng.',
+                'product_image' => 'samsunggalaxytabs9.png'
+            ],
+
+            [
+                'product_name' => 'Xiaomi Pad 6s Pro',
+                'product_type' => '3',
+                'product_quantity' => 10,
+                'product_price' => '10.000.000 vnđ',
+                'product_detail' => 'Xiaomi Pad 6S Pro sở hữu màn hình 12.4 inch kích thước lớn cùng độ phân giải 3K hiển thị sống động, tần số quét 144Hz. Máy tính bảng với cấu hình từ con chip được sản xuất trên tiến trình 4nm - Snapdragon® 8 thế hệ 2. Cùng với đó, thiết bị sở hữu viên pin dung lượng lớn 10000 mah cùng sạc nhanh công suất 120W.',
+                'product_image' => 'xiaomiTab.png'
+            ],
+            
+            [
+                'product_name' => 'iPad Pro 2021 M1 ',
+                'product_type' => '3',
+                'product_quantity' => 10,
+                'product_price' => '21.000.000 vnđ',
+                'product_detail' => 'iPad Pro 11 inch 2021 sở hữu ngoại hình mang nhiều điểm tương tự về ngoại hình với chiếc iPad Pro trước đó. Apple iPad Pro 2021 sử dụng màn hình kích thước 11 inch và sử dụng màn hình LCD truyền thống.  Màn hình trên iPad Pro 2021 này với công nghệ màu ProMotion cùng độ phân giải cao 264 pixel mỗi inch. Màn hình này cũng được trang bị lớp phủ chống bám vân tay và chống phản xạ, nâng cao trải nghiệm cho người dùng.',
+                'product_image' => 'ipadpro13.png'
+            ],
+
+            [
+                'product_name' => 'iPhone 11 64GB',
+                'product_type' => '1',
+                'product_quantity' => 10,
+                'product_price' => '9.870.000 vnđ',
+                'product_detail' => 'iPhone 11 sở hữu hiệu năng khá mạnh mẽ, ổn định trong thời gian dài nhờ được trang bị chipset A13 Bionic. Màn hình LCD 6.1 inch sắc nét cùng chất lượng hiển thị Full HD của máy cho trải nghiệm hình ảnh mượt mà và có độ tương phản cao. Hệ thống camera hiện đại được tích hợp những tính năng công nghệ mới kết hợp với viên Pin dung lượng 3110mAh, giúp nâng cao trải nghiệm của người dùng.',
+                'product_image' => 'iPhone 11.png'
+            ],
+
+            [
+                'product_name' => 'iPad Pro M3 5G',
+                'product_type' => '3',
+                'product_quantity' => 10,
+                'product_price' => '23.760.000 vnđ',
+                'product_detail' => 'iPad Pro 11 inch M3 5G sở hữu công nghệ màn hình OLED, tần số quét 120Hz và trang bị con chip Apple M3 kết hợp với phiên bản iPadOS 17 đem lại hiệu năng vượt trội. Bên cạnh đó, chiếc máy tính bảng iPad Pro này có hai camera 12MP và 10MP, dung lượng RAM tối đa 16GB đa nhiệm cực kỳ tốt. ',
+                'product_image' => 'ipadprom3.png'
+            ],
+
+            [
+                'product_name' => 'Laptop Gaming Acer Nitro 5',
                 'product_type' => '2',
                 'product_quantity' => 10,
                 'product_price' => '23.070.000 vnđ',
@@ -188,59 +251,185 @@ class ProductSeeder extends Seeder
             ],
 
             [
-                'product_name' => 'iPad Pro 11 inch 2022 M2 Wifi 128GB',
+                'product_name' => 'Samsung Galaxy Tab S9',
                 'product_type' => '3',
                 'product_quantity' => 10,
-                'product_price' => '21.040.000 vnđ',
-                'product_detail' => 'Sự thay đổi lớn về thiết kế và cấu hình chính là những yếu tố giúp cho iPad Pro 2022 chiếc máy tính bảng mới nhất từ Apple - hứa hẹn sẽ là một trong những mẫu máy tính bảng cực kỳ hấp dẫn trong năm 2022.',
-                'product_image' => 'ipadpro2022.png'
+                'product_price' => '15.760.000 vnđ',
+                'product_detail' => 'Samsung Galaxy Tab S9 Wifi sở hữu màn hình kích thước 11 inch Dynamic AMOLED 2X cùng tần số quét 120Hz mang lại trải nghiệm hình ảnh mượt mà và ổn định. Cấu hình máy tính bảng Samsung mới này cũng mạnh mẽ với con chip Snapdragon® 8 Gen 2 cùng với đó là sự hỗ trợ của bút Spen thế hệ mới tiện lợi. Máy còn ấn tượng với khả năng kháng nước và bụi bẩn IP68 cùng camera độ phân giải cao.',
+                'product_image' => 'Samsung Galaxy Tab S9 Wifi.png'
             ],
 
             [
-                'product_name' => 'iPad mini 6 WiFi 64GB',
+                'product_name' => 'Laptop Acer Gaming Aspire 5',
+                'product_type' => '2',
+                'product_quantity' => 10,
+                'product_price' => '19.500.000 vnđ',
+                'product_detail' => 'Laptop Acer Gaming Aspire 5 A515 58GM 53PZ thu hút giới game thủ khi có giao diện mỏng nhẹ, đậm chất gaming cùng hiệu năng mạnh mẽ với Core i5 H thế hệ 13. Kết hợp với card rời NVIDIA GeForce RTX 2050 4GB, RAM DDR4 8GB cùng bộ nhớ trong PCIe NVMe Gen 4 512GB cho tốc độ xử lý các tác vụ từ cơ bản đến nâng cao nhanh chóng và mượt mà. ',
+                'product_image' => 'Acer Gaming.png'
+            ],
+
+            [
+                'product_name' => 'iPad Pro 11 inch M3 5G',
                 'product_type' => '3',
                 'product_quantity' => 10,
-                'product_price' => '9.000.000 vnđ',
-                'product_detail' => 'iPad Mini 6 được Apple thiết kế với hình dáng nhỏ gọn cân đối chiều dài và ngang giúp bạn có thể mang theo bên mình mọi lúc mọi nơi để hỗ trợ cho quá trình học tập, làm việc hay giải trí một cách dễ dàng.',
-                'product_image' => 'ipadmini6.png'
+                'product_price' => '23.760.000 vnđ',
+                'product_detail' => 'iPad Pro 11 inch M3 5G sở hữu công nghệ màn hình OLED, tần số quét 120Hz và trang bị con chip Apple M3 kết hợp với phiên bản iPadOS 17 đem lại hiệu năng vượt trội. Bên cạnh đó, chiếc máy tính bảng iPad Pro này có hai camera 12MP và 10MP, dung lượng RAM tối đa 16GB đa nhiệm cực kỳ tốt. ',
+                'product_image' => 'ipadprom3.png'
+            ],
+//
+            [
+                'product_name' => 'Xiaomi Redmi Note 12',
+                'product_type' => '1',
+                'product_quantity' => 30,
+                'product_price' => '12.300.000 vnđ',
+                'product_detail' => 'Xiaomi Redmi Note 12 8GB 128GB tỏa sáng với diện mạo viền vuông cực thời thượng cùng hiệu suất mạnh mẽ nhờ sở hữu con chip Snapdragon 685 ấn tượng. Chất lượng hiển thị hình ảnh của Redmi Note 12 Vàng cũng khá sắc nét thông qua tấm nền AMOLED 120Hz hiện đại. Chưa hết, máy còn sở hữu cụm 3 camera với độ rõ nét lên tới 50MP cùng viên pin 5000mAh và s ạc nhanh 33W giúp đáp ứng được mọi nhu cầu sử dụng của người dùng.',
+                'product_image' => 'rebmi12.png'
+            ],
+
+            [
+                'product_name' => 'Xiaomi Redmi Note 13',
+                'product_type' => '1',
+                'product_quantity' => 30,
+                'product_price' => '14.300.000 vnđ',
+                'product_detail' => 'Xiaomi Redmi Note 13 Pro Plus sở hữu màn hình rộng 6.67 inch, trang bị bộ vi xử lý Dimensity 7200 đem lại hiệu năng kinh ngạc. Với dung lượng pin 5000 mAh cùng hỗ trợ sạc nhanh lên đến 120W. Camera 200MP và khả năng zoom 4x mở ra những trải nghiệm chụp ảnh độc đáo và đa dạng.',
+                'product_image' => 'redmi13pro.png'
+            ],
+
+            [
+                'product_name' => 'Xiaomi 13T Pro 5G',
+                'product_type' => '1',
+                'product_quantity' => 30,
+                'product_price' => '10.790.000 vnđ',
+                'product_detail' => 'Xiaomi 13T Pro là flagship mới nhất nhà Xiaomi, mạnh mẽ ấn tượng với chip MediaTek Dimensity 9200+, cùng với đó là RAM 12GB và bộ nhớ trong lên tới 512GB. Đặc biệt, khả năng chụp ảnh đỉnh cao nhờ cụm camera siêu chất, viên pin lớn 5000mAh cùng sạc nhanh 120W. Tất cả sẽ mang tới một siêu phẩm đình đám giúp bạn có được trải nghiệm độc đáo và khẳng định được cá tính của mình.',
+                'product_image' => 'xiami13t.png'
+            ],
+
+            [
+                'product_name' => 'iPhone 13 Pro Max',
+                'product_type' => '1',
+                'product_quantity' => 30,
+                'product_price' => '22.300.000 vnđ',
+                'product_detail' => 'Phone 13 Pro Max chắc chắn sẽ là chiếc smartphone cao cấp được quan tâm nhiều nhất trong năm 2021. Dòng iPhone 13 series được ra mắt vào ngày 14 tháng 9 năm 2021 tại sự kiện "California Streaming" diễn ra trực tuyến tương tự năm ngoái cùng với 3 phiên bản khác là iPhone 13, 13 mini và 13 Pro. Vậy điện thoại 13 Pro Max giá bao nhiêu? Có gì nổi bật? Cùng tìm hiểu ngay nhé!',
+                'product_image' => 'iphone13promax.png'
+            ],
+
+            [
+                'product_name' => 'iPhone 13 ',
+                'product_type' => '1',
+                'product_quantity' => 30,
+                'product_price' => '18.900.000 vnđ',
+                'product_detail' => 'iPhone 13 sẽ có 4 phiên bản khác nhau và kích thước không đổi so với series iPhone 12 hiện tại. Nếu iPhone 12 có sự thay đổi trong thiết kế từ góc cạnh bo tròn (Thiết kế được duy trì từ thời iPhone 6 đến iPhone 11 Pro Max) sang thiết kế vuông vắn (đã từng có mặt trên iPhone 4 đến iPhone 5S, SE).',
+                'product_image' => 'iphone12.png'
             ],
             
             [
-                'product_name' => 'iPad Pro 11 inch 2022 M2',
-                'product_type' => '3',
+                'product_name' => 'Laptop ASUS TUF Gaming',
+                'product_type' => '2',
                 'product_quantity' => 10,
-                'product_price' => '25.400.000 vnđ',
-                'product_detail' => 'iPad Pro 11 2022 M2 Wifi 5G 128GB vừa qua đã được hãng Apple cho ra mắt với nhiều tính năng cao cấp. Cùng với những cải tiến mới như trang bị dòng chip xịn sò, kết hợp với viên pin có dung lượng ổn định, chiếc iPad Pro thế hệ mới này hứa hẹn sẽ mang đến sự trải nghiệm thú vị cho bạn.',
-                'product_image' => 'ipadpro13.png'
+                'product_price' => '19.799.000 vnđ',
+                'product_detail' => 'Laptop Asus TUF Gaming A15 FA507NU-LP140W đem tới hiệu suất xử lý khủng nhờ được trang bị chipset AMD Ryzen 5 7535HS và VGA NVIDIA GeForce RTX 4050 6GB. Cùng với đó là khả năng lưu trữ và đa nhiệm xuất sắc thông qua dung lượng RAM 8GB DDR5-4800 SO-DIMM cùng ổ cứng 512GB PCIe 4.0 NVMe M.2 SSD. Ngoài ra, dòng laptop Asus Gaming này còn sở hữu màn hình 15.6 inches với công nghệ hiển thị tiên tiến, hỗ trợ độ sáng 250nits và độ phủ màu sRGB 100% siêu thực.',
+                'product_image' => 'tubgaming.png'
             ],
 
             [
-                'product_name' => 'Samsung Galaxy Tab S9 Ultra 12GB 512GB',
-                'product_type' => '3',
+                'product_name' => 'Laptop Asus Expertbook',
+                'product_type' => '2',
                 'product_quantity' => 10,
-                'product_price' => '21.400.000 vnđ',
-                'product_detail' => 'Samsung Galaxy Tab S9 Ultra là thế hệ tablet mới của nhà Samsung với thiết kế đẹp mắt, thanh lịch, màn hình Dynamic AMOLED 2X cùng với chipset Snapdragon 8 gen 2 mạnh mẽ cân mọi tác vụ. Bên cạnh đó, thời lượng pin của Galaxy Tab S9 Ultra cũng được cải thiện so với người tiền nhiệm để mang đến trải nghiệm lâu hơn cho người dùng.',
-                'product_image' => 'samsunggalaxytabs9.png'
+                'product_price' => '14.560.000 vnđ',
+                'product_detail' => 'Laptop ASUS ExpertBook B1402CBA-NK2669W mạnh mẽ nhờ được trang bị bộ vi xử lý Intel Core I5-1235U, RAM 16GB kết hợp cùng ổ cứng SSD 512GB PCIe. Màn hình 14.0 inch Full HD mang tới chất lượng hình ảnh sắc nét vượt trội. Hệ điều hành Windows 11 và thiết kế mỏng nhẹ cùng tone màu sang trọng mang tới lựa chọn tuyệt vời cho người dùng.',
+                'product_image' => 'laptopasus.png'
             ],
 
             [
-                'product_name' => 'Xiaomi Pad 6s Pro 8GB 256GB',
-                'product_type' => '3',
+                'product_name' => 'Laptop Dell Vostro',
+                'product_type' => '2',
                 'product_quantity' => 10,
-                'product_price' => '10.000.000 vnđ',
-                'product_detail' => 'Xiaomi Pad 6S Pro sở hữu màn hình 12.4 inch kích thước lớn cùng độ phân giải 3K hiển thị sống động, tần số quét 144Hz. Máy tính bảng với cấu hình từ con chip được sản xuất trên tiến trình 4nm - Snapdragon® 8 thế hệ 2. Cùng với đó, thiết bị sở hữu viên pin dung lượng lớn 10000 mah cùng sạc nhanh công suất 120W.',
-                'product_image' => 'xiaomiTab.png'
+                'product_price' => '11.000.000 vnđ',
+                'product_detail' => 'Laptop Dell Vostro 3520 là một trong những sản phẩm laptop Dell Vostro đáng chú ý của thương hiệu Dell, được thiết kế để đáp ứng nhu cầu làm việc và giải trí của người dùng hiện đại. Với thiết kế nhỏ gọn, hiệu năng mạnh mẽ và tính năng bảo mật ấn tượng, sản phẩm này sẽ là một trợ thủ đắc lực cho công việc và giải trí hàng ngày của bạn.',
+                'product_image' => 'laptopdellvostro.png'
             ],
-            
+
             [
-                'product_name' => 'iPad Pro 11 2021 M1 WiFi 128GB',
+                'product_name' => 'Laptop Gigabyte',
+                'product_type' => '2',
+                'product_quantity' => 10,
+                'product_price' => '19.300.000 vnđ',
+                'product_detail' => 'Laptop Gigabyte G5 MF-F2VN333SH thuộc phân khúc cao cấp có thể hỗ trợ người dùng trải nghiệm nhiều tựa game với hiệu ứng đồ họa bắt mắt. Nổi bật với bộ vi xử lý đầu bảng của Intel và dung lượng bộ nhớ vượt trội, chiếc laptop Gigabyte hứa hẹn sẽ là người bạn đồng hành tuyệt vời giúp chiến thắng trong các trận đấu. ',
+                'product_image' => 'giga.png'
+            ],
+
+            [
+                'product_name' => 'Laptop Surface Pro 9',
+                'product_type' => '2',
+                'product_quantity' => 10,
+                'product_price' => '15.790.000 vnđ',
+                'product_detail' => 'Laptop Surface Pro 9 là dòng laptop 13 inch sở hữu thiết kế đẹp mắt, tính di động cao để thao tác sử dụng thêm linh hoạt. Surface Pro 9 còn mang đến hiệu suất mạnh mẽ, giúp xử lý nhanh mọi tác vụ và có thể giải trí được với game 3D.',
+                'product_image' => 'surface.png'
+            ],
+
+            [
+                'product_name' => 'Laptop HP Gaming Victus',
+                'product_type' => '2',
+                'product_quantity' => 10,
+                'product_price' => '21.320.000 vnđ',
+                'product_detail' => 'Laptop HP Gaming Victus 15 FB1023AX 94F20PA được trang bị bộ xử lý trung tâm AMD Ryzen 5 7535HS 6 nhân, 12 luồng với tốc độ xung nhịp lên tới 4.5GHz. RAM dung lượng 8GB xử lý tốt khối lượng công việc tốt và phù hợp để thiết kế đồ hoạ 2D. VGA NVIDIA Geforce RTX 2050 4GB trên laptop HP Victus này mang tới trải nghiệm chiến game mượt mà trên màn hình rộng 15.6 inch cùng tần số quét 144Hz ấn tượng. ',
+                'product_image' => 'hpgaming.png'
+            ],
+
+            [
+                'product_name' => 'iPad Air 6 M2',
                 'product_type' => '3',
                 'product_quantity' => 10,
-                'product_price' => '21.000.000 vnđ',
-                'product_detail' => 'iPad Pro 11 inch 2021 sở hữu ngoại hình mang nhiều điểm tương tự về ngoại hình với chiếc iPad Pro trước đó. Apple iPad Pro 2021 sử dụng màn hình kích thước 11 inch và sử dụng màn hình LCD truyền thống.  Màn hình trên iPad Pro 2021 này với công nghệ màu ProMotion cùng độ phân giải cao 264 pixel mỗi inch. Màn hình này cũng được trang bị lớp phủ chống bám vân tay và chống phản xạ, nâng cao trải nghiệm cho người dùng.',
-                'product_image' => 'ipadpro13.png'
-            ]
+                'product_price' => '15.670.000 vnđ',
+                'product_detail' => 'iPad Air 6 M2 là mẫu máy tính bảng đến từ thương hiệu Apple sang trọng với một cấu hình vượt trội. Vậy iPad Air 6 M2 chính hãng này có gì nổi bật về thiết kế và cấu hình, cùng hiểu ngay sau đây.',
+                'product_image' => 'ipadair6.png'
+            ],
 
+            [
+                'product_name' => 'Redmi Pad SE',
+                'product_type' => '3',
+                'product_quantity' => 10,
+                'product_price' => '17.450.000 vnđ',
+                'product_detail' => 'Máy tính bảng Xiaomi Redmi Pad SE sở hữu màn hình LCD 11 inch với tần số quét 90hz cùng chứng nhận bảo vệ mắt TÜV Rheinland ánh sáng xanh thấp và không nhấp nháy. Cùng với đó, tablet còn được trang bị loa Dolby Atmos âm thanh nổi giúp mang lại trải nghiệm âm thanh ấn tượng. Máy với ba lựa chọn màu sắc là xanh bạc hà, tím Lavender và xám khoáng thạch.',
+                'product_image' => 'redmipadse.png'
+            ],
+
+            [
+                'product_name' => 'TCL Tab 11',
+                'product_type' => '3',
+                'product_quantity' => 10,
+                'product_price' => '5.300.000 vnđ',
+                'product_detail' => 'Máy tính bảng TCL Tab 11 với màn hình IPS LCD 1200 x 2000 pixels kích thước lớn 10.95 inches cùng dải màu 16.7 triệu màu mang lại trải nghiệm hiển thị sống động. Cùng với đó, máy còn được trang bị một cấu hình mạnh mẽ với 4GB RAM cùng con chip Mediatek Helio P60T Octa-core. TCL Tab 11 còn tương tích với bút T-Pen giúp người dùng take-note, ghi chú một cách dễ dàng.',
+                'product_image' => 'tcltab11.png'
+            ],
+
+            [
+                'product_name' => 'Nokia T21',
+                'product_type' => '3',
+                'product_quantity' => 10,
+                'product_price' => '7.200.000 vnđ',
+                'product_detail' => 'Nokia T21 là một cái tên đã không còn quá xa lạ với những tín đồ đam mê công nghệ. Được phát triển từ phiên bản đời trước là Nokia T20, T21 đã có những bước đột phá về thiết kế bên ngoài và cấu hình bên trong, mang tới cho người dùng một trải nghiệm cực kỳ thú vị và mới lạ.',
+                'product_image' => 'nokiat21.png'
+            ],
+
+            [
+                'product_name' => 'TECNO SPARK 20PRO+',
+                'product_type' => '1',
+                'product_quantity' => 10,
+                'product_price' => '8.300.000 vnđ',
+                'product_detail' => 'Tecno Spark 20 Pro Plus sở hữu cấu hình cực ấn tượng trong phân khúc giá rẻ với chip Helio G99 Ultimate, 8GB RAM (+8GB mở rộng) cùng bộ nhớ 256GB. Màn hình AMOLED 6,78 inch 120 Hz sẽ luôn mang tới chất lượng hiển thị của điện thoại. Hệ thống camera có độ phân giải 108MP, hỗ trợ quay video 2K đáp ứng tốt cho nhu cầu sống ảo của người dùng.',
+                'product_image' => 'tecnospark20.png'
+            ],
+
+            [
+                'product_name' => 'Samsung Galaxy S23 Ultra',
+                'product_type' => '1',
+                'product_quantity' => 10,
+                'product_price' => '22.140.000 vnđ',
+                'product_detail' => 'Samsung S23 Ultra là dòng điện thoại cao cấp của Samsung, sở hữu camera độ phân giải 200MP ấn tượng, chip Snapdragon 8 Gen 2 mạnh mẽ, bộ nhớ RAM 8GB mang lại hiệu suất xử lý vượt trội cùng khung viền vuông vức sang trọng. Sản phẩm được ra mắt từ đầu năm 2023.',
+                'product_image' => 's23ultra.png'
+            ],
         ]);
+
     }
 }
