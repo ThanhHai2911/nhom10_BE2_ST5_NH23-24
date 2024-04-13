@@ -158,26 +158,6 @@ class ProductSeeder extends Seeder
             ],
 
             [
-                'product_name' => 'iPad mini 6 WiFi',
-                'product_type' => '3',
-                'product_quantity' => 10,
-                'product_price' => '9.000.000 vnđ',
-                'product_detail' => 'iPad Mini 6 được Apple thiết kế với hình dáng nhỏ gọn cân đối chiều dài và ngang giúp bạn có thể mang theo bên mình mọi lúc mọi nơi để hỗ trợ cho quá trình học tập, làm việc hay giải trí một cách dễ dàng.',
-                'product_image' => 'ipadmini6.png',
-                'type_name' => '1'
-            ],
-            
-            [
-                'product_name' => 'iPad Pro 2022 M2',
-                'product_type' => '3',
-                'product_quantity' => 10,
-                'product_price' => '25.400.000 vnđ',
-                'product_detail' => 'iPad Pro 11 2022 M2 Wifi 5G 128GB vừa qua đã được hãng Apple cho ra mắt với nhiều tính năng cao cấp. Cùng với những cải tiến mới như trang bị dòng chip xịn sò, kết hợp với viên pin có dung lượng ổn định, chiếc iPad Pro thế hệ mới này hứa hẹn sẽ mang đến sự trải nghiệm thú vị cho bạn.',
-                'product_image' => 'ipadpro13.png',
-                'type_name' => '1'
-            ],
-
-            [
                 'product_name' => 'Samsung Galaxy Tab S9',
                 'product_type' => '3',
                 'product_quantity' => 10,
@@ -195,16 +175,6 @@ class ProductSeeder extends Seeder
                 'product_detail' => 'Xiaomi Pad 6S Pro sở hữu màn hình 12.4 inch kích thước lớn cùng độ phân giải 3K hiển thị sống động, tần số quét 144Hz. Máy tính bảng với cấu hình từ con chip được sản xuất trên tiến trình 4nm - Snapdragon® 8 thế hệ 2. Cùng với đó, thiết bị sở hữu viên pin dung lượng lớn 10000 mah cùng sạc nhanh công suất 120W.',
                 'product_image' => 'xiaomiTab.png',
                 'type_name' => '3'
-            ],
-            
-            [
-                'product_name' => 'iPad Pro 2021 M1 ',
-                'product_type' => '3',
-                'product_quantity' => 10,
-                'product_price' => '21.000.000 vnđ',
-                'product_detail' => 'iPad Pro 11 inch 2021 sở hữu ngoại hình mang nhiều điểm tương tự về ngoại hình với chiếc iPad Pro trước đó. Apple iPad Pro 2021 sử dụng màn hình kích thước 11 inch và sử dụng màn hình LCD truyền thống.  Màn hình trên iPad Pro 2021 này với công nghệ màu ProMotion cùng độ phân giải cao 264 pixel mỗi inch. Màn hình này cũng được trang bị lớp phủ chống bám vân tay và chống phản xạ, nâng cao trải nghiệm cho người dùng.',
-                'product_image' => 'ipadpro13.png',
-                'type_name' => '1'
             ],
 
             [
@@ -277,15 +247,6 @@ class ProductSeeder extends Seeder
                 'type_name' => '8'
             ],
 
-            [
-                'product_name' => 'iPad Pro 11 inch M3 5G',
-                'product_type' => '3',
-                'product_quantity' => 10,
-                'product_price' => '23.760.000 vnđ',
-                'product_detail' => 'iPad Pro 11 inch M3 5G sở hữu công nghệ màn hình OLED, tần số quét 120Hz và trang bị con chip Apple M3 kết hợp với phiên bản iPadOS 17 đem lại hiệu năng vượt trội. Bên cạnh đó, chiếc máy tính bảng iPad Pro này có hai camera 12MP và 10MP, dung lượng RAM tối đa 16GB đa nhiệm cực kỳ tốt. ',
-                'product_image' => 'ipadprom3.png',
-                'type_name' => '1'
-            ],
 //
             [
                 'product_name' => 'Xiaomi Redmi Note 12',
@@ -314,7 +275,7 @@ class ProductSeeder extends Seeder
                 'product_price' => '10.790.000 vnđ',
                 'product_detail' => 'Xiaomi 13T Pro là flagship mới nhất nhà Xiaomi, mạnh mẽ ấn tượng với chip MediaTek Dimensity 9200+, cùng với đó là RAM 12GB và bộ nhớ trong lên tới 512GB. Đặc biệt, khả năng chụp ảnh đỉnh cao nhờ cụm camera siêu chất, viên pin lớn 5000mAh cùng sạc nhanh 120W. Tất cả sẽ mang tới một siêu phẩm đình đám giúp bạn có được trải nghiệm độc đáo và khẳng định được cá tính của mình.',
                 'product_image' => 'xiami13t.png',
-                'type_name' => '7'
+                'type_name' => '3'
             ],
 
             [
@@ -388,16 +349,6 @@ class ProductSeeder extends Seeder
             ],
 
             [
-                'product_name' => 'iPad Air 6 M2',
-                'product_type' => '3',
-                'product_quantity' => 10,
-                'product_price' => '15.670.000 vnđ',
-                'product_detail' => 'iPad Air 6 M2 là mẫu máy tính bảng đến từ thương hiệu Apple sang trọng với một cấu hình vượt trội. Vậy iPad Air 6 M2 chính hãng này có gì nổi bật về thiết kế và cấu hình, cùng hiểu ngay sau đây.',
-                'product_image' => 'ipadair6.png',
-                'type_name' => '1'
-            ],
-
-            [
                 'product_name' => 'Redmi Pad SE',
                 'product_type' => '3',
                 'product_quantity' => 10,
@@ -444,7 +395,7 @@ class ProductSeeder extends Seeder
                 'product_price' => '22.140.000 vnđ',
                 'product_detail' => 'Samsung S23 Ultra là dòng điện thoại cao cấp của Samsung, sở hữu camera độ phân giải 200MP ấn tượng, chip Snapdragon 8 Gen 2 mạnh mẽ, bộ nhớ RAM 8GB mang lại hiệu suất xử lý vượt trội cùng khung viền vuông vức sang trọng. Sản phẩm được ra mắt từ đầu năm 2023.',
                 'product_image' => 's23ultra.png',
-                'type_name' => '3'
+                'type_name' => '2'
             ],
 
             [
@@ -507,6 +458,255 @@ class ProductSeeder extends Seeder
                 'type_name' => '15'
             ],
 
+            [
+                'product_name' => 'iPad Pro 2022 M2',
+                'product_type' => '3',
+                'product_quantity' => 10,
+                'product_price' => '25.400.000 vnđ',
+                'product_detail' => 'iPad Pro 11 2022 M2 Wifi 5G 128GB vừa qua đã được hãng Apple cho ra mắt với nhiều tính năng cao cấp. Cùng với những cải tiến mới như trang bị dòng chip xịn sò, kết hợp với viên pin có dung lượng ổn định, chiếc iPad Pro thế hệ mới này hứa hẹn sẽ mang đến sự trải nghiệm thú vị cho bạn.',
+                'product_image' => 'ipadpro13.png',
+                'type_name' => '1'
+            ],
+
+            [
+                'product_name' => 'iPad Pro 2021 M1 ',
+                'product_type' => '3',
+                'product_quantity' => 10,
+                'product_price' => '21.000.000 vnđ',
+                'product_detail' => 'iPad Pro 11 inch 2021 sở hữu ngoại hình mang nhiều điểm tương tự về ngoại hình với chiếc iPad Pro trước đó. Apple iPad Pro 2021 sử dụng màn hình kích thước 11 inch và sử dụng màn hình LCD truyền thống.  Màn hình trên iPad Pro 2021 này với công nghệ màu ProMotion cùng độ phân giải cao 264 pixel mỗi inch. Màn hình này cũng được trang bị lớp phủ chống bám vân tay và chống phản xạ, nâng cao trải nghiệm cho người dùng.',
+                'product_image' => 'ipadpro13.png',
+                'type_name' => '1'
+            ],
+
+            [
+                'product_name' => 'iPad Air 6 M2',
+                'product_type' => '3',
+                'product_quantity' => 10,
+                'product_price' => '15.670.000 vnđ',
+                'product_detail' => 'iPad Air 6 M2 là mẫu máy tính bảng đến từ thương hiệu Apple sang trọng với một cấu hình vượt trội. Vậy iPad Air 6 M2 chính hãng này có gì nổi bật về thiết kế và cấu hình, cùng hiểu ngay sau đây.',
+                'product_image' => 'ipadair6.png',
+                'type_name' => '1'
+            ],
+
+            [
+                'product_name' => 'Samsung Galaxy S24 Ultra',
+                'product_type' => '1',
+                'product_quantity' => 10,
+                'product_price' => '28.140.000 vnđ',
+                'product_detail' => 'Samsung S24 Ultra là dòng điện thoại cao cấp của Samsung, sở hữu camera độ phân giải 200MP ấn tượng, chip Snapdragon 8 Gen 3 mạnh mẽ, bộ nhớ RAM 8GB mang lại hiệu suất xử lý vượt trội cùng khung viền vuông vức sang trọng. Sản phẩm được ra mắt từ đầu năm 2024.',
+                'product_image' => 'samsungs24ultra.png',
+                'type_name' => '2'
+            ],
+
+            [
+                'product_name' => 'Samsung Galaxy M34',
+                'product_type' => '1',
+                'product_quantity' => 10,
+                'product_price' => '6.340.000 vnđ',
+                'product_detail' => 'Samsung M34 5G là chiếc điện thoại làm nên ấn tượng nhờ chip Exynos 1280 mạnh mẽ và ROM 128 GB, RAM 8GB. Cùng với đó là hệ thống 3 camera với cảm biến chính 50MP, góc siêu rộng 8 MP + macro 2 MP và camera selfie 13MP. Cạnh đó, màn hình Super AMOLED cao cấp, tần số quét 120Hz và viên pin 6000mAh còn tạo nên những điểm nhấn đặc biệt cho chiếc smartphone này.',
+                'product_image' => 'Galaxy M34.png',
+                'type_name' => '2'
+            ],
+
+            [
+                'product_name' => 'Samsung Galaxy S22 Ultra',
+                'product_type' => '1',
+                'product_quantity' => 10,
+                'product_price' => '18.340.000 vnđ',
+                'product_detail' => 'Điện thoại Samsung S22 Ultra phiên bản RAM 12GB cho cảm giác siêu mượt mà khi mở và đóng ứng dụng, đi kèm bộ nhớ trong 256GB cho bạn thoải mái lưu trữ những khung hình, thước phim chất lượng cao. Vi xử lý Qualcomm Snapdragon 8 Gen 1 hứa hẹn mang đến hiệu năng tuyệt đỉnh, xử lý mượt mà mọi tác vụ.',
+                'product_image' => 'Galaxy S22 Ultra.png',
+                'type_name' => '2'
+            ],
+
+            [
+                'product_name' => 'Samsung Galaxy A35',
+                'product_type' => '1',
+                'product_quantity' => 10,
+                'product_price' => '7.990.000 vnđ',
+                'product_detail' => 'Samsung Galaxy A35 sở hữu những tính năng mang tính đột phá, vượt trội hơn hẳn những mẫu điện thoại thông thường. Với thiết kế ngoại hình ấn tượng cùng sự mạnh mẽ của hiệu năng tới từ con chip Exynos 1380 đi kèm với bộ vi xử lý đồ hoạ ấn tượng, sản phẩm Samsung Galaxy A mới này được các chuyên giá đánh giá là rất có tiềm năng so với những chiếc máy cùng phân khúc.',
+                'product_image' => 'Galaxy A35.png',
+                'type_name' => '2'
+            ],
+
+            [
+                'product_name' => 'Samsung Galaxy S24 Plus',
+                'product_type' => '1',
+                'product_quantity' => 10,
+                'product_price' => '20.990.000 vnđ',
+                'product_detail' => 'Samsung Galaxy S24 Plus có màn hình 6.7 inch, với tấm nền Dynamic AMOLED 2X giúp hình ảnh sống động đến từng chi tiết, độ làm mới liên tục từng giây. Camera của điện thoại gồm: camera chính 50MP và camera selfie 12MP, giúp ghi lại những khoảnh khắc đáng nhớ của bạn bên gia đình. Hiệu năng mạnh mẽ với dung lượng 8GB+256GB,viên pin 4.900 mAh kết hợp sạc nhanh 45W.',
+                'product_image' => 'Galaxy S24 Plus.png',
+                'type_name' => '2'
+            ],
+
+            [
+                'product_name' => 'Samsung Galaxy S21 FE',
+                'product_type' => '1',
+                'product_quantity' => 10,
+                'product_price' => '9.990.000 vnđ',
+                'product_detail' => 'Samsung S21 FE 8GB 128GB sở hữu chipset Exynos 2100 mạnh mẽ có thể chơi mượt mà, RAM 8GB và ROM 128GB cho khả năng đa nhiệm và lưu trữ ổn định. Thêm vào đó cụm camera chất lượng, cho hình ảnh sắc nét: 12MP+12MP+8MP và camera selfie 32MP. Không chỉ vậy, các phiên bản màu sắc thanh lịch, thời thượng giúp sản phẩm nổi bật hơn giữa hàng loạt các thương hiệu khác.',
+                'product_image' => 'Galaxy S21 FE.png',
+                'type_name' => '2'
+            ],
+
+            [
+                'product_name' => 'Xiaomi POCO X6 Pro',
+                'product_type' => '1',
+                'product_quantity' => 30,
+                'product_price' => '8.300.000 vnđ',
+                'product_detail' => 'Điện thoại Xiaomi Poco X6 Pro được trang bị con chip Dimensity 8300 Ultra 8 nhân, tiến trình 4nm, tích hợp với GPU Mali-G615 cùng RAM 8GB, bộ nhớ trong 256GB. Máy sở hữu 3 camera sau với camera chính 64MP và 1 camera selfie 16MP. Ngoài ra máy X6 Pro được trang bị màn hình AMOLED 6.67 inch, độ phân giải 1220 x 2712 pixels cùng tần số quét 120Hz. ',
+                'product_image' => 'POCO X6 Pro.png',
+                'type_name' => '3'
+            ],
+
+            [
+                'product_name' => 'Redmi Note 12 Pro',
+                'product_type' => '1',
+                'product_quantity' => 30,
+                'product_price' => '5.790.000 vnđ',
+                'product_detail' => 'Xiaomi Redmi Note 12 Pro 4G là mẫu điện thoại tầm trung mới của hãng Xiaomi vừa được ra mắt vào tháng 4 năm 2023. Mẫu điện thoại Xiaomi mới này được trang bị màn hình 6.67 inch cùng tần số quét tới 120Hz giúp các chuyển động mượt mà, đặc biệt trong các trận chiến game. Xiaomi Redmi Note 12 Pro 4G cũng sẽ hoạt động ổn định với con chip Snapdragon® 732G cùng bộ nhớ RAM 6GB. Điện thoại cũng đáp ứng tốt nhu cầu nhiếp ảnh của người dùng với cụm bốn camera sau, trong đó ống kính chính sở hữu độ phân giải tới 50MP.',
+                'product_image' => 'Note 12 Pro.png',
+                'type_name' => '3'
+            ],
+
+            [
+                'product_name' => 'Xiaomi 13',
+                'product_type' => '1',
+                'product_quantity' => 30,
+                'product_price' => '16.490.000 vnđ',
+                'product_detail' => 'Xiaomi 13 là sản phẩm mới được trang bị màn hình OLED kích thước 6.36 inch cùng tần số quét lên đến 120Hz. Bên trong Xiaomi 13 là con chip Snapdragon 8 Gen 2 mới nhất cùng bộ nhớ RAM 8GB vượt trội. Điện thoại cũng đáp ứng tốt khả năng nhiếp ảnh với camera Leica 50MP.',
+                'product_image' => 'Xiaomi 13.png',
+                'type_name' => '3'
+            ],
+
+            [
+                'product_name' => 'Sony Xperia 1 V',
+                'product_type' => '1',
+                'product_quantity' => 20,
+                'product_price' => '35.060.000 vnđ',
+                'product_detail' => 'Sony Xperia 1 V sở hữu hệ thống camera vô cùng ấn tượng với 3 cảm biến có độ phân giải 52MP, 12MP và 12MP. Mẫu điện thoại Sony này sở hữu bộ vi xử lý Snapdragon 8 Gen 2 mạnh mẽ, RAM đạt đến 12GB giúp cải tiến hiệu suất hoạt động trên máy đáng kể. Màn hình Xperia 1V trang bị tấm nền OLED 4K với kích thước 6.5 inch cùng tần số quét 120Hz.',
+                'product_image' => 'Xperia 1 V.png',
+                'type_name' => '7'
+            ],
+
+            [
+                'product_name' => 'Sony Xperia 10 V',
+                'product_type' => '1',
+                'product_quantity' => 20,
+                'product_price' => '16.060.000 vnđ',
+                'product_detail' => 'Sony Xperia 10 V được trang bị cấu hình mạnh mẽ với chip Snapdragon 695 5G, RAM 8GB ấn tượng. Bên cạnh đó chiếc điện thoại Sony này còn sở hữu giá thành phải chăng cùng nhiều tính năng vượt trội. Chắc chắn Xperia 10V sẽ mang đến lợi thế cạnh tranh mà nhiều thương hiệu khác cùng phân khúc phải dè chừng.',
+                'product_image' => 'Xperia 10 V.png',
+                'type_name' => '7'
+            ],
+
+            [
+                'product_name' => 'Xperia 5 V',
+                'product_type' => '1',
+                'product_quantity' => 20,
+                'product_price' => '25.990.000 vnđ',
+                'product_detail' => ' Sony Xperia 5V với thiết kế phẳng hiện đại, màn hình OLED tuyệt hảo, chip Snapdragon 8 Gen 2 mạnh mẽ, bộ đôi camera 52MP-12MP chụp ảnh chất lượng cùng viên pin 5000mAh cho trải nghiệm xuyên suốt cả ngày.',
+                'product_image' => 'Xperia 5 V.png',
+                'type_name' => '7'
+            ],
+
+            [
+                'product_name' => 'TTECNO POVA 5',
+                'product_type' => '1',
+                'product_quantity' => 10,
+                'product_price' => '5.570.000 vnđ',
+                'product_detail' => 'Điện thoại Tecno Pova 5 hoạt động trên con chip MediaTek Helio G99 và bộ nhớ RAM 8GB cùng viên pin dung lượng 6000mAh hỗ trợ sạc nhanh công suất 45W. Vẻ ngoài máy với màn hình IPS LCD 6.78 inch tần số quét 120Hz hiển thị mượt mà. Cùng với đó cụm camera chính 50MP sẽ giúp điện thoại Tecno này sở hữu khả năng nhiếp ảnh ổn định.',
+                'product_image' => 'TECNO POVA 5.png',
+                'type_name' => '6'
+            ],
+
+            [
+                'product_name' => 'TECNO Camon 20 Pro',
+                'product_type' => '1',
+                'product_quantity' => 10,
+                'product_price' => '4.370.000 vnđ',
+                'product_detail' => 'Điện thoại Tecno Pova 5 hoạt động trên con chip MediaTek Helio G99 và bộ nhớ RAM 8GB cùng viên pin dung lượng 6000mAh hỗ trợ sạc nhanh công suất 45W. Vẻ ngoài máy với màn hình IPS LCD 6.78 inch tần số quét 120Hz hiển thị mượt mà. Cùng với đó cụm camera chính 50MP sẽ giúp điện thoại Tecno này sở hữu khả năng nhiếp ảnh ổn định.',
+                'product_image' => '20 Pro.png',
+                'type_name' => '6'
+            ],
+
+            [
+                'product_name' => 'Surface Pro 8',
+                'product_type' => '2',
+                'product_quantity' => 10,
+                'product_price' => '22.790.000 vnđ',
+                'product_detail' => 'Surface Pro 8 Core i5 / 8GB / 128GB dòng laptop được thiết kế 2 trong 1 vô cùng sang trọng, ấn tượng cùng màn hình có độ phân giải cao giúp hiển thị hình ảnh một cách rõ nét và chân thật, đáp ứng nhu cầu học tập, làm việc và giải trí của người dùng.',
+                'product_image' => 'Surface Pro 8.png',
+                'type_name' => '11'
+            ],
+
+            [
+                'product_name' => 'Surface Laptop Go',
+                'product_type' => '2',
+                'product_quantity' => 10,
+                'product_price' => '11.790.000 vnđ',
+                'product_detail' => 'Laptop mỏng nhẹ ngày càng trở nên phổ biến và được ưu tiên hàng đầu khi chọn lựa laptop của người dùng bởi tính tiện lợi khi di chuyển của nó. Khi nhắc đến các mẫu laptop mỏng nhẹ nổi tiếng nhất hiện nay, phải kể đến Surface Laptop Go 21K-00019 - một trong những đại diện lý tưởng cho dòng laptop Microsoft Surface nhỏ gọn nhưng hiệu năng vẫn mạnh mẽ.',
+                'product_image' => 'Laptop Go.png',
+                'type_name' => '11'
+            ],
+
+            [
+                'product_name' => 'TCL 40 NXT',
+                'product_type' => '1',
+                'product_quantity' => 10,
+                'product_price' => '3.990.000 vnđ',
+                'product_detail' => 'Điện thoại TCL 40 Nxt Paper sở hữu màn hình LCD 6.78 inch cùng độ phân giải tới FHD, tần số quét màn hình 90Hz mang lại khả năng hiển thị ấn tượng. Điện thoại còn được trang bị cấu hình với con chip Helio G88 cùng bộ nhớ RAM 8GB và dung lượng lưu trữ 256GB. Máy cũng được trang bị cụm camera chất lượng với ống kính chính 50MP và hai ống kính phụ 5MP và 2MP.',
+                'product_image' => 'TCL 40 NXT.png',
+                'type_name' => '13'
+            ],
+
+            [
+                'product_name' => 'TCL 40SE',
+                'product_type' => '1',
+                'product_quantity' => 10,
+                'product_price' => '5.300.000 vnđ',
+                'product_detail' => 'TCL 40 SE tạo được ấn tượng với người dùng khi sở hữu chipset ổn định Helio G37 cùng chất lượng hiển thị tuyệt vời trên màn hình NXTVISION 6.75’’ cao cấp. Trải nghiệm quay chụp trên thế hệ điện thoại TCL cũng có nhiều cải tiến khi được tích hợp cụm 3 camera AI 50MP. Kèm theo đó là viên pin 5010 mAh, giúp kéo dài thời lượng sử dụng của người dùng.',
+                'product_image' => 'TCL 40SE.png',
+                'type_name' => '13'
+            ],
+
+            [
+                'product_name' => 'Laptop Gigabyte U4',
+                'product_type' => '2',
+                'product_quantity' => 10,
+                'product_price' => '21.670.000 vnđ',
+                'product_detail' => 'Hiệu suất làm việc hằng ngày của bạn sẽ được tăng cường với sản phẩm laptop Gigabyte U4 UD-70S1823SO. Đây lag chiếc laptop Gigabyte mang vẻ ngoài sang trọng cùng với vi xử lý Intel đời 11 và 16 GB RAM bên trong hỗ trợ nhu cầu làm việc đa nhiệm một cách hiệu quả tối ưu.',
+                'product_image' => 'Gigabyte U4.png',
+                'type_name' => '4'
+            ],
+
+            [
+                'product_name' => 'OPPO Reno7',
+                'product_type' => '1',
+                'product_quantity' => 30,
+                'product_price' => '7.300.000 vnđ',
+                'product_detail' => 'Đi ngược với thiết kế mặt lưng phẳng cùng góc cạnh vuông vức, điện thoại OPPO Reno7 5G được trang bị thiết kế với góc cạnh bo tròn mềm mại. Thiết kế này hoàn toàn không làm mất đi vẻ sang trọng của thiết bị đồng thời mang lại khả năng cầm nắm dễ dàng. Tổng thể, OPPO Reno7 5G khá nhẹ với tổng trọng lượng chỉ khoảng 173g, dễ dàng đút túi và mang theo mà không cảm thấy nặng nề.',
+                'product_image' => 'OPPO Reno7.png',
+                'type_name' => '14'
+            ],
+
+            [
+                'product_name' => 'OPPO Find N2 Flip',
+                'product_type' => '1',
+                'product_quantity' => 30,
+                'product_price' => '16.030.000 vnđ',
+                'product_detail' => 'OPPO Find N2 Flip có kích thước 3.26 inch ở màn hình ngoài và bên trong là 6.8 inch, đặc biệt là GẬP KHÔNG NÊP GẤP và công nghệ hình ảnh chuyên nghiệp - MariSilicon X. Ngoài ra smartphone sẽ được vận hành bởi con chip Dimensity 9000+, kèm dung lượng pin 4.300 mAh và sạc siêu nhanh Super VOOC 44W.',
+                'product_image' => 'OPPO Find N2 Flip.png',
+                'type_name' => '14'
+            ],
+
+            [
+                'product_name' => 'OPPO Find N3 Flip',
+                'product_type' => '1',
+                'product_quantity' => 30,
+                'product_price' => '22.030.000 vnđ',
+                'product_detail' => 'OPPO Find N3 Flip chính thức ra mắt thị trường Việt Nam ngày 26/10 sở hữu nhiều ưu điểm vượt trội: chip Dimensity 9200, RAM 12GB cùng bộ nhớ trong 256GB. Cạnh đó, camera điện thoại gập Find N3 Flip hợp tác cùng Hasselblad, ống kính chính độ phân giải 50MP và màn hình AMOLED 6.8 inch cho trải nghiệp quay chụp chuyên nghiệp hơn bao giờ hết.',
+                'product_image' => 'OPPO Find N3 Flip.png',
+                'type_name' => '14'
+            ],
             
         ]);
 
