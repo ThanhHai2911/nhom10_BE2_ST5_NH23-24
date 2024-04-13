@@ -11,6 +11,9 @@
             </div>
         </div>
     </div>
+    @foreach($category as $data)                                  
+    <a href="{{route('product.category',$data->id)}}" style="margin-top: 20px;" class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" >{{$data->type_name}}</a>
+    @endforeach
     @endsection
         
  

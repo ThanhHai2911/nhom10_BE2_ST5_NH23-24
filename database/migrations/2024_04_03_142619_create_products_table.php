@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('product_price');
             $table->string('product_detail',1000);
             $table->string('product_image');
+            $table->string('type_name');
             $table->timestamps();
         });
     }

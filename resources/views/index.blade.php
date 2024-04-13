@@ -74,10 +74,8 @@
                 <div class="brand-wrapper">
                     <div class="brand-list">
                         <img src="img/brand1.png" alt="">
-                        <img src="img/brand2.png" alt="">
                         <img src="img/brand3.png" alt="">
                         <img src="img/brand4.png" alt="">
-                        <img src="img/brand5.png" alt="">
                         <img src="img/brand6.png" alt="">
                     </div>
                 </div>

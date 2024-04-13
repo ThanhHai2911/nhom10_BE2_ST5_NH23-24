@@ -1158,7 +1158,7 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button{background
 /* Menu_Categories */
 .dropbtn {
     color: #6e6a6a;
-    padding: 20px;
+    padding: 19px;
     font-size: 16px;
     border: none;
     cursor: pointer;
@@ -1186,7 +1186,7 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button{background
   .dropdown-content a {
     text-decoration: none;
     display: block;
-    width: 113px;
+    width: 108px;
     border-radius: 10px;
     margin-top: 5px;
 }
@@ -1202,7 +1202,7 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button{background
   }
   
   .dropdown:hover .dropbtn {
-    background-color: #5a88ca;
+    background-color: #7daff5;
     color: #FFF;
   }
 

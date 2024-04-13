@@ -97,12 +97,12 @@
                         <!--Thêm Nav -->
                         <li>
                         <form action="">
-                            <input style="border-radius: 10px; margin-top: 10px; margin-left: 250px;" type="text" placeholder="Search products...">
+                            <input style="border-radius: 10px; margin-top: 10px; margin-left: 180px;" type="text" placeholder="Search products...">
                             <input style="border-radius: 10px;" type="submit" value="Search">
                         </form>
                         </li>
                         </li>    
-                        <li style="margin-left: 260px;">
+                        <li style="margin-left: 330px;">
                         <a href="cart"><i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
                         </li> 
                     </ul>
@@ -120,7 +120,7 @@
             <div class="row">
                 <div class="col-md-4 col-sm-6">
                     <div class="footer-about-us">
-                        <h2><span>UStora</span></h2>
+                        <a href="index"><h2><span>UStora</span></h2></a>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sunt id doloribus vero quam laborum quas alias dolores blanditiis iusto consequatur, modi aliquid eveniet eligendi iure eaque ipsam iste, pariatur omnis sint! Suscipit, debitis, quisquam. Laborum commodi veritatis magni at?</p>
                         <div class="footer-social">
                             <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
