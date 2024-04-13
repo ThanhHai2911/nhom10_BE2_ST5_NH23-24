@@ -63,12 +63,6 @@
                         <h1><a href="./"><img src="img/logo.png"></a></h1>
                     </div>
                 </div>
-                
-                <div class="col-sm-6">
-                    <div class="shopping-item">
-                        <a href="cart">Cart - <span class="cart-amunt">$100</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
-                    </div>
-                </div>
             </div>
         </div>
     </div> <!-- End site branding area -->
@@ -88,10 +82,9 @@
                     <ul class="nav navbar-nav">
                         <li><a href="index">Home</a></li>
                         <li class="active"><a href="shop">Shop page</a></li>
-                        <li><a href="cart">Cart</a></li>    
                         <li>
                             <div class="dropdown">
-                                <button class="dropbtn">Categories</button>
+                                <button class="dropbtn">Category</button>
                                 <div class="dropdown-content">
                                     @foreach($category as $data)                                  
                                         <a href="{{route('category',$data->id)}}" class="menu_categories">{{$data->name}}</a>
@@ -100,7 +93,16 @@
                             </div>
                         </li>
                        <!--Thêm Nav -->    
-
+                       <li>
+                        <form action="">
+                            <input style="border-radius: 10px; margin-top: 10px; margin-left: 250px;" type="text" placeholder="Search products...">
+                            <input style="border-radius: 10px;" type="submit" value="Search">
+                        </form>
+                        </li>
+                        </li>    
+                        <li style="margin-left: 260px;">
+                        <a href="cart"><i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
+                        </li> 
                     </ul>
                 </div>  
             </div>
@@ -133,8 +135,9 @@
                     <div class="footer-menu">
                         <h2 class="footer-wid-title">Categories</h2>
                         <ul>
-                            <li><a href="">Mobile Phone</a></li>
-                          
+                        @foreach($category as $data)                                  
+                            <a style="margin-left: 40px;" href="{{route('category',$data->id)}}" class="menu_categories">{{$data->name}}</a>
+                        @endforeach
                         </ul>                        
                     </div>
                 </div>
@@ -145,7 +148,7 @@
                         <p>Sign up to our newsletter and get exclusive deals you wont find anywhere else straight to your inbox!</p>
                         <div class="newsletter-form">
                             <input type="email" placeholder="Type your email">
-                            <input type="submit" value="Subscribe">
+                            <input type="submit" value="Add">
                         </div>
                     </div>
                 </div>
@@ -157,7 +160,7 @@
             <div class="row">
                 <div class="col-md-8">
                     <div class="copyright">
-                       <p>&copy; 2015 uCommerce. All Rights Reserved. <a href="http://www.freshdesignweb.com" target="_blank">freshDesignweb.com</a></p>
+                        <p>&copy; 2024 All Rights Reserved.</p>
                     </div>
                 </div>
                 

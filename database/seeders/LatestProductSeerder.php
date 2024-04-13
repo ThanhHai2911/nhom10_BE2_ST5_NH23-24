@@ -25,7 +25,7 @@ class LatestProductSeerder extends Seeder
             ],
 
             [
-                'latestproduct_name' => 'OPPO Reno11 F 5G 8GB 256GB',
+                'latestproduct_name' => 'OPPO Reno11 F 5G',
                 'latestproduct_type' => '1',
                 'latestproduct_quantity' => 30,
                 'latestproduct_price' => '8.000.000 vnđ',
@@ -34,7 +34,7 @@ class LatestProductSeerder extends Seeder
             ],
 
             [
-                'latestproduct_name' => 'Nokia 105 4G Pro',
+                'latestproduct_name' => 'Nokia 105 4G',
                 'latestproduct_type' => '1',
                 'latestproduct_quantity' => 25,
                 'latestproduct_price' => '400.000 vnđ',
@@ -43,7 +43,7 @@ class LatestProductSeerder extends Seeder
             ],
 
             [
-                'latestproduct_name' => 'Laptop Lenovo Yoga Duet 7',
+                'latestproduct_name' => 'Laptop Lenovo Yoga',
                 'latestproduct_type' => '2',
                 'latestproduct_quantity' => 25,
                 'latestproduct_price' => '18.990.000 vnđ',
@@ -52,7 +52,7 @@ class LatestProductSeerder extends Seeder
             ],
 
             [
-                'latestproduct_name' => 'MacBook Pro 16 inch M2 Pro 2023',
+                'latestproduct_name' => 'MacBook Pro M2 Pro 2023',
                 'latestproduct_type' => '2',
                 'latestproduct_quantity' => 25,
                 'latestproduct_price' => '82.000.000 vnđ',

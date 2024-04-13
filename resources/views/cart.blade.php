@@ -45,13 +45,11 @@
                     
                     <div class="single-sidebar">
                         <h2 class="sidebar-title">Recent Posts</h2>
+                        @foreach($product_cart as $data)
                         <ul>
-                            <li><a href="#">Sony Smart TV - 2015</a></li>
-                            <li><a href="#">Sony Smart TV - 2015</a></li>
-                            <li><a href="#">Sony Smart TV - 2015</a></li>
-                            <li><a href="#">Sony Smart TV - 2015</a></li>
-                            <li><a href="#">Sony Smart TV - 2015</a></li>
+                            <li><a href="{{route('single.product',$data->id)}}">{{$data->product_name}}</a></li>
                         </ul>
+                        @endforeach
                     </div>
                 </div>
                 

@@ -79,8 +79,6 @@
                         <img src="img/brand4.png" alt="">
                         <img src="img/brand5.png" alt="">
                         <img src="img/brand6.png" alt="">
-                        <img src="img/brand1.png" alt="">
-                        <img src="img/brand2.png" alt="">
                     </div>
                 </div>
             </div>
@@ -97,7 +95,6 @@
             <div class="col-md-4">
                 <div class="single-product-widget">
                     <h2 class="product-wid-title">Top Sellers</h2>
-                    <a href="" class="wid-view-more">View All</a>
                     <div class="single-wid-product">
                         <a href="single-product"><img src="{{asset('img/' . $data->product_image)}}" alt=""
                                 class="product-thumb"></a>
@@ -118,12 +115,11 @@
             <div class="col-md-4">
                 <div class="single-product-widget">
                     <h2 class="product-wid-title">Recently Viewed</h2>
-                    <a href="shop" class="wid-view-more">View All</a>
                     @foreach($data_product as $data )
                     <div class="single-wid-product">
-                        <a href="single-product"><img src="{{asset('img/' . $data->product_image)}}" alt=""
+                        <a href="{{route('single.product',$data->id)}}"><img src="{{asset('img/' . $data->product_image)}}" alt=""
                                 class="product-thumb"></a>
-                        <h2><a href="single-product">{{$data->product_name}}</a></h2>
+                        <h2><a href="{{route('single.product',$data->id)}}">{{$data->product_name}}</a></h2>
                         <div class="product-wid-rating">
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
@@ -141,7 +137,6 @@
             <div class="col-md-4">
                 <div class="single-product-widget">
                     <h2 class="product-wid-title">Top New</h2>
-                    <a href="shop" class="wid-view-more">View All</a>
                     @foreach($latestproduct as $data )
                     <div class="single-wid-product">
                         <a href="{{route('latest.product',$data->id)}}"><img

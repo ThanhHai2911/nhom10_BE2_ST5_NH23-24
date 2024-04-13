@@ -100,9 +100,12 @@ z-index: 999;}
     margin-top: 40px;
     padding: 10px;
     position: relative;
+    border-radius: 10px;
+    width: 50px;
 }
 .shopping-item a {
     color: #666;
+    margin-right: 20px;
 }
 .cart-amunt {
     color: #5a88ca;
@@ -497,6 +500,7 @@ z-index: 999;}
   font-size: 30px;
   font-weight: 100;
   margin-bottom: 40px;
+  text-align: center;
 }
 
 
@@ -606,19 +610,22 @@ padding: 35px 0 70px;}
 
 .newsletter-form input[type="email"] {
     background: none repeat scroll 0 0 #fff;
-    border: medium none;
     margin-bottom: 10px;
     padding: 10px;
-    width: 100%;
+    width: 70%;
+    border-radius: 10px;
+    border: medium none;
 }
 .newsletter-form input[type="submit"] {
     background: none repeat scroll 0 0 #5a88ca;
     border: medium none;
     color: #fff;
     display: inline-block;
-    font-size: 18px;
+    font-size: 15px;
     padding: 7px 20px;
     text-transform: uppercase;border: 1px solid #5a88ca;
+    border-radius: 10px;
+    width: 20%;
 }
 .newsletter-form input[type="submit"]:hover {background: #222;border-color: #666}
 .newsletter-form {
@@ -803,6 +810,8 @@ input[type="submit"]:hover, button[type=submit]:hover {background-color: #222}
 }
 .product-inner-price {
     margin-bottom: 25px;
+    color: #e10c25;
+    
 }
 .product-inner-price > ins {
     color: #5a88ca;
@@ -875,6 +884,7 @@ form.cart {
 .submit-review input[type="text"], .submit-review input[type="email"], .submit-review textarea {
     margin-bottom: 20px;
     width: 100%;
+    border-radius: 10px;
 }
 .rating-chooser {
     margin-bottom: 30px;
@@ -1176,7 +1186,7 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button{background
   .dropdown-content a {
     text-decoration: none;
     display: block;
-    width: 121px;
+    width: 113px;
     border-radius: 10px;
     margin-top: 5px;
 }
