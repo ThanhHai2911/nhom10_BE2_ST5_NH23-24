@@ -829,15 +829,15 @@ input[type="submit"]:hover, button[type=submit]:hover {background-color: #222}
     width: 50px;
 }
 .add_to_cart_button {
-    background: none repeat scroll 0 0 #5a88ca;
+    background: none repeat scroll 0 0 #ebecee;
     border: medium none;
-    color: #fff;
+    color: #0e0d0d;
     padding: 6px 20px;display: inline-block;
     border-radius: 10px;
     margin-left: 10px;
 
 }
-.add_to_cart_button:hover {background-color: #222;color: #fff;text-decoration: none}
+.add_to_cart_button:hover  {background-color: #222;color: #fff;text-decoration: none}
 form.cart {
     margin-bottom: 25px;
 }

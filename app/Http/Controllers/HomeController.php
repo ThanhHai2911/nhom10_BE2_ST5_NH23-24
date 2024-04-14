@@ -25,7 +25,7 @@ class HomeController extends Controller
         $product_cart = Product::paginate(5);
         $data_category = Category::all(); 
         $data_latestproduct=Latestproduct::all();
-        return view('single-product',compact('product','data_category','data_latestproduct','product_cart','category_product'));
+        return view('single-product',compact('product','data_category','data_latestproduct','product_cart'));
     }
 
     public function latestproducts(Latestproduct $latestproducts){
