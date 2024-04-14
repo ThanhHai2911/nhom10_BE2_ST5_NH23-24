@@ -21,7 +21,7 @@ class HomeController extends Controller
         $data_latestproduct = Latestproduct::all();
         $latestproduct = Latestproduct::paginate(3);
         $category = Category::all();
-        $topseller = TopSeller::all();
+        $topseller = TopSeller::paginate(3);
 
         return compact('product','data_category','data_latestproduct','latestproduct','data_product','product_cart','category','topseller');
     }
@@ -55,14 +55,14 @@ class HomeController extends Controller
     
     public function product(Product $product){
         $product_cart = Product::paginate(5);
-        $data_category = Category::all(); 
+        $data_category = Category::paginate(3); 
         $data_latestproduct=Latestproduct::all();
         return view('single-product',compact('product','data_category','data_latestproduct','product_cart'));
     }
 
     public function latestproducts(Latestproduct $latestproducts){
         $product_cart = Product::paginate(5);
-        $data_category = Category::all(); 
+        $data_category = Category::paginate(3); 
         $data_latestproduct=Latestproduct::all();
         return view('latest-product',compact('latestproducts','data_category','data_latestproduct','product_cart'));
     } 
