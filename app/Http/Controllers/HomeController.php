@@ -49,7 +49,14 @@ class HomeController extends Controller
         $category_product = Category::all();
         $data_category = Category::where('type_id',$categoryproducts)->first(); 
         $product = Product::where('type_name',$data_category->type_id)->get();
-        return view('category-product',compact('product','data_category','category','category_product'));
+        return view('product-category',compact('category_product','product','data_category','category'));
+    }
+    public function logoproduct($categoryproducts){
+        $category = Category::paginate(3);
+        $category_product = Category::all();
+        $data_category = Category::where('type_idlogo',$categoryproducts)->first(); 
+        $product = Product::where('type_logo',$data_category->type_id)->get();
+        return view('logo-product',compact('product','data_category','category','category_product'));
     }
     
 }

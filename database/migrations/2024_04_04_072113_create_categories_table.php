@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('name');
             $table->string('type_id');
             $table->string('type_name');
+            $table->string('type_logo');
+            $table->string('type_idlogo');
             $table->timestamps();
         });
     }

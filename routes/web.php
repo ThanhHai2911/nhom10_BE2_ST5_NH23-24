@@ -10,3 +10,4 @@ Route::get('/single-product/{product}',[HomeController::class,'product'])->name(
 Route::get('/latest-product/{latestproducts}',[HomeController::class,'latestproducts'])->name('latest.product');
 Route::get('/category-product/{categoryproducts}',[HomeController::class,'categoryproducts'])->name('category');
 Route::get('/product-category/{productcategory}',[HomeController::class,'productcategory'])->name('product.category');
+Route::get('/logo-product/{logoproduct}',[HomeController::class,'logoproduct'])->name('logo.product');

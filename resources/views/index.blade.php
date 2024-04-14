@@ -73,10 +73,9 @@
             <div class="col-md-12">
                 <div class="brand-wrapper">
                     <div class="brand-list">
-                        <img src="img/brand1.png" alt="">
-                        <img src="img/brand3.png" alt="">
-                        <img src="img/brand4.png" alt="">
-                        <img src="img/brand6.png" alt="">
+                    @foreach($category as $data)                                  
+                        <a  href="{{route('logo.product',$data->id)}}"><img src="{{asset('img/' . $data->type_logo)}}" style="width: 180px;height: 100px;margin-right: 10px;" alt=""></a>
+                    @endforeach
                     </div>
                 </div>
             </div>
