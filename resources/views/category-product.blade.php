@@ -3,7 +3,7 @@
 @yield('product-category')
 <div class="product-breadcroumb">
   <a href="index"></i>Home</a>
-  <a href="">{{$data_category->name}}</a>
+  <a href="{{route('category',$data_category->id)}}">{{$data_category->name}}</a>
 </div> 
 @foreach($category_product as $data)                                  
 <a href="{{route('product.category',$data->id)}}" style="margin-top: 20px;" class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="/canvas/shop/?add-to-cart=70">{{$data->type_name}}</a>
