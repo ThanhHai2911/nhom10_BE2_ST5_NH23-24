@@ -15,14 +15,6 @@ class TopSellersSeeder extends Seeder
     public function run()
     {
         DB::table('topsellers')->insert([
-            [
-                'topsale_name' => 'Iphone 14 ProMax',
-                'topsale_type' => '1',
-                'topsale_quantity' => 20,
-                'topsale_price' => '28.000.000 vnđ',
-                'topsale_detail' => 'iPhone 14 ProMax sở hữu thiết kế màn hình Dynamic Island ấn tượng cùng màn hình OLED 6,7 inch hỗ trợ always-on display và hiệu năng vượt trội với chip A16 Bionic',
-                'topsale_image' => 'iphone14pro.png'
-            ],
 
             [
                 'topsale_name' => 'Iphone 15 ProMax',
@@ -33,15 +25,6 @@ class TopSellersSeeder extends Seeder
                 'topsale_image' => 'iphone15promax.png'
             ],
 
-            [
-                'topsale_name' => 'Xiaomi 14',
-                'topsale_type' => '1',
-                'topsale_quantity' => 25,
-                'topsale_price' => '14.000.000 vnđ',
-                'topsale_detail' => 'Xiaomi 14 5G mang trên mình màn hình OLED 6.36-inch,cùng với bộ vi xử lý Qualcomm Snapdragon 8 Gen 3, làm nên một cấu hình siêu mạnh mẽ cho người dùng. Đi kèm với đó là viên pin dung lượng 4610mAh hỗ trợ tốc độ sạc 90W kết hợp cùng hệ thống ba camera sau với cảm biến chính 50MP, đảm bảo hiệu suất và khả năng chụp ảnh ấn tượng',
-                'topsale_image' => 'xiaomi14.png'
-            ],
-            
             [
                 'topsale_name' => 'iPhone 13 128GB',
                 'topsale_type' => '1',
@@ -58,7 +41,25 @@ class TopSellersSeeder extends Seeder
                 'topsale_price' => '33.500.000 vnđ',
                 'topsale_detail' => 'Samsung Galaxy Z Fold5 12GB 256GB tạo nên trải nghiệm xử lý tác vụ siêu mượt mà thông qua chipset Snapdragon 8 Gen 2 đỉnh cao cùng dung lượng RAM lên tới 12GB. Máy được trang bị công nghệ màn hình Dynamic AMOLED 2X 120Hz với kích thước có thể lên tới 7.6 inch khi mở, đem lại trải nghiệm hình ảnh sắc nét trong từng điểm ảnh. Bên cạnh đó, phân khúc smartphone gập này còn sở hữu cụm camera hiện đại với độ sắc nét đạt tới 50MP cùng viên pin 4400mAh.',
                 'topsale_image' => 'samsungzfold5.png'
-            ]
+            ],
+
+            [
+                'topsale_name' => 'Iphone 14 ProMax',
+                'topsale_type' => '1',
+                'topsale_quantity' => 20,
+                'topsale_price' => '28.000.000 vnđ',
+                'topsale_detail' => 'iPhone 14 ProMax sở hữu thiết kế màn hình Dynamic Island ấn tượng cùng màn hình OLED 6,7 inch hỗ trợ always-on display và hiệu năng vượt trội với chip A16 Bionic',
+                'topsale_image' => 'iphone14pro.png'
+            ],
+
+            [
+                'topsale_name' => 'Xiaomi 14',
+                'topsale_type' => '1',
+                'topsale_quantity' => 25,
+                'topsale_price' => '14.000.000 vnđ',
+                'topsale_detail' => 'Xiaomi 14 5G mang trên mình màn hình OLED 6.36-inch,cùng với bộ vi xử lý Qualcomm Snapdragon 8 Gen 3, làm nên một cấu hình siêu mạnh mẽ cho người dùng. Đi kèm với đó là viên pin dung lượng 4610mAh hỗ trợ tốc độ sạc 90W kết hợp cùng hệ thống ba camera sau với cảm biến chính 50MP, đảm bảo hiệu suất và khả năng chụp ảnh ấn tượng',
+                'topsale_image' => 'xiaomi14.png'
+            ],
         ]);
 
 
