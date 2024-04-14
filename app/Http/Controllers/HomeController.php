@@ -6,11 +6,13 @@ use App\Models\Latestproduct;
 use App\Models\Product;
 use App\Models\TopSale;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
-    public function index($page = "index"){
+
+    public static function getProductData()
+    {
         $product = Product::all();
         $product_cart = Product::paginate(5);
         $data_product = Product::paginate(3);
@@ -18,7 +20,35 @@ class HomeController extends Controller
         $data_latestproduct = Latestproduct::all();
         $latestproduct = Latestproduct::paginate(3);
         $category = Category::all();
-        return view($page,compact('product','data_category','data_latestproduct','latestproduct','data_product','product_cart','category'));
+
+        return compact('product','data_category','data_latestproduct','latestproduct','data_product','product_cart','category');
+    }
+
+
+    public function index($page = "index"){
+       
+
+        $data = self::getProductData();   
+        switch ($page) {
+            case 'login':
+                return view('auth.login');  
+            case 'forgot-password':
+                return view('auth.forgot-password');  
+            case 'register':
+                return view('auth.register');
+            case 'profile':         
+                return $this->showProfile();    
+            case 'admin_product':
+                return view('admin_product.index', $data);
+            default:
+            
+                # code...
+                break;
+        }
+        return view($page,$data);
+
+
+       
     }
     
     public function product(Product $product){
@@ -50,6 +80,12 @@ class HomeController extends Controller
         $data_category = Category::where('type_id',$categoryproducts)->first(); 
         $product = Product::where('type_name',$data_category->type_id)->get();
         return view('category-product',compact('product','data_category','category','category_product'));
+    }
+
+
+    protected function showProfile(){
+        $user = Auth::user();
+        return view('profile.edit',compact('user'));
     }
     
 }

@@ -40,18 +40,21 @@
    
     <div class="header-area">
         <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <div class="user-menu">
-                        <ul>
-                            <li><a href="#"><i class="fa fa-user"></i> My Account</a></li>                         
-                            <li><a href="#"><i class="fa fa-user"></i> My Cart</a></li>
-                        </ul>
-                    </div>
+        @if (Route::has('login'))
+                <div class="login">
+                    @auth
+                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">
+                        <div>{{ Auth::user()->name }}</div>
+                        </a>
+                    @else
+                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
+
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
+                        @endif
+                    @endauth
                 </div>
-                
-                
-            </div>
+            @endif
         </div>
     </div> <!-- End header area -->
     
