@@ -26,8 +26,8 @@ class CategorySeeder extends Seeder
             [
                 'name' => 'Laptop',
                 'type_id' => '2',
-                'type_name' => 'Samsung',
-                'type_logo' => 'samsung.png',
+                'type_name' => 'Gigabyte',
+                'type_logo' => 'gigabyte.png',
                 'type_idlogo' => '2'
             ],
 
@@ -40,10 +40,10 @@ class CategorySeeder extends Seeder
             ],
 
             [
-                'name' => 'Laptop',
+                'name' => 'Phone',
                 'type_id' => '4',
-                'type_name' => 'Gigabyte',
-                'type_logo' => 'gigabyte.png',
+                'type_name' => 'Samsung',
+                'type_logo' => 'samsung.png',
                 'type_idlogo' => '4'
             ],
 
@@ -80,7 +80,7 @@ class CategorySeeder extends Seeder
             ],
 
             [
-                'name' => 'Tablet',
+                'name' => 'Laptop',
                 'type_id' => '9',
                 'type_name' => 'Asus',
                 'type_logo' => 'asus.png',
@@ -112,7 +112,7 @@ class CategorySeeder extends Seeder
             ],
 
             [
-                'name' => 'Tablet',
+                'name' => 'Phone',
                 'type_id' => '13',
                 'type_name' => 'TCL',
                 'type_logo' => 'tcl.png',

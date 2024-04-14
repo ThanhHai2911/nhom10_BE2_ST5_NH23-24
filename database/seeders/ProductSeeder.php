@@ -67,8 +67,8 @@ class ProductSeeder extends Seeder
                 'product_price' => '33.500.000 vnđ',
                 'product_detail' => 'Samsung Galaxy Z Fold5 12GB 256GB tạo nên trải nghiệm xử lý tác vụ siêu mượt mà thông qua chipset Snapdragon 8 Gen 2 đỉnh cao cùng dung lượng RAM lên tới 12GB. Máy được trang bị công nghệ màn hình Dynamic AMOLED 2X 120Hz với kích thước có thể lên tới 7.6 inch khi mở, đem lại trải nghiệm hình ảnh sắc nét trong từng điểm ảnh. Bên cạnh đó, phân khúc smartphone gập này còn sở hữu cụm camera hiện đại với độ sắc nét đạt tới 50MP cùng viên pin 4400mAh.',
                 'product_image' => 'samsungzfold5.png',
-                'type_name' => '2',
-                'type_logo' => '2'
+                'type_name' => '4',
+                'type_logo' => '4'
             ],
 
             [
@@ -78,8 +78,8 @@ class ProductSeeder extends Seeder
                 'product_price' => '24.000.000 vnđ',
                 'product_detail' => 'Điện thoại Samsung Galaxy S24 được trang bị bộ xử lý Exynos 2400 do Samsung tự sản xuất với 10 nhân CPU cùng bộ nhớ RAM 8GB, bộ nhớ trong 256GB. Màn hình thiết bị với kích thước 6.2 inch với khung viền siêu mỏng cùng công nghệ Dynamic AMOLED 2X.',
                 'product_image' => 'samsunggalaxys24.png',
-                'type_name' => '2',
-                'type_logo' => '2'
+                'type_name' => '4',
+                'type_logo' => '4'
             ],
 
             [
@@ -89,8 +89,8 @@ class ProductSeeder extends Seeder
                 'product_price' => '9.500.000 vnđ',
                 'product_detail' => 'Samsung Galaxy A55 thiết kế sang trọng, hiện đại với màn hình rộng 6.6 inch, tấm nền Super AMOLED cùng độ phân giải Full HD+ cho hình ảnh hiển thị mượt mà, sắc nét. Sở hữu con chip Exynos 1480, cùng tần số quét 120 Hz cho trải nghiệm sử dụng không bị giật, lag.',
                 'product_image' => 'samsunga55.png',
-                'type_name' => '2',
-                'type_logo' => '2'
+                'type_name' => '4',
+                'type_logo' => '4'
             ],
 
             [
@@ -177,8 +177,8 @@ class ProductSeeder extends Seeder
                 'product_price' => '21.400.000 vnđ',
                 'product_detail' => 'Samsung Galaxy Tab S9 Ultra là thế hệ tablet mới của nhà Samsung với thiết kế đẹp mắt, thanh lịch, màn hình Dynamic AMOLED 2X cùng với chipset Snapdragon 8 gen 2 mạnh mẽ cân mọi tác vụ. Bên cạnh đó, thời lượng pin của Galaxy Tab S9 Ultra cũng được cải thiện so với người tiền nhiệm để mang đến trải nghiệm lâu hơn cho người dùng.',
                 'product_image' => 'samsunggalaxytabs9.png',
-                'type_name' => '2',
-                'type_logo' => '2'
+                'type_name' => '4',
+                'type_logo' => '4'
             ],
 
             [
@@ -254,8 +254,8 @@ class ProductSeeder extends Seeder
                 'product_price' => '15.760.000 vnđ',
                 'product_detail' => 'Samsung Galaxy Tab S9 Wifi sở hữu màn hình kích thước 11 inch Dynamic AMOLED 2X cùng tần số quét 120Hz mang lại trải nghiệm hình ảnh mượt mà và ổn định. Cấu hình máy tính bảng Samsung mới này cũng mạnh mẽ với con chip Snapdragon® 8 Gen 2 cùng với đó là sự hỗ trợ của bút Spen thế hệ mới tiện lợi. Máy còn ấn tượng với khả năng kháng nước và bụi bẩn IP68 cùng camera độ phân giải cao.',
                 'product_image' => 'Samsung Galaxy Tab S9 Wifi.png',
-                'type_name' => '2',
-                'type_logo' => '2'
+                'type_name' => '4',
+                'type_logo' => '4'
             ],
 
             [
@@ -365,8 +365,8 @@ class ProductSeeder extends Seeder
                 'product_price' => '19.300.000 vnđ',
                 'product_detail' => 'Laptop Gigabyte G5 MF-F2VN333SH thuộc phân khúc cao cấp có thể hỗ trợ người dùng trải nghiệm nhiều tựa game với hiệu ứng đồ họa bắt mắt. Nổi bật với bộ vi xử lý đầu bảng của Intel và dung lượng bộ nhớ vượt trội, chiếc laptop Gigabyte hứa hẹn sẽ là người bạn đồng hành tuyệt vời giúp chiến thắng trong các trận đấu. ',
                 'product_image' => 'giga.png',
-                'type_name' => '4',
-                'type_logo' => '4'
+                'type_name' => '2',
+                'type_logo' => '2'
             ],
 
             [
@@ -431,8 +431,8 @@ class ProductSeeder extends Seeder
                 'product_price' => '22.140.000 vnđ',
                 'product_detail' => 'Samsung S23 Ultra là dòng điện thoại cao cấp của Samsung, sở hữu camera độ phân giải 200MP ấn tượng, chip Snapdragon 8 Gen 2 mạnh mẽ, bộ nhớ RAM 8GB mang lại hiệu suất xử lý vượt trội cùng khung viền vuông vức sang trọng. Sản phẩm được ra mắt từ đầu năm 2023.',
                 'product_image' => 's23ultra.png',
-                'type_name' => '2',
-                'type_logo' => '2'
+                'type_name' => '4',
+                'type_logo' => '4'
             ],
 
             [
@@ -541,8 +541,8 @@ class ProductSeeder extends Seeder
                 'product_price' => '28.140.000 vnđ',
                 'product_detail' => 'Samsung S24 Ultra là dòng điện thoại cao cấp của Samsung, sở hữu camera độ phân giải 200MP ấn tượng, chip Snapdragon 8 Gen 3 mạnh mẽ, bộ nhớ RAM 8GB mang lại hiệu suất xử lý vượt trội cùng khung viền vuông vức sang trọng. Sản phẩm được ra mắt từ đầu năm 2024.',
                 'product_image' => 'samsungs24ultra.png',
-                'type_name' => '2',
-                'type_logo' => '2'
+                'type_name' => '4',
+                'type_logo' => '4'
             ],
 
             [
@@ -552,8 +552,8 @@ class ProductSeeder extends Seeder
                 'product_price' => '6.340.000 vnđ',
                 'product_detail' => 'Samsung M34 5G là chiếc điện thoại làm nên ấn tượng nhờ chip Exynos 1280 mạnh mẽ và ROM 128 GB, RAM 8GB. Cùng với đó là hệ thống 3 camera với cảm biến chính 50MP, góc siêu rộng 8 MP + macro 2 MP và camera selfie 13MP. Cạnh đó, màn hình Super AMOLED cao cấp, tần số quét 120Hz và viên pin 6000mAh còn tạo nên những điểm nhấn đặc biệt cho chiếc smartphone này.',
                 'product_image' => 'Galaxy M34.png',
-                'type_name' => '2',
-                'type_logo' => '2'
+                'type_name' => '4',
+                'type_logo' => '4'
             ],
 
             [
@@ -563,8 +563,8 @@ class ProductSeeder extends Seeder
                 'product_price' => '18.340.000 vnđ',
                 'product_detail' => 'Điện thoại Samsung S22 Ultra phiên bản RAM 12GB cho cảm giác siêu mượt mà khi mở và đóng ứng dụng, đi kèm bộ nhớ trong 256GB cho bạn thoải mái lưu trữ những khung hình, thước phim chất lượng cao. Vi xử lý Qualcomm Snapdragon 8 Gen 1 hứa hẹn mang đến hiệu năng tuyệt đỉnh, xử lý mượt mà mọi tác vụ.',
                 'product_image' => 'Galaxy S22 Ultra.png',
-                'type_name' => '2',
-                'type_logo' => '2'
+                'type_name' => '4',
+                'type_logo' => '4'
             ],
 
             [
@@ -574,8 +574,8 @@ class ProductSeeder extends Seeder
                 'product_price' => '7.990.000 vnđ',
                 'product_detail' => 'Samsung Galaxy A35 sở hữu những tính năng mang tính đột phá, vượt trội hơn hẳn những mẫu điện thoại thông thường. Với thiết kế ngoại hình ấn tượng cùng sự mạnh mẽ của hiệu năng tới từ con chip Exynos 1380 đi kèm với bộ vi xử lý đồ hoạ ấn tượng, sản phẩm Samsung Galaxy A mới này được các chuyên giá đánh giá là rất có tiềm năng so với những chiếc máy cùng phân khúc.',
                 'product_image' => 'Galaxy A35.png',
-                'type_name' => '2',
-                'type_logo' => '2'
+                'type_name' => '4',
+                'type_logo' => '4'
             ],
 
             [
@@ -585,8 +585,8 @@ class ProductSeeder extends Seeder
                 'product_price' => '20.990.000 vnđ',
                 'product_detail' => 'Samsung Galaxy S24 Plus có màn hình 6.7 inch, với tấm nền Dynamic AMOLED 2X giúp hình ảnh sống động đến từng chi tiết, độ làm mới liên tục từng giây. Camera của điện thoại gồm: camera chính 50MP và camera selfie 12MP, giúp ghi lại những khoảnh khắc đáng nhớ của bạn bên gia đình. Hiệu năng mạnh mẽ với dung lượng 8GB+256GB,viên pin 4.900 mAh kết hợp sạc nhanh 45W.',
                 'product_image' => 'Galaxy S24 Plus.png',
-                'type_name' => '2',
-                'type_logo' => '2'
+                'type_name' => '4',
+                'type_logo' => '4'
             ],
 
             [
@@ -596,8 +596,8 @@ class ProductSeeder extends Seeder
                 'product_price' => '9.990.000 vnđ',
                 'product_detail' => 'Samsung S21 FE 8GB 128GB sở hữu chipset Exynos 2100 mạnh mẽ có thể chơi mượt mà, RAM 8GB và ROM 128GB cho khả năng đa nhiệm và lưu trữ ổn định. Thêm vào đó cụm camera chất lượng, cho hình ảnh sắc nét: 12MP+12MP+8MP và camera selfie 32MP. Không chỉ vậy, các phiên bản màu sắc thanh lịch, thời thượng giúp sản phẩm nổi bật hơn giữa hàng loạt các thương hiệu khác.',
                 'product_image' => 'Galaxy S21 FE.png',
-                'type_name' => '2',
-                'type_logo' => '2'
+                'type_name' => '4',
+                'type_logo' => '4'
             ],
 
             [
@@ -739,8 +739,8 @@ class ProductSeeder extends Seeder
                 'product_price' => '21.670.000 vnđ',
                 'product_detail' => 'Hiệu suất làm việc hằng ngày của bạn sẽ được tăng cường với sản phẩm laptop Gigabyte U4 UD-70S1823SO. Đây lag chiếc laptop Gigabyte mang vẻ ngoài sang trọng cùng với vi xử lý Intel đời 11 và 16 GB RAM bên trong hỗ trợ nhu cầu làm việc đa nhiệm một cách hiệu quả tối ưu.',
                 'product_image' => 'Gigabyte U4.png',
-                'type_name' => '4',
-                'type_logo' => '4'
+                'type_name' => '2',
+                'type_logo' => '2'
             ],
 
             [
