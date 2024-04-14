@@ -5,6 +5,7 @@ use App\Models\Category;
 use App\Models\Latestproduct;
 use App\Models\Product;
 use App\Models\TopSale;
+use App\Models\TopSeller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -20,8 +21,9 @@ class HomeController extends Controller
         $data_latestproduct = Latestproduct::all();
         $latestproduct = Latestproduct::paginate(3);
         $category = Category::all();
+        $topseller = TopSeller::all();
 
-        return compact('product','data_category','data_latestproduct','latestproduct','data_product','product_cart','category');
+        return compact('product','data_category','data_latestproduct','latestproduct','data_product','product_cart','category','topseller');
     }
 
 

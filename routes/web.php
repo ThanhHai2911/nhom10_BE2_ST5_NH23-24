@@ -20,7 +20,6 @@ Route::get('/single-product/{product}',[HomeController::class,'product'])->name(
 Route::get('/latest-product/{latestproducts}',[HomeController::class,'latestproducts'])->name('latest.product');
 Route::get('/category-product/{categoryproducts}',[HomeController::class,'categoryproducts'])->name('category');
 Route::get('/product-category/{productcategory}',[HomeController::class,'productcategory'])->name('product.category');
-<<<<<<< HEAD
 
 //Admin
 Route::middleware('auth')->group(function  () {
@@ -42,8 +41,5 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-
-require __DIR__.'/auth.php';
-=======
 Route::get('/logo-product/{logoproduct}',[HomeController::class,'logoproduct'])->name('logo.product');
->>>>>>> 41c2c2da6aafebc8fd7b7c6e8eec36076bddd124
+require __DIR__.'/auth.php';
