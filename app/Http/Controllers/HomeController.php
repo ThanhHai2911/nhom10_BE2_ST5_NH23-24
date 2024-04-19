@@ -88,7 +88,7 @@ class HomeController extends Controller
 
     public function topselersproducts(TopSeller $topselersproducts){
         $product_cart = Product::paginate(5);
-        $data_category = Category::all(); 
+        $data_category = Category::paginate(3); 
         $data_topselersproducts = TopSeller::all();
         $data_latestproduct = Latestproduct::all();
         return view('topsellers-product',compact('topselersproducts','data_category','data_topselersproducts','product_cart','data_latestproduct'));
@@ -103,6 +103,7 @@ class HomeController extends Controller
     public function searchproduct(Request $req) {
         $data_category = Category::paginate(3); 
         $product_timkiem = Product::where('product_name', 'like', '%' . $req->key. '%')
+                          ->orWhere('product_price',$req->key)
                           ->get();
         return view('search-product', compact('product_timkiem','data_category'));
     }
