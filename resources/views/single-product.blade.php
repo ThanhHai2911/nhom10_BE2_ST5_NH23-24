@@ -50,9 +50,9 @@
                 <div class="col-md-8">
                     <div class="product-content-right">
                         <div class="product-breadcroumb">
-                            <a href="">Home</a>
-                            <a href="">Product</a>
-                            <a href="">{{$product->product_name}}</a>
+                            <a href="index">Home</a>
+                            <a href="shop">Product</a>
+                            <a href="{{route('single.product',$product->id)}}">{{$product->product_name}}</a>
                         </div>
                         
                         <div class="row">

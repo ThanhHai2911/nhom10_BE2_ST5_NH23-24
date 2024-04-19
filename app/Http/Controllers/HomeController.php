@@ -22,7 +22,6 @@ class HomeController extends Controller
         $latestproduct = Latestproduct::paginate(3);
         $category = Category::all();
         $topseller = TopSeller::paginate(3);
-
         return compact('product','data_category','data_latestproduct','latestproduct','data_product','product_cart','category','topseller');
     }
 
@@ -30,7 +29,7 @@ class HomeController extends Controller
     public function index($page = "index"){
        
 
-        $data = self::getProductData();   
+        $data = self::getProductData();  
         switch ($page) {
             case 'login':
                 return view('auth.login');  
@@ -44,13 +43,9 @@ class HomeController extends Controller
                 return view('admin_product.index', $data);
             default:
             
-                # code...
                 break;
         }
-        return view($page,$data);
-
-
-       
+        return view($page,$data);     
     }
     
     public function product(Product $product){
@@ -91,10 +86,24 @@ class HomeController extends Controller
         return view('logo-product',compact('product','data_category','category','category_product'));
     }
 
+    public function topselersproducts(TopSeller $topselersproducts){
+        $product_cart = Product::paginate(5);
+        $data_category = Category::all(); 
+        $data_topselersproducts = TopSeller::all();
+        $data_latestproduct = Latestproduct::all();
+        return view('topsellers-product',compact('topselersproducts','data_category','data_topselersproducts','product_cart','data_latestproduct'));
+    }
+
 
     protected function showProfile(){
         $user = Auth::user();
         return view('profile.edit',compact('user'));
     }
     
+    public function searchproduct(Request $req) {
+        $data_category = Category::paginate(3); 
+        $product_timkiem = Product::where('product_name', 'like', '%' . $req->key. '%')
+                          ->get();
+        return view('search-product', compact('product_timkiem','data_category'));
+    }
 }

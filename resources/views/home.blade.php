@@ -94,13 +94,13 @@
                                     </div>
                         </div>    
                         <li>
-                        <form action="">
-                            <input style="border-radius: 10px; margin-top: 10px; margin-left: 180px;" type="text" placeholder="Search products...">
-                            <input style="border-radius: 10px;" type="submit" value="Search">
+                        <form action="{{ route('timkiem.product', 'searchproduct') }}" method="get">
+                            <input style="border-radius: 10px; margin-top: 10px; margin-left: 180px; width:300px;" name="key" type="text" placeholder="Search products...">
+                            <button style="border-radius: 10px; width:80px; height: 45px; margin-left: 10px;">Search</button>
                         </form>
                         </li>
                         </li>    
-                        <li style="margin-left: 330px;">
+                        <li style="margin-left: 220px;">
                         <a href="cart"><i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
                         </li>                   
                     </ul>

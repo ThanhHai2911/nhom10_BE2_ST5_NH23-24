@@ -4,6 +4,11 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
+use Illuminate\Http\Request;
+use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Facades\DB;
+
+Paginator::useBootstrap();
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,6 +25,8 @@ Route::get('/single-product/{product}',[HomeController::class,'product'])->name(
 Route::get('/latest-product/{latestproducts}',[HomeController::class,'latestproducts'])->name('latest.product');
 Route::get('/category-product/{categoryproducts}',[HomeController::class,'categoryproducts'])->name('category');
 Route::get('/product-category/{productcategory}',[HomeController::class,'productcategory'])->name('product.category');
+Route::get('/topsellers-product/{topselersproducts}',[HomeController::class,'topselersproducts'])->name('topsellers.product');
+Route::get('/search-product/{searchproduct}',[HomeController::class,'searchproduct'])->name('timkiem.product');
 
 //Admin
 Route::middleware('auth')->group(function  () {

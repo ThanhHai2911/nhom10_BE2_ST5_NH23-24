@@ -1,23 +1,20 @@
-@extends('category')
+@extends('category-timkiem')
 @section('content')
-@yield('product-category')
 <div class="product-breadcroumb">
   <a href="index"></i>Home</a>
-  <a href="{{route('category',$data_category->id)}}">{{$data_category->name}}</a>
 </div> 
-@foreach($category_product as $data)                                  
-<a href="{{route('product.category',$data->id)}}" style="margin-top: 20px;" class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="/canvas/shop/?add-to-cart=70">{{$data->type_name}}</a>
-@endforeach
+<h2 style="text-align: center;">Kết quả tìm kiếm</h2>
+<h3>Tìm thấy {{count($product_timkiem)}} sản phẩm</h3>
 <div class="single-product-area">
     <div class="container">
         <div class="row">
-            @foreach($product as $data)
+        @foreach($product_timkiem as $data)
             <div class="col-md-3 col-sm-6">
                 <div class="single-shop-product">
                     <div class="product-upper">
-                        <a href="{{route('single.product',$data->id)}}"> <img src="{{asset('img/' . $data->product_image)}}" alt=""></a>
+                        <a href="{{route('timkiem.product',$data->id)}}"> <img src="{{asset('img/' . $data->product_image)}}" alt=""></a>
                     </div>
-                    <h2><a href="{{route('single.product',$data->id)}}">{{$data->product_name}}</a></h2>
+                    <h2><a href="{{route('timkiem.product',$data->id)}}">{{$data->product_name}}</a></h2>
                     <div class="product-carousel-price">
                         {{$data->product_price}}
                     </div>
@@ -27,7 +24,7 @@
                     </div>
                 </div>
             </div>
-            @endforeach
+        @endforeach
         </div>
         <div class="row">
             <div class="col-md-12">
@@ -55,6 +52,5 @@
             </div>
         </div>
     </div>
-
 </div>
-    @endsection
+@endsection

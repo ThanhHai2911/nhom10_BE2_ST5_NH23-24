@@ -28,7 +28,7 @@
                     
                     <div class="single-sidebar">
                     <h2 class="sidebar-title">Latest Products</h2>
-                        @foreach($data_latestproduct as $data ) 
+                    @foreach($data_latestproduct as $data ) 
                         <div class="thubmnail-recent">
                             <a href="{{route('latest.product',$data->id)}}"><img src="{{asset('img/' . $data->latestproduct_image)}}" class="recent-thumb" alt=""></a>
                             <h2><a href="{{route('latest.product',$data->id)}}">{{$data->latestproduct_name}}</a></h2>
@@ -51,16 +51,16 @@
                 <div class="col-md-8">
                     <div class="product-content-right">
                         <div class="product-breadcroumb">
-                            <a href="index">Home</a>
-                            <a href="">Top New</a>
-                            <a href="{{route('latest.product',$latestproducts->id)}}">{{$latestproducts->latestproduct_name}}</a>
+                            <a href="">Home</a>
+                            <a href="">Top Sellers</a>
+                            <a href="{{route('topsellers.product',$topselersproducts->id)}}">{{$topselersproducts->topsale_name}}</a>
                         </div>
                         
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="product-images">
                                     <div class="product-main-img">
-                                        <img src="{{asset('img/' . $latestproducts->latestproduct_image)}}" alt="">
+                                        <img src="{{asset('img/' . $topselersproducts->topsale_image)}}" alt="">
                                     </div>
                                     
                                     <!-- <div class="product-gallery">
@@ -73,9 +73,9 @@
                             
                             <div class="col-sm-6">
                                 <div class="product-inner">
-                                    <h2 class="product-name">{{$latestproducts->latestproduct_name}}</h2>
+                                    <h2 class="product-name">{{$topselersproducts->topsale_name}}</h2>
                                     <div class="product-inner-price">
-                                    {{$latestproducts->latestproduct_price}}
+                                    {{$topselersproducts->topsale_price}}
                                     </div>    
                                     
                                     <form action="" class="cart">
@@ -97,7 +97,7 @@
                                         <div class="tab-content">
                                             <div role="tabpanel" class="tab-pane fade in active" id="home">
                                                 <h2>Product Description</h2>  
-                                               <p>   {{$latestproducts->latestproduct_detail}}</p>
+                                               <p>   {{$topselersproducts->topsale_detail}}</p>
                                             </div>
                                             <div role="tabpanel" class="tab-pane fade" id="profile">
                                                 <h2>Reviews</h2>
@@ -133,17 +133,17 @@
                             
                                 <div class="single-product">
                                     <div class="product-f-image">
-                                        <img src="{{asset('img/' . $latestproducts->latestproduct_image)}}" alt="" class="img-product">
+                                        <img src="{{asset('img/' . $topselersproducts->topsale_image)}}" alt="" class="img-product">
                                         <div class="product-hover">
                                             <a href="" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                            <a href="{{route('latest.product',$latestproducts->id)}}" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                            <a href="{{route('latest.product',$topselersproducts->id)}}" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                         </div>
                                     </div>
 
-                                    <h2><a href="{{route('latest.product',$latestproducts->id)}}">{{$latestproducts->latestproduct_name}}</a></h2>
+                                    <h2><a href="{{route('latest.product',$topselersproducts->id)}}">{{$topselersproducts->topsale_name}}</a></h2>
 
                                     <div class="product-carousel-price">
-                                    {{$latestproducts->latestproduct_price}}
+                                    {{$topselersproducts->topsale_price}}
                                     </div> 
                                 </div>
                                                             

@@ -40,7 +40,6 @@
             <div class="col-md-12">
                 <div class="latest-product">
                     <h2 class="section-title">Latest Products</h2>
-
                     <div class="product-carousel">
                         @foreach($data_latestproduct as $data )
                         <div class="single-product">
@@ -94,9 +93,9 @@
                     <h2 class="product-wid-title">Top Sellers</h2>
                     @foreach($topseller as $data)
                     <div class="single-wid-product">
-                        <a href="{{route('single.product',$data->id)}}"><img src="{{asset('img/' . $data->topsale_image)}}" alt=""
+                        <a href="{{route('topsellers.product',$data->id)}}"><img src="{{asset('img/' . $data->topsale_image)}}" alt=""
                                 class="product-thumb"></a>
-                        <h2><a href="{{route('single.product',$data->id)}}">{{$data->topsale_name}}</a></h2>
+                        <h2><a href="{{route('topsellers.product',$data->id)}}">{{$data->topsale_name}}</a></h2>
                         <div class="product-wid-rating">
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
