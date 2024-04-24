@@ -24,9 +24,9 @@
                 <div class="col-md-4">
                     <div class="single-sidebar">
                         <h2 class="sidebar-title">Search Products</h2>
-                        <form action="#">
-                            <input type="text" placeholder="Search products...">
-                            <input style="border-radius: 10px;" type="submit" value="Search">
+                        <form role="timkiem"  action="{{ route('timkiem.product', 'searchproduct') }}" method="get">
+                            <input type="text" placeholder="Search products..." name="key">
+                            <button style="border-radius: 10px;" type="submit">Search</button>
                         </form>
                     </div>
                     
@@ -69,33 +69,37 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @foreach($cartItems as $key => $value)
                                         <tr class="cart_item">
                                             <td class="product-remove">
                                                 <a title="Remove this item" class="remove" href="#">×</a> 
                                             </td>
 
                                             <td class="product-thumbnail">
-                                                <a href="single-product.blade.php"><img width="145" height="145" alt="poster_1_up" class="shop_thumbnail" src="img/product-thumb-2.jpg"></a>
+                                                <a href="{{route('single.product','$product -> id')}}"><img width="145" height="145" alt="poster_1_up" class="shop_thumbnail" src="{{asset('img')}}/{{$value['product_image']}}"></a>
                                             </td>
 
                                             <td class="product-name">
-                                                <a href="single-product.blade.php">Ship Your Idea</a> 
+                                                <a href="{{route('single.product','$product -> id')}}">{{$value['product_name']}}</a> 
                                             </td>
 
                                             <td class="product-price">
-                                                <span class="amount">£15.00</span> 
+                                                <span class="amount">{{$value['product_price']}}</span> 
                                             </td>
 
                                             <td class="product-quantity">
                                                 <div class="quantity buttons_added">
-                                                    <input style="text-align: center;" type="number" size="4" class="input-text qty text" title="Qty" value="1" min="0" step="1">
+                                                    <input style="text-align: center;" type="number" size="4" class="input-text qty text" title="Qty" value="{{$value['quantity']}}" min="0" step="1">
                                                 </div>
                                             </td>
 
                                             <td class="product-subtotal">
-                                                <span class="amount">£15.00</span> 
+                                                <span class="amount">{{$value['product_price']}}</span> 
                                             </td>
                                         </tr>
+                                        @endforeach
+                                        
+                                        
                                         <tr>
                                             <td class="actions" colspan="6">
                                                 <div class="coupon">

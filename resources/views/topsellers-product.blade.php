@@ -78,7 +78,9 @@
                                     {{$topselersproducts->topsale_price}}
                                     </div>    
                                     
-                                    <form action="" class="cart">
+                                    <form action="{{route('cart.add','add')}}" class="cart" method="post">
+                                        @csrf
+                                        <input type="hidden" name="id" value="{{$topselersproducts->id}}">
                                         <div class="quantity">
                                             <input type="number" size="4" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
                                         </div>

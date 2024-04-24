@@ -20,9 +20,9 @@
                 <div class="col-md-4">
                     <div class="single-sidebar">
                         <h2 class="sidebar-title">Search Products</h2>
-                        <form action="">
-                            <input type="text" placeholder="Search products...">
-                            <input style="border-radius: 10px;" type="submit" value="Search">
+                        <form role="timkiem"  action="{{ route('timkiem.product', 'searchproduct') }}" method="get">
+                            <input type="text" placeholder="Search products..." name="key">
+                            <button style="border-radius: 10px;" type="submit">Search</button>
                         </form>
                     </div>
                     
@@ -78,7 +78,9 @@
                                     {{$latestproducts->latestproduct_price}}
                                     </div>    
                                     
-                                    <form action="" class="cart">
+                                    <form action="{{route('cart.addlast','addlast')}}" class="cart" method="post">
+                                        @csrf
+                                        <input type="hidden" name="id" value="{{$latestproducts->id}}">
                                         <div class="quantity">
                                             <input type="number" size="4" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
                                         </div>

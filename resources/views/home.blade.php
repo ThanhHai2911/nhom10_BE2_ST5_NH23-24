@@ -101,7 +101,7 @@
                         </li>
                         </li>    
                         <li style="margin-left: 220px;">
-                        <a href="cart"><i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
+                        <a href="{{ route('cart.product','listproduct') }}"><i class="fa fa-shopping-cart"></i> <span class="product-count"></span></a>
                         </li>                   
                     </ul>
                 </div>  

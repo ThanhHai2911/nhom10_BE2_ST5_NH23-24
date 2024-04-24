@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Category;
 use App\Models\Latestproduct;
 use App\Models\Product;
@@ -9,12 +10,13 @@ use App\Models\TopSeller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+
 class HomeController extends Controller
 {
 
     public static function getProductData()
     {
-        $product = Product::all();
+        $product = Product::paginate(24);
         $product_cart = Product::paginate(5);
         $data_product = Product::paginate(3);
         $data_category = Category::paginate(3); 
@@ -45,7 +47,7 @@ class HomeController extends Controller
             
                 break;
         }
-        return view($page,$data);     
+        return view($page,$data)->with('i',(request()->input('page', 1) -1) * 5);     
     }
     
     public function product(Product $product){
@@ -107,4 +109,6 @@ class HomeController extends Controller
                           ->get();
         return view('search-product', compact('product_timkiem','data_category'));
     }
+
+    
 }
