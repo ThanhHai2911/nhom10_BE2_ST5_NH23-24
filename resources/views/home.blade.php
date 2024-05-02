@@ -155,7 +155,7 @@
                         <a href="index">
                             <h2><span>UStora</span></h2>
                         </a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sunt id doloribus vero quam laborum quas alias dolores blanditiis iusto consequatur, modi aliquid eveniet eligendi iure eaque ipsam iste, pariatur omnis sint! Suscipit, debitis, quisquam. Laborum commodi veritatis magni at?</p>
+                        <p>128 Quang Trung,Phường Bến Nghé, Quận 1, TP.Hồ Chí Minh</p>
                         <div class="footer-social">
                             <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
                             <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
@@ -164,7 +164,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6">
+                <div class="col-md-4 col-sm-6" >
                     <div class="footer-menu">
                         <h2 class="footer-wid-title">Categories</h2>
                         <ul>
@@ -177,14 +177,12 @@
 
                 <div class="col-md-4 col-sm-6">
                     <div class="footer-newsletter">
-                        <h2 class="footer-wid-title">Newsletter</h2>
-                        <p>Sign up to our newsletter and get exclusive deals you wont find anywhere else straight to your inbox!</p>
-                        <div class="newsletter-form">
-                            <form action="#">
-                                <input type="email" placeholder="Type your email">
-                                <input type="submit" value="Add">
-                            </form>
-                        </div>
+                        <h2 class="footer-wid-title" style="text-align: center;">Map</h2>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                                <iframe class="position-relative rounded w-100 h-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15693.125032219153!2d106.6931843!3d10.762622500000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175295b3b9050f3%3A0xf4c7b3e1c24da02!2sHo%20Chi%20Minh%20City%2C%20Vietnam!5e0!3m2!1sen!2sbd!4v1640452681322!5m2!1sen!2sbd" frameborder="0" style="min-height: 300px; border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                            </div>
+                        </div>  
                     </div>
                 </div>
             </div>

@@ -46,8 +46,7 @@
                             <div class="product-f-image">
                                 <img src="{{asset('img/' . $data->latestproduct_image)}}" alt="" class="img-product">
                                 <div class="product-hover">
-                                    <a href="cart" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to
-                                        cart</a>
+                                    <a href="cart" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
                                     <a href="{{route('latest.product',$data->id)}}" class="view-details-link"><i
                                             class="fa fa-link"></i> See details</a>
                                 </div>
