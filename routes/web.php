@@ -2,10 +2,12 @@
 
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CartLastController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
+use App\Models\Categori;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\DB;
@@ -34,6 +36,8 @@ Route::get('/cart/{listproduct}',[CartController::class,'listproduct'])->name('c
 
 Route::post('/cart/{addlast}',[CartLastController::class,'addlast'])->name('cart.addlast');
 Route::get('/cart/{listlastproduct}',[CartLastController::class,'listlastproduct'])->name('cart.lastproduct');
+
+
 //Admin
 Route::middleware('auth')->group(function  () {
     Route::resource("/admin_product", ProductController::class);

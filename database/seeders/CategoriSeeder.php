@@ -14,7 +14,7 @@ class CategoriSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('categori')->insert([
+        DB::table('categoris')->insert([
             [
                 'name' => 'Phone',
             ],
