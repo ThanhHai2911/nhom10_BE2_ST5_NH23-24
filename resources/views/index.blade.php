@@ -54,7 +54,7 @@
                             </div>
                             <h2><a href="{{route('latest.product',$data->id)}}">{{$data->latestproduct_name}}</a></h2>
                             <div class="product-carousel-price">
-                                {{$data->latestproduct_price}}
+                                {{number_format( $data->latestproduct_price,0, ',', '.')}} vnđ
                             </div>
                         </div>
                         @endforeach
@@ -104,7 +104,7 @@
                             <i class="fa fa-star"></i>
                         </div>
                         <div class="product-wid-price">
-                            {{$data->topsale_price}}
+                            {{number_format( $data->topsale_price,0, ',', '.')}} vnđ
                         </div>
                     </div>
                     @endforeach
@@ -126,7 +126,7 @@
                             <i class="fa fa-star"></i>
                         </div>
                         <div class="product-wid-price">
-                            {{$data->product_price}}
+                            {{number_format( $data->product_price,0, ',', '.')}} vnđ
                         </div>
                     </div>
                     @endforeach
@@ -148,7 +148,7 @@
                             <i class="fa fa-star"></i>
                         </div>
                         <div class="product-wid-price">
-                            {{$data->latestproduct_price}}
+                            {{number_format( $data->latestproduct_price,0, ',', '.')}} vnđ
                         </div>
                     </div>
                     @endforeach

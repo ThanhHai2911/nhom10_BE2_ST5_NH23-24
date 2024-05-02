@@ -835,6 +835,7 @@ input[type="submit"]:hover, button[type=submit]:hover {background-color: #222}
     padding: 6px 20px;display: inline-block;
     border-radius: 10px;
     margin-left: 10px;
+    
 }
 .add_to_cart_button:hover  {background-color: #222;color: #fff;text-decoration: none}
 form.cart {

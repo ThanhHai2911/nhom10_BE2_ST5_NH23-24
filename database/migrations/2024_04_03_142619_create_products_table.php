@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('product_name');
             $table->string('product_type');
             $table->integer('product_quantity');
-            $table->string('product_price');
+            $table->double('product_price');
             $table->string('product_detail',1000);
             $table->string('product_image');
             $table->string('type_name');

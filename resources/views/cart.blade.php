@@ -37,7 +37,7 @@
                             <a href="{{route('latest.product',$data->id)}}"><img src="{{asset('img/' . $data->latestproduct_image)}}" alt="" class="recent-thumb"></a>
                             <h2><a href="{{route('latest.product',$data->id)}}">{{$data->latestproduct_name}}</a></h2>
                             <div class="product-sidebar-price">
-                            {{$data->latestproduct_price}}
+                            {{number_format( $data->latestproduct_price,0, ',', '.')}} vnđ
                             </div>                             
                         </div>
                         @endforeach
@@ -84,7 +84,7 @@
                                             </td>
 
                                             <td class="product-price">
-                                                <span class="amount">{{$value['product_price']}}</span> 
+                                                <span class="amount">{{number_format( $value['product_price'],0, ',', '.')}} vnđ</span> 
                                             </td>
 
                                             <td class="product-quantity">
@@ -94,7 +94,7 @@
                                             </td>
 
                                             <td class="product-subtotal">
-                                                <span class="amount">{{$value['product_price']}}</span> 
+                                                <span class="amount">{{number_format( $value['product_price'] * $value['quantity'],0, ',', '.')}} vnđ</span> 
                                             </td>
                                         </tr>
                                         @endforeach
@@ -102,11 +102,6 @@
                                         
                                         <tr>
                                             <td class="actions" colspan="6">
-                                                <div class="coupon">
-                                                    <label for="coupon_code">Coupon:</label>
-                                                    <input style="border-radius: 10px; margin-right: 30px; width: 180px;" type="text" placeholder="Coupon code" value="" id="coupon_code" class="input-text" name="coupon_code">
-                                                    <input style="border-radius: 10px; margin-right: 30px;" type="submit" value="Apply Coupon" name="apply_coupon" class="button">
-                                                </div>
                                                 <input style="border-radius: 10px;margin-right: 30px;" type="submit" value="Update Cart" name="update_cart" class="button">
                                                 <input style="border-radius: 10px;" type="submit" value="Checkout" name="proceed" class="checkout-button button alt wc-forward">
                                             </td>

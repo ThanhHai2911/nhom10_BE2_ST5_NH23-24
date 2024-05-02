@@ -16,7 +16,8 @@ class HomeController extends Controller
 
     public static function getProductData()
     {
-        $product = Product::paginate(24);
+        $product = Product::paginate(8);
+        $data_product_admin = Product::all();
         $product_cart = Product::paginate(5);
         $data_product = Product::paginate(3);
         $data_category = Category::paginate(3); 
@@ -24,7 +25,7 @@ class HomeController extends Controller
         $latestproduct = Latestproduct::paginate(3);
         $category = Category::all();
         $topseller = TopSeller::paginate(3);
-        return compact('product','data_category','data_latestproduct','latestproduct','data_product','product_cart','category','topseller');
+        return compact('product','data_category','data_latestproduct','latestproduct','data_product','product_cart','category','topseller','data_product_admin');
     }
 
 
@@ -47,7 +48,7 @@ class HomeController extends Controller
             
                 break;
         }
-        return view($page,$data)->with('i',(request()->input('page', 1) -1) * 5);     
+        return view($page,$data); 
     }
     
     public function product(Product $product){
@@ -69,7 +70,7 @@ class HomeController extends Controller
         $category_product = Category::all();
         $category = Category::paginate(3);
         $data_category = Category::where('id',$categoryproducts)->first(); 
-        $product = Product::where('product_type',$data_category->id)->get();
+        $product = Product::where('product_type',$data_category->id)->paginate(8);
         return view('category-product',compact('product','data_category', 'category','product_cart','category_product'));
     }
 
@@ -77,14 +78,14 @@ class HomeController extends Controller
         $category = Category::paginate(3);
         $category_product = Category::all();
         $data_category = Category::where('type_id',$categoryproducts)->first(); 
-        $product = Product::where('type_name',$data_category->type_id)->get();
+        $product = Product::where('type_name',$data_category->type_id)->paginate(8);
         return view('product-category',compact('category_product','product','data_category','category'));
     }
     public function logoproduct($categoryproducts){
         $category = Category::paginate(3);
         $category_product = Category::all();
         $data_category = Category::where('type_idlogo',$categoryproducts)->first(); 
-        $product = Product::where('type_logo',$data_category->type_id)->get();
+        $product = Product::where('type_logo',$data_category->type_id)->paginate(8);
         return view('logo-product',compact('product','data_category','category','category_product'));
     }
 
@@ -106,7 +107,7 @@ class HomeController extends Controller
         $data_category = Category::paginate(3); 
         $product_timkiem = Product::where('product_name', 'like', '%' . $req->key. '%')
                           ->orWhere('product_price',$req->key)
-                          ->get();
+                          ->paginate(5); 
         return view('search-product', compact('product_timkiem','data_category'));
     }
 

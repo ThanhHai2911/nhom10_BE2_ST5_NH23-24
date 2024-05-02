@@ -16,7 +16,7 @@
                     </div>
                     <h2><a href="{{route('single.product',$data->id)}}">{{$data->product_name}}</a></h2>
                     <div class="product-carousel-price">
-                        {{$data->product_price}}
+                        {{number_format( $data->product_price,0, ',', '.')}} vnđ
                     </div>
                     <form action="{{route('cart.add','add')}}" class="cart" method="post">
                         @csrf
@@ -27,7 +27,9 @@
             </div>
             @endforeach
         </div>
-
+        <div style="text-align: center;">
+            {{$product_timkiem->links()}}
+        </div>
     </div>
 </div>
 @endsection

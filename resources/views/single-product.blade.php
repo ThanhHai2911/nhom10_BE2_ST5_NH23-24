@@ -32,7 +32,7 @@
                             <a href="{{route('latest.product',$data->id)}}"><img src="{{asset('img/' . $data->latestproduct_image)}}" class="recent-thumb" alt=""></a>
                             <h2><a href="{{route('latest.product',$data->id)}}">{{$data->latestproduct_name}}</a></h2>
                             <div class="product-sidebar-price">
-                            {{$data->latestproduct_price}}
+                            {{number_format( $data->latestproduct_price,0, ',', '.')}} vnđ
                             </div>                             
                         </div>
                         @endforeach
@@ -74,7 +74,7 @@
                                 <div class="product-inner">
                                     <h2 class="product-name">{{$product->product_name}}</h2>
                                     <div class="product-inner-price">
-                                       {{$product->product_price}}
+                                    {{number_format( $product->product_price,0, ',', '.')}} vnđ
                                     </div>    
                                     
                                     <form action="{{route('cart.add','add')}}" class="cart" method="post">
@@ -144,7 +144,7 @@
                                     <h2><a href="{{route('single.product',$product->id)}}">{{$product->product_name}}</a></h2>
 
                                     <div class="product-carousel-price">
-                                    {{$product->product_price}}
+                                    {{number_format($product->product_price,0, ',', '.')}} vnđ
                                     </div> 
                                 </div>
                                                             
