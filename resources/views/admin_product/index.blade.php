@@ -26,7 +26,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($product as $item)
+                                @foreach($data_product_admin as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td><img src="{{asset('img/'.$item->product_image)}}" alt="" with="100px" height="100px"></td>

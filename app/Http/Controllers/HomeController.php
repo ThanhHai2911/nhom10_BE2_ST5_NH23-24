@@ -16,7 +16,8 @@ class HomeController extends Controller
 
     public static function getProductData()
     {
-        $product = Product::paginate(24);
+        $product = Product::paginate(8);
+        $data_product_admin = Product::all();
         $product_cart = Product::paginate(5);
         $data_product = Product::paginate(3);
         $data_category = Category::paginate(3); 
@@ -24,7 +25,7 @@ class HomeController extends Controller
         $latestproduct = Latestproduct::paginate(3);
         $category = Category::all();
         $topseller = TopSeller::paginate(3);
-        return compact('product','data_category','data_latestproduct','latestproduct','data_product','product_cart','category','topseller');
+        return compact('product','data_category','data_latestproduct','latestproduct','data_product','product_cart','category','topseller','data_product_admin');
     }
 
 
