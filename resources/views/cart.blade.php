@@ -92,16 +92,26 @@
 
                                         <td class="product-quantity">
                                             <div class="quantity buttons_added">
-                                                <input id="quantity-{{$key}}" style="text-align: center;" type="number" size="4" class="input-text qty text" title="Qty" value="{{$value['quantity']}}" min="0" step="1">
+                                                <input id="quantityInput" style="text-align: center;" type="number"  class="input-text qty text" title="Qty" value="{{$value['quantity']}}" min="0" step="1">
                                             </div>
                                         </td>
 
                                         <td class="product-subtotal">
-                                            <span class="amount" id="subtotal-{{$key}}">{{number_format( $value['product_price'] * $value['quantity'],0, ',', '.')}} vnđ</span>
+                                            <span class="amount">{{number_format( $value['product_price'] * $value['quantity'],0, ',', '.')}} vnđ</span>
                                         </td>
                                     </tr>
+                                    <script>
+                                        document.getElementById('quantityInput').addEventListener('input', function() {
+                                            var quantity = parseInt(this.value);
+                                            var price = parseFloat("{{$value['product_price']}}");
+                                            var subtotal = quantity * price;
+                                            document.getElementById('subtotal').textContent = formatCurrency(subtotal);
+                                        });
 
-
+                                        function formatCurrency(amount) {
+                                            return amount.toFixed(0).replace(/\d(?=(\d{3})+$)/g, '$&,');
+                                        }
+                                    </script>
                                     @endforeach
                                     <tr>
 
@@ -122,4 +132,5 @@
         </div>
     </div>
 </div>
+
 @endsection

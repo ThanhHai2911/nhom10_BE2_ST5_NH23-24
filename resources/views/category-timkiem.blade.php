@@ -122,7 +122,7 @@
                 <div class="col-md-4 col-sm-6">
                     <div class="footer-about-us">
                         <a href="index"><h2><span>UStora</span></h2></a>
-                        <p>Hẻm 128 Tổ 99, Khu Phố 14, Gò Vấp, Thành phố Hồ Chí Minh, Việt Nam</p>
+                        <p>21/2A Phan Huy Ích, Phường 12, Gò Vấp, Thành phố Hồ Chí Minh, Việt Nam</p>
                         <p>Điện Thoại: 0234 678 678</p>
                         <div class="footer-social">
                             <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
@@ -151,7 +151,7 @@
                         <h2 class="footer-wid-title" style="text-align: center;">Map</h2>
                         <div class="col-md-4 col-sm-6">
                             <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                                <iframe class="position-relative rounded w-100 h-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.668130754125!2d106.64381261477465!3d10.83942389227159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528b909d29901%3A0x5f3d7ecb8eaa73e0!2zMjEvMkEgUGhhbiBIdXkgw4lcSCwgUGjDsm5nIDEyLCBHxqEgVsOpcCwgVHJhbiBwaMOybmcgSOG7kW5nIFTDom4gS-G7uSBDaGkgTWluaA!5e0!3m2!1svi!2s!4v1689234795123!5m2!1svi!2s" frameborder="0" style="min-height: 300px; border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                                <iframe class="position-relative rounded w-100 h-100" src="https://www.google.com/maps?q=Điện+thoại+di+động+Ustora,+21/2A+Phan+Huy+Ích,+Phường+12,+Gò+Vấp,+Thành+phố+Hồ+Chí+Minh,+Việt+Nam&output=embed" frameborder="0" style="min-height: 300px; border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                             </div>
                         </div>  
                     </div>
