@@ -22,11 +22,9 @@ class HomeController extends Controller
         $product_cart = Product::paginate(5);
         $data_product = Product::paginate(3);
         $data_category = Categori::all(); 
-        $data_latestproduct = Latestproduct::all();
-        $latestproduct = Latestproduct::paginate(3);
         $category = Category::all();
         $topseller = TopSeller::paginate(3);
-        return compact('product','data_category','data_latestproduct','latestproduct','data_product','product_cart','category','topseller','data_product_admin');
+        return compact('product','data_category','data_product','product_cart','category','topseller','data_product_admin');
     }
 
 
@@ -55,16 +53,8 @@ class HomeController extends Controller
     public function product(Product $product){
         $product_cart = Product::paginate(5);
         $data_category = Categori::all(); 
-        $data_latestproduct=Latestproduct::all();
-        return view('single-product',compact('product','data_category','data_latestproduct','product_cart'));
+        return view('single-product',compact('product','data_category','product_cart'));
     }
-
-    public function latestproducts(Latestproduct $latestproducts){
-        $product_cart = Product::paginate(5);
-        $data_category = Categori::all(); 
-        $data_latestproduct=Latestproduct::all();
-        return view('latest-product',compact('latestproducts','data_category','data_latestproduct','product_cart'));
-    } 
 
     public function categoryproducts($categoryproducts){
         $product_cart = Product::paginate(5);
@@ -94,10 +84,8 @@ class HomeController extends Controller
         $product_cart = Product::paginate(5);
         $data_category = Categori::all(); 
         $data_topselersproducts = TopSeller::all();
-        $data_latestproduct = Latestproduct::all();
-        return view('topsellers-product',compact('topselersproducts','data_category','data_topselersproducts','product_cart','data_latestproduct'));
+        return view('topsellers-product',compact('topselersproducts','data_category','product_cart'));
     }
-
 
     protected function showProfile(){
         $user = Auth::user();

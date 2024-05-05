@@ -26,16 +26,16 @@ Paginator::useBootstrap();
 
 Route::get('/{page?}',[HomeController::class,'index']);
 Route::get('/single-product/{product}',[HomeController::class,'product'])->name('single.product');
-Route::get('/latest-product/{latestproducts}',[HomeController::class,'latestproducts'])->name('latest.product');
 Route::get('/category-product/{categoryproducts}',[HomeController::class,'categoryproducts'])->name('category');
 Route::get('/product-category/{productcategory}',[HomeController::class,'productcategory'])->name('product.category');
 Route::get('/topsellers-product/{topselersproducts}',[HomeController::class,'topselersproducts'])->name('topsellers.product');
 Route::get('/search-product/{searchproduct}',[HomeController::class,'searchproduct'])->name('timkiem.product');
 Route::post('/cart/{add}',[CartController::class,'add'])->name('cart.add');
+Route::post('/cart/{removeFromCart}', [CartController::class, 'removeFromCart'])->name('cart.remove');
 Route::get('/cart/{listproduct}',[CartController::class,'listproduct'])->name('cart.product');
 
-Route::post('/cart/{addlast}',[CartLastController::class,'addlast'])->name('cart.addlast');
-Route::get('/cart/{listlastproduct}',[CartLastController::class,'listlastproduct'])->name('cart.lastproduct');
+
+
 
 
 //Admin

@@ -10,29 +10,34 @@
   <div class="container">
     <div class="row">
       @foreach($product as $data)
-      <div class="col-md-3 col-sm-6">
-        <div class="single-shop-product">
-          <div class="product-upper">
-            <a href="{{route('single.product',$data->id)}}"> <img src="{{asset('img/' . $data->product_image)}}" alt=""></a>
-          </div>
-          <h2><a href="{{route('single.product',$data->id)}}">{{$data->product_name}}</a></h2>
-          <div class="product-carousel-price">
-            {{number_format( $data->product_price,0, ',', '.')}} vnđ
-          </div>
-
-          <form action="{{route('cart.add','add')}}" class="cart" method="post">
-            @csrf
-            <input type="hidden" name="id" value="{{$data->id}}">
-            <button style="margin-left: 65px;width: 130px;padding: 10px;margin-top:10px;" class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow">Add to cart</button>
-          </form>
-        </div>
-      </div>
+      <div class="col-md-3 col-sm-6" style="border-radius: 10px;background-color: #fbfbfb;margin-left: 10px; margin-top: 10px; width: 282px;">
+                <div class="single-shop-product">
+                    <div class="product-upper">
+                        <a href="{{route('single.product',$data->id)}}"> <img src="{{asset('img/' . $data->product_image)}}" alt=""></a>
+                    </div>
+                    <h2><a href="{{route('single.product',$data->id)}}">{{$data->product_name}}</a></h2>
+                    <div class="product-carousel-price">
+                        {{number_format( $data->product_price,0, ',', '.')}} vnđ
+                    </div>
+                    <div style="margin-top: 20px;">
+                        {{$data->Promotion}}
+                    </div>
+                </div>
+                <div style="margin: 20px;">
+                    <i class="fa fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa fa-star" style="color: #FFD43B; margin-right: 40px;"></i>
+                    Yêu Thích <a href=""><i class="fa fa-heart" style="color: red;"></i></a>
+                </div>
+            </div>
       @endforeach
 
     </div>
   </div>
   <div style="text-align: center;">
-      {{$product->links()}}
-    </div>
+    {{$product->links()}}
+  </div>
 </div>
 @endsection

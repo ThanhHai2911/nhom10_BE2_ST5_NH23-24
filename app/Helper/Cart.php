@@ -25,5 +25,20 @@ class Cart{
         $this->items[$product->id] = $item;
         session(['cart' => $this->items]);
     }
+    public function getTotalPrice(){
+        $totalprice = 0;
+        foreach($this -> items as $item){
+            $totalprice += $item['product_price'] * $item['quantity'];
+        }
+        return $totalprice;
+    }
+    public function remove($productId)
+    {
+        if (isset($this->items[$productId])) {
+            unset($this->items[$productId]);
+            session(['cart' => $this->items]);
+        }
+    }
+
 
 }

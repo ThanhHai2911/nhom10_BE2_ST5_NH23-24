@@ -28,15 +28,15 @@
                     
                     <div class="single-sidebar">
                     <h2 class="sidebar-title">Latest Products</h2>
-                    @foreach($data_latestproduct as $data ) 
-                        <div class="thubmnail-recent">
-                            <a href="{{route('latest.product',$data->id)}}"><img src="{{asset('img/' . $data->latestproduct_image)}}" class="recent-thumb" alt=""></a>
-                            <h2><a href="{{route('latest.product',$data->id)}}">{{$data->latestproduct_name}}</a></h2>
-                            <div class="product-sidebar-price">
-                            {{number_format( $data->latestproduct_price,0, ',', '.')}} vnđ
-                            </div>                             
+                    @foreach($product_cart as $data )
+                    <div class="thubmnail-recent">
+                        <a href="{{route('single.product',$data->id)}}"><img src="{{asset('img/' . $data->product_image)}}" class="recent-thumb" alt=""></a>
+                        <h2><a href="{{route('single.product',$data->id)}}">{{$data->product_name}}</a></h2>
+                        <div class="product-sidebar-price">
+                            {{number_format( $data->product_price,0, ',', '.')}} vnđ
                         </div>
-                        @endforeach
+                    </div>
+                    @endforeach
                     </div>
                     <div class="single-sidebar">
                         <h2 class="sidebar-title">Recent Posts</h2>
@@ -137,12 +137,11 @@
                                     <div class="product-f-image">
                                         <img src="{{asset('img/' . $topselersproducts->topsale_image)}}" alt="" class="img-product">
                                         <div class="product-hover">
-                                            <a href="" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                            <a href="{{route('latest.product',$topselersproducts->id)}}" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                            <a href="{{route('single.product',$topselersproducts->id)}}" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                         </div>
                                     </div>
 
-                                    <h2><a href="{{route('latest.product',$topselersproducts->id)}}">{{$topselersproducts->topsale_name}}</a></h2>
+                                    <h2><a href="{{route('single.product',$topselersproducts->id)}}">{{$topselersproducts->topsale_name}}</a></h2>
 
                                     <div class="product-carousel-price">
                                     {{number_format( $topselersproducts->topsale_price,0, ',', '.')}} vnđ
