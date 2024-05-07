@@ -592,7 +592,6 @@ padding: 35px 0 70px;}
 
 
 .footer-social a {
-  background: none repeat scroll 0 0 #5a88ca;
   color: #fff;
   display: inline-block;
   font-size: 20px;
@@ -601,7 +600,7 @@ padding: 35px 0 70px;}
   margin-right: 10px;
   padding-top: 5px;
   text-align: center;
-  width: 40px;border: 1px solid #5a88ca;
+  width: 40px;
 }
 
 .footer-social a:hover {background-color: #222;border-color: #666}
@@ -1214,4 +1213,5 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button li.active 
     font-size: 15px;
     padding: 10px;
   }
+  
 

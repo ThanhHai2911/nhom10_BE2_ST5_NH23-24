@@ -29,74 +29,6 @@
 
 <body>
 
-    <div class="header-area">
-        <div class="container">
-            @if (Route::has('login'))
-            <div class="login">
-                @auth
-                <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">
-                    <div>{{ Auth::user()->name }}</div>
-                </a>
-                @else
-                <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
-
-                @if (Route::has('register'))
-                <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                @endif
-                @endauth
-            </div>
-            @endif
-        </div>
-    </div> <!-- End header area -->
-
-    <div class="site-branding-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="logo">
-                        <h1><a href="./"><img src="img/logo.png"></a></h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> <!-- End site branding area -->
-
-    <div class="mainmenu-area">
-        <div class="container">
-
-            <div class="row">
-                <ul class="nav navbar-nav">
-                    <li class="active">
-                        <a href="index">Trang Chủ</a>
-                    </li>
-                    <li><a href="shop">Sản Phẩm</a></li>
-                    <li>
-                        <div class="dropdown">
-                            <button class="dropbtn">Danh Mục</button>
-                            <div class="dropdown-content">
-                                @foreach($data_category as $data)
-                                <a href="{{route('category',$data->id)}}" class="menu_categories">{{$data->name}}</a>
-                                @endforeach
-                            </div>
-                        </div>
-                    </li>
-                    <!--Thêm Nav -->
-                    <li>
-                        <form role="timkiem" action="{{ route('timkiem.product', 'searchproduct') }}" method="get">
-                            <input style="border-radius: 10px; margin-top: 10px; margin-left: 180px; width:300px;" name="key" type="text" placeholder="Search products...">
-                            <button style="border-radius: 10px; width:80px; height: 45px; margin-left: 10px;">Search</button>
-                        </form>
-                    </li>
-                    </li>
-                    <li style="margin-left: 190px;">
-                        <a href="{{ route('cart.product','listproduct') }}"><i class="fa fa-shopping-cart"></i> <span class="product-count"></span></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    </div> <!-- End mainmenu area -->
-
     @yield('content')
 
 
@@ -112,11 +44,11 @@
                         <p>21/2A Phan Huy Ích, Phường 12, Gò Vấp, Thành phố Hồ Chí Minh, Việt Nam</p>
                         <p>0234 678 678</p>
                         <p>didongustors@gmail.com</p>
-                        <div class="footer-social">
-                            <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
-                            <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
-                            <a href="#" target="_blank"><i class="fa fa-youtube"></i></a>
-                            <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+                        <div class="footer-social" >
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
                         </div>
                     </div>
 
@@ -163,10 +95,10 @@
 
                 <div class="col-md-4">
                     <div class="footer-card-icon">
-                        <i class="fa fa-cc-discover"></i>
-                        <i class="fa fa-cc-mastercard"></i>
-                        <i class="fa fa-cc-paypal"></i>
-                        <i class="fa fa-cc-visa"></i>
+                        <i class="fab fa-cc-discover"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                        <i class="fab fa-cc-visa"></i>
                     </div>
                 </div>
             </div>

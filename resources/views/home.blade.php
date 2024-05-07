@@ -75,26 +75,15 @@
     <div class="mainmenu-area">
         <div class="container">
             <div class="row">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <!-- <li style="width: 80px; height: 80px; margin-top: -35px; margin-left: -40px;">
-                            <a href="./"><img src="img/logo.png"></a>
-                        </li> -->
                         <li class="active">
-                            <a href="index">Home</a>
+                            <a href="index">Trang Chủ</a>
                         </li>
-                        <li><a href="shop">Shop page</a></li>
+                        <li><a href="shop">Sản Phẩm</a></li>
                         <li>
                             <div class="dropdown">
-                                <button class="dropbtn">Category</button>
+                                <button class="dropbtn">Danh Mục</button>
                                 <div class="dropdown-content">
                                     @foreach($data_category as $data)
                                     <a href="{{route('category',$data->id)}}" class="menu_categories">{{$data->name}}</a>
@@ -109,7 +98,7 @@
                         </li>
 
                         </li>
-                        <li style="margin-left: 220px;">
+                        <li style="margin-left: 190px;">
                             <a href="{{ route('cart.product','listproduct') }}"><i class="fa fa-shopping-cart"></i> <span class="product-count"></span></a>
                         </li>
                     </ul>
@@ -150,13 +139,14 @@
         <div class="zigzag-bottom"></div>
         <div class="container">
             <div class="row">
-                <div class="col-md-4 col-sm-6">
-                    <div class="footer-about-us">
-                        <a href="index">
-                            <h2><span>UStora</span></h2>
-                        </a>
+                <div class="col-lg-3 col-md-4">
+                    <div class="footer-menu">
+                        <div style="margin-bottom: 20px;margin-top: -30px;">
+                            <a href="./"><img src="img/logo.png"></a>
+                        </div>
                         <p>21/2A Phan Huy Ích, Phường 12, Gò Vấp, Thành phố Hồ Chí Minh, Việt Nam</p>
-                        <p>Điện Thoại: 0234 678 678</p>
+                        <p>0234 678 678</p>
+                        <p>didongustors@gmail.com</p>
                         <div class="footer-social">
                             <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
                             <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
@@ -164,32 +154,39 @@
                             <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
                         </div>
                     </div>
+
                 </div>
-                <div class="col-md-4 col-sm-6" >
+                <div class="col-lg-3 col-md-4">
                     <div class="footer-menu">
-                        <h2 class="footer-wid-title">Categories</h2>
+                        <h2 class="footer-wid-title">Danh mục nổi bật</h2>
                         <ul>
                             @foreach($data_category as $data)
-                            <a style="margin-left: 40px;" href="{{route('category',$data->id)}}" class="menu_categories">{{$data->name}}</a>
+                            <a style="margin-left: 100px;" href="{{route('category',$data->id)}}" class="menu_categories">{{$data->name}}</a>
                             @endforeach
                         </ul>
                     </div>
                 </div>
+                <div class="col-lg-3 col-md-4">
+                    <div class="footer-newsletter">
+                        <h2 class="footer-wid-title" style="text-align: center;">Chính sách công ty</h2>
+                        <div style="margin-left: 40px;">
+                            <p href="#">Chính sách bán hàng</p>
+                            <p href="#">Liên hệ chúng tôi</p>
+                        </div>
 
-                <div class="col-md-4 col-sm-6">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4">
                     <div class="footer-newsletter">
                         <h2 class="footer-wid-title" style="text-align: center;">Map</h2>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                                <iframe class="position-relative rounded w-100 h-100" src="https://www.google.com/maps?q=Điện+thoại+di+động+Ustora,+21/2A+Phan+Huy+Ích,+Phường+12,+Gò+Vấp,+Thành+phố+Hồ+Chí+Minh,+Việt+Nam&output=embed" frameborder="0" style="min-height: 250px; border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                            </div>
-                        </div>  
+                    </div>
+                    <div class="footer-map">
+                        <iframe src="https://www.google.com/maps?q=Điện+thoại+di+động+Ustora,+21/2A+Phan+Huy+Ích,+Phường+12,+Gò+Vấp,+Thành+phố+Hồ+Chí+Minh,+Việt+Nam&output=embed" width="100%" height="260" frameborder="0" style="border:0" allowfullscreen=""></iframe>
                     </div>
                 </div>
             </div>
         </div>
-    </div> <!-- End footer top area -->
-
+    </div>
     <div class="footer-bottom-area">
         <div class="container">
             <div class="row">
@@ -209,7 +206,7 @@
                 </div>
             </div>
         </div>
-    </div> <!-- End footer bottom area -->
+    </div><!-- End footer bottom area -->
 
     <!-- Latest jQuery form server -->
     <script src="https://code.jquery.com/jquery.min.js"></script>
@@ -231,7 +228,7 @@
     <script type="text/javascript" src="js/bxslider.min.js"></script>
     <script type="text/javascript" src="js/script.slider.js"></script>
     <script>
-        
+
     </script>
 </body>
 

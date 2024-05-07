@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="product-bit-title text-center">
-                    <h2>Shopping Cart</h2>
+                    <h2>Giỏ Hàng</h2>
                 </div>
             </div>
         </div>
@@ -23,15 +23,15 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="single-sidebar">
-                    <h2 class="sidebar-title">Search Products</h2>
+                    <h2 class="sidebar-title">Tìm Kiếm</h2>
                     <form role="timkiem" action="{{ route('timkiem.product', 'searchproduct') }}" method="get">
-                        <input type="text" placeholder="Search products..." name="key">
-                        <button style="border-radius: 10px;" type="submit">Search</button>
+                        <input type="text" placeholder="Tìm Kiếm Sản Phẩm..." name="key">
+                        <button style="border-radius: 10px;" type="submit">Tìm Kiếm</button>
                     </form>
                 </div>
 
                 <div class="single-sidebar">
-                    <h2 class="sidebar-title">Latest Products</h2>
+                    <h2 class="sidebar-title">Sản Phẩm Mới</h2>
                     @foreach($product_cart as $data )
                     <div class="thubmnail-recent">
                         <a href="{{route('single.product',$data->id)}}"><img src="{{asset('img/' . $data->product_image)}}" class="recent-thumb" alt=""></a>
@@ -40,15 +40,6 @@
                             {{number_format( $data->product_price,0, ',', '.')}} vnđ
                         </div>
                     </div>
-                    @endforeach
-                </div>
-
-                <div class="single-sidebar">
-                    <h2 class="sidebar-title">Recent Posts</h2>
-                    @foreach($product_cart as $data)
-                    <ul>
-                        <li><a href="{{route('single.product',$data->id)}}">{{$data->product_name}}</a></li>
-                    </ul>
                     @endforeach
                 </div>
             </div>
@@ -69,13 +60,10 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($cart->getList() as $key => $value)
+                                    @foreach($cartItems as $key => $value)
                                     <tr class="cart_item">
                                         <td class="product-remove">
-                                            <form method="POST" action="{{ route('cart.remove', 'removeFromCart') }}">
-                                                @csrf
-                                                <button type="submit" title="Remove this item">×</button>
-                                            </form>
+                                            <ahref="{{ route('cart.remove', ['productId' => $value['productId']]) }}" onclick="return confirm('Bạn có chắc chắn muốn xóa sản phẩm này?');" type="submit" title="Remove this item">×</ahref=>
                                         </td>
 
                                         <td class="product-thumbnail">
@@ -92,7 +80,7 @@
 
                                         <td class="product-quantity">
                                             <div class="quantity buttons_added">
-                                                <input id="quantityInput" style="text-align: center;" type="number"  class="input-text qty text" title="Qty" value="{{$value['quantity']}}" min="0" step="1">
+                                                <input id="quantityInput" style="text-align: center;" type="number" class="input-text qty text" title="Qty" value="{{$value['quantity']}}" min="0" step="1">
                                             </div>
                                         </td>
 
@@ -114,14 +102,21 @@
                                     </script>
                                     @endforeach
                                     <tr>
-
+                                        @if (count($cartItems) > 0)
                                         <td colspan="6">
-                                            <h4 style=" margin-bottom: -15px; margin-top: 10px;">Tổng tiền thanh toán ({{count($cart->getList())}} sản phẩm): {{number_format($cart->getTotalPrice() ,0, ',', '.')}} vnđ</h4>
-                                            <button style="border-radius: 10px; margin-right: -600px; margin-top: -600px;" type="submit">Thanh Toán</button>
+                                            <h4 style=" margin-bottom: -15px; margin-top: 10px;">Tổng tiền thanh toán ({{count($cartItems)}} sản phẩm): {{number_format($cart->getTotalPrice() ,0, ',', '.')}} vnđ</h4>
+                                            <a href="{{ route('checkout','checkout') }}" style="border-radius: 10px; margin-right: -600px; margin-top: -600px;" type="submit" class="add_to_cart_button">Thanh Toán</a>
                                         </td>
+                                        @else
+                                        <td colspan="6">
+                                            <h4 style=" margin-bottom: -15px; margin-top: 10px;">Tổng tiền thanh toán ({{count($cartItems)}} sản phẩm): {{number_format($cart->getTotalPrice() ,0, ',', '.')}} vnđ</h4>
+                                            <a onclick="return confirm('Chưa có sản phẩm nào trong giỏ hàng!');" style="border-radius: 10px; margin-right: -580px;margin-top: -50px;" type="submit" class="add_to_cart_button">Thanh Toán</a>
+                                        </td>
+                                        @endif
                                     </tr>
                                 </tbody>
                             </table>
+
                         </form>
 
                         <div class="cart-collaterals">
@@ -132,5 +127,4 @@
         </div>
     </div>
 </div>
-
 @endsection

@@ -14,7 +14,7 @@
             <div class="col-md-3 col-sm-6">
                 <div class="single-promo promo2">
                     <i class="fa fa-truck"></i>
-                    <p>Free shipping</p>
+                    <p>Free ship</p>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6">
@@ -57,7 +57,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="latest-product">
-                    <h2 class="section-title">Latest Products</h2>
+                    <h2 class="section-title">Sản Phẩm Mới</h2>
                     <div class="product-carousel">
                         @foreach($product_cart as $data )
                         <div class="single-product">

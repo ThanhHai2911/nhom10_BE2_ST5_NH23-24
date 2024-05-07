@@ -11,27 +11,40 @@ use App\Models\Product;
 class CartController extends Controller
 {
 
-    public function listproduct(Cart $cart,Product $product){
+    public function listproduct(Cart $cart, Product $product)
+    {
+        $cartItems = $cart->getList();
         $product_cart = Product::paginate(5);
-        $data_category = Category::paginate(3); 
-        return view('cart', compact('cart','product_cart','data_category','product'));
+        $data_category = Category::paginate(3);
+        return view('cart', compact('cart', 'product_cart', 'data_category', 'product', 'cartItems'));
     }
 
-    public function add(Request $request,Cart $cart)
+
+    public function add(Request $request, Cart $cart)
     {
-        $product = Product::find($request -> id);
+        $product = Product::find($request->id);
         $quantity = $request->quantity;
-        $cart->add($product,$quantity);
-        return redirect()->route('cart.product','listproduct');
+        $cart->add($product, $quantity);
+        return redirect()->route('cart.product', 'listproduct');
     }
 
-    public function removeFromCart($productId, Cart $cart)
+    public function remove($productId)
     {
-        $cart->remove($productId);
+        $cart = session('cart', []);
 
-        return redirect()->route('cart.product', 'listproduct')->with('success', 'Sản phẩm đã được xóa khỏi giỏ hàng.');
+        if (array_key_exists($productId, $cart)) {
+            unset($cart[$productId]);
+            session(['cart' => $cart]);
+
+            return redirect()->back()->with('message', 'Sản phẩm đã được xóa khỏi giỏ hàng');
+        }
+
+        return redirect()->back()->with('error', 'Sản phẩm không tồn tại trong giỏ hàng');
+    }
+
+    public function showCart()
+    {
+        $cart = session('cart', []);
+        return view('cart', ['cart' => $cart]);
     }
 }
-
-
-
