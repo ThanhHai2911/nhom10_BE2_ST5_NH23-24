@@ -33,9 +33,6 @@
             </div>
             @endforeach
         </div>
-        <div style="text-align: center;">
-            {{$product_timkiem->links()}}
-        </div>
     </div>
 </div>
 @endsection

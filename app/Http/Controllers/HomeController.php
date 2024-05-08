@@ -111,21 +111,12 @@ class HomeController extends Controller
     }
 
    
-
-    
-    public function searchproduct(Request $req) {
-        $data_category = Category::paginate(3); 
-        $product_timkiem = Product::where('product_name', 'like', '%' . $req->key. '%')
-                          ->orWhere('product_price',$req->key)
-                          ->get();
-        return view('search-product', compact('product_timkiem','data_category'));
-
     public function searchproduct(Request $req)
     {
         $data_category = Categori::all();
         $product_timkiem = Product::where('product_name', 'like', '%' . $req->key . '%')
             ->orWhere('product_price', $req->key)
-            ->paginate(5);
+            ->get();
         return view('search-product', compact('product_timkiem', 'data_category'));
     }
     public function checkout(Cart $cart)

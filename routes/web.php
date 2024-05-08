@@ -44,7 +44,15 @@ Route::get('/topsellers-product/{topselersproducts}',[HomeController::class,'top
 Route::get('/search-product/{searchproduct}',[HomeController::class,'searchproduct'])->name('timkiem.product');
 
 
+//Gio Hang
+Route::post('/cart/{add}',[CartController::class,'add'])->name('cart.add')->middleware('auth.check');
+Route::get('/cart/{listproduct}',[CartController::class,'listproduct'])->name('cart.product');
+Route::get('/cart', [CartController::class, 'showCart'])->name('cart.show');
+Route::get('/cart/remove/{productId}', [CartController::class, 'remove'])->name('cart.remove');
 
+//Thanh Toan
+Route::post('/pay/process', [PaymentControlle::class, 'processPayment'])->name('payment.process');
+Route::get('/pay/{checkout}', [HomeController::class, 'checkout'])->name('checkout');
 
 
 
