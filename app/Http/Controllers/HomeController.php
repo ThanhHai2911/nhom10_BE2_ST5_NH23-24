@@ -41,7 +41,7 @@ class HomeController extends Controller
                 return view('auth.forgot-password');
             case 'register':
                 return view('auth.register');
-<<<<<<< HEAD
+
             case 'profile':         
                 return $this->showProfile();    
             case 'products':
@@ -49,12 +49,12 @@ class HomeController extends Controller
                     return view('products.index')->with('product',$product);
             case 'profile_admin':
                     return view('layouts.profile_admin');   
-=======
+
             case 'profile':
                 return $this->showProfile();
             case 'admin_product':
                 return view('admin_product.index', $data);
->>>>>>> a0a0e0fb6efdb1144d1f499d9fcb4127d4e1e07e
+
             default:
 
                 break;
@@ -109,7 +109,7 @@ class HomeController extends Controller
         $user = Auth::user();
         return view('profile.edit', compact('user'));
     }
-<<<<<<< HEAD
+
    
 
     
@@ -119,7 +119,6 @@ class HomeController extends Controller
                           ->orWhere('product_price',$req->key)
                           ->get();
         return view('search-product', compact('product_timkiem','data_category'));
-=======
 
     public function searchproduct(Request $req)
     {
@@ -141,6 +140,6 @@ class HomeController extends Controller
             'totalQuantity' => $totalQuantity,
             'totalPrice' => $totalPrice
         ], compact('data_category'));
->>>>>>> a0a0e0fb6efdb1144d1f499d9fcb4127d4e1e07e
+
     }
 }
