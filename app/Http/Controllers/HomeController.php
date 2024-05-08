@@ -39,8 +39,11 @@ class HomeController extends Controller
                 return view('auth.register');
             case 'profile':         
                 return $this->showProfile();    
-            case 'admin_product':
-                return view('admin_product.index', $data);
+            case 'products':
+                        $product = Product::orderBy('created_at','DESC')->get();
+                    return view('products.index')->with('product',$product);
+            case 'profile_admin':
+                    return view('layouts.profile_admin');   
             default:
             
                 break;
@@ -99,6 +102,8 @@ class HomeController extends Controller
         $user = Auth::user();
         return view('profile.edit',compact('user'));
     }
+   
+
     
     public function searchproduct(Request $req) {
         $data_category = Category::paginate(3); 
