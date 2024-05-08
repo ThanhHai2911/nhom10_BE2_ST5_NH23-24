@@ -1,11 +1,16 @@
 <?php
 
-use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\CartLastController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Middleware\IsAdminMiddleware;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PaymentControlle;
 use App\Http\Controllers\ProductController;
+use App\Models\Categori;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\DB;
@@ -21,13 +26,21 @@ Paginator::useBootstrap();
 | be assigned to the "web" middleware group. Make something great!
 |
 */
- 
+//Trang chu
 Route::get('/{page?}',[HomeController::class,'index']);
+
+//Chi Tiet San Pham
 Route::get('/single-product/{product}',[HomeController::class,'product'])->name('single.product');
-Route::get('/latest-product/{latestproducts}',[HomeController::class,'latestproducts'])->name('latest.product');
+
+//San pham theo danh muc
 Route::get('/category-product/{categoryproducts}',[HomeController::class,'categoryproducts'])->name('category');
 Route::get('/product-category/{productcategory}',[HomeController::class,'productcategory'])->name('product.category');
+Route::get('/logo-product/{logoproduct}',[HomeController::class,'logoproduct'])->name('logo.product');
+
+//Top khuyen mai
 Route::get('/topsellers-product/{topselersproducts}',[HomeController::class,'topselersproducts'])->name('topsellers.product');
+
+//Tim kiem san pham
 Route::get('/search-product/{searchproduct}',[HomeController::class,'searchproduct'])->name('timkiem.product');
 
 
@@ -85,12 +98,10 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-Route::get('/logo-product/{logoproduct}',[HomeController::class,'logoproduct'])->name('logo.product');
+
 require __DIR__.'/auth.php';
 
-
-
-
-
-
-
+//Phan quyen
+Route::post('/admin_product',function(){
+    return view('index');
+})->middleware('phanquyen');

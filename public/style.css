@@ -149,6 +149,7 @@ z-index: 999;}
     color: #6e6a6a;
     font-size: 14px;
     padding: 20px;
+    
 }
 
 .mainmenu-area ul.navbar-nav li:hover a, .mainmenu-area ul.navbar-nav li.active a {background: #7daff5; color:#FFF;}
@@ -591,7 +592,6 @@ padding: 35px 0 70px;}
 
 
 .footer-social a {
-  background: none repeat scroll 0 0 #5a88ca;
   color: #fff;
   display: inline-block;
   font-size: 20px;
@@ -600,7 +600,7 @@ padding: 35px 0 70px;}
   margin-right: 10px;
   padding-top: 5px;
   text-align: center;
-  width: 40px;border: 1px solid #5a88ca;
+  width: 40px;
 }
 
 .footer-social a:hover {background-color: #222;border-color: #666}
@@ -835,6 +835,7 @@ input[type="submit"]:hover, button[type=submit]:hover {background-color: #222}
     padding: 6px 20px;display: inline-block;
     border-radius: 10px;
     margin-left: 10px;
+    
 }
 .add_to_cart_button:hover  {background-color: #222;color: #fff;text-decoration: none}
 form.cart {
@@ -1103,7 +1104,7 @@ div.quantity input.plus:hover, div.quantity input.minus:hover {background-color:
 div.cart-collaterals ul.products li.product a:hover h3 {color: #5a88ca}
 div.cart-collaterals ul.products li.product a:hover {text-decoration: none}
 
-div.cart-collaterals ul.products li.product:hover .add_to_cart_button{background-color: #222}
+div.cart-collaterals ul.products li.product:hover .add_to_cart_button li.active a{background-color: #222;color:#FFF}
 
 
 .cart-collaterals .shipping_calculator {
@@ -1212,4 +1213,5 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button{background
     font-size: 15px;
     padding: 10px;
   }
+  
 

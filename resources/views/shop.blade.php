@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="product-bit-title text-center">
-                        <h2>Product</h2>
+                        <h2>Sản Phẩm</h2>
                     </div>
                 </div>
             </div>

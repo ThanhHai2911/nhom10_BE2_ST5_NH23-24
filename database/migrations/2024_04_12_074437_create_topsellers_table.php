@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('topsale_name');
             $table->string('topsale_type');
             $table->integer('topsale_quantity');
-            $table->string('topsale_price');
+            $table->double('topsale_price');
             $table->string('topsale_detail',1000);
             $table->string('topsale_image');
             $table->timestamps();
