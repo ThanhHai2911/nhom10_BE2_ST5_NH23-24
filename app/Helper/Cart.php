@@ -49,4 +49,16 @@ class Cart
         }
         return $totalQuantity;
     }
+    public function remove($productId)
+    {
+        $cart = session('cart', []); 
+
+        if (array_key_exists($productId, $cart)) {
+            unset($cart[$productId]);
+            session(['cart' => $cart]);
+
+            return redirect()->back()->with('message', 'Sản phẩm đã được xóa khỏi giỏ hàng');
+        }
+        return redirect()->back()->with('error', 'Sản phẩm không tồn tại trong giỏ hàng');
+    }
 }
