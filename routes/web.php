@@ -1,14 +1,14 @@
 <?php
 
+use App\Http\Controllers\BookingControlle;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CartLastController;
 use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\CheckoutControlle;
 use App\Http\Controllers\ProfileController;
 use App\Http\Middleware\IsAdminMiddleware;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\PaymentControlle;
 use App\Http\Controllers\ProductController;
 use App\Models\Categori;
 use Illuminate\Http\Request;
@@ -51,10 +51,9 @@ Route::get('/cart', [CartController::class, 'showCart'])->name('cart.show');
 Route::get('/cart/remove/{productId}', [CartController::class, 'remove'])->name('cart.remove');
 
 //Thanh Toan
-Route::post('/pay/process', [PaymentControlle::class, 'processPayment'])->name('payment.process');
 Route::get('/pay/{checkout}', [HomeController::class, 'checkout'])->name('checkout');
-
-
+Route::post('/pay/{store}', [BookingControlle::class, 'store'])->name('pay');
+Route::post('/vnpay_payment', [CheckoutControlle::class, 'vnpay_payment']);
 
 Route::middleware('auth')->group(function () {
     Route::get('dashboard', function () {

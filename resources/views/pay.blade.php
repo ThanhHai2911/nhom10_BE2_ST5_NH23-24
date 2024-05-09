@@ -85,9 +85,9 @@
                         </div>
                         <div class="form-group clearfix hidden-sm hidden-xs">
                             <div class="field__input-btn-wrapper mt10" style="margin-left: 70px;">
-                                <form action="{{ route('payment.process') }}" method="post">
+                                <form action="{{ route('pay','store') }}" method="post">
                                     @csrf
-                                    <input class="btn btn-success btn-checkout tp_button" data-loading-text="Đang xử lý" type="button" value="Đặt hàng">
+                                    <button name="redirect" class="btn btn-success btn-checkout tp_button" type="submit">Đặt hàng</button>
                                 </form>
                             </div>
                         </div>
@@ -336,7 +336,7 @@
                                                             <div class="product-thumbnail__wrapper">
                                                                 <img src="{{asset('img')}}/{{$item['product_image']}}" class="product-thumbnail__image">
                                                             </div>
-                                                            <span class="product-thumbnail__quantity" aria-hidden="true">{{ $item['quantity']}}</span>
+                                                            <span id="booking_quantity" class="product-thumbnail__quantity" aria-hidden="true">{{ $item['quantity']}}</span>
                                                         </div>
                                                     </td>
                                                     <td class="product-info">

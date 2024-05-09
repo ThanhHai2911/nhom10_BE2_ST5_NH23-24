@@ -36,30 +36,7 @@
 <div class="single-product-area">
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
-                <div class="single-sidebar">
-                    <h2 class="sidebar-title">Tìm Kiếm</h2>
-                    <form role="timkiem" action="{{ route('timkiem.product', 'searchproduct') }}" method="get">
-                        <input type="text" placeholder="Tìm Kiếm Sản Phẩm..." name="key">
-                        <button style="border-radius: 10px;" type="submit">Tìm Kiếm</button>
-                    </form>
-                </div>
-
-                <div class="single-sidebar">
-                    <h2 class="sidebar-title">Sản Phẩm Mới</h2>
-                    @foreach($product_cart as $data )
-                    <div class="thubmnail-recent">
-                        <a href="{{route('single.product',$data->id)}}"><img src="{{asset('img/' . $data->product_image)}}" class="recent-thumb" alt=""></a>
-                        <h2><a href="{{route('single.product',$data->id)}}">{{$data->product_name}}</a></h2>
-                        <div class="product-sidebar-price">
-                            {{number_format( $data->product_price,0, ',', '.')}} vnđ
-                        </div>
-                    </div>
-                    @endforeach
-                </div>
-            </div>
-
-            <div class="col-md-8">
+            <div class="col-md-12">
                 <div class="product-content-right">
                     <div class="product-breadcroumb">
                         <a href="index">Trang Chủ</a>
@@ -68,16 +45,16 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-sm-6">
-                            <div class="product-images">
-                                <div class="product-main-img">
+                        <div class="col-sm-8" style="border: solid black 1px; border-radius: 10px;height: 440px;margin-top: 15px;">
+                            <div class="product-images" style="margin-left: 200px; margin-top: 50px;">
+                                <div class="product-main-img" style="width: 350px;height:350px">
                                     <img src="{{asset('img/' . $product->product_image)}}" alt="">
                                 </div>
 
                             </div>
                         </div>
 
-                        <div class="col-sm-6">
+                        <div class="col-sm-4">
                             <div class="product-inner">
                                 <h2 class="product-name">{{$product->product_name}}</h2>
                                 <div class="product-inner-price">
@@ -104,54 +81,56 @@
                                 @endif
 
                                 <div class="product-inner-category">
-                                    <p>Danh Mục: <a href="">Phone</a></p>
+                                    {{$product->Promotion}}
                                 </div>
-
-                                <div role="tabpanel">
-                                    <ul class="product-tab" role="tablist">
-                                        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Mô Tả</a></li>
-                                        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Đánh Giá Sản Phẩm</a></li>
-                                    </ul>
-                                    <div class="tab-content">
-                                        <div role="tabpanel" class="tab-pane fade in active" id="home">
-                                            <h2>Mô Tả</h2>
-                                            <p> {{$product->product_detail}}</p>
-                                        </div>
-                                        <div role="tabpanel" class="tab-pane fade" id="profile">
-
-                                            <h1>Đánh giá sản phẩm</h1>
-                                            <div class="product-review">
-
-                                                <div id="star-rating">
-                                                    <span class="star " data-rating="1">&#9734;</span>
-                                                    <span class="star" data-rating="2">&#9734;</span>
-                                                    <span class="star" data-rating="3">&#9734;</span>
-                                                    <span class="star" data-rating="4">&#9734;</span>
-                                                    <span class="star" data-rating="5">&#9734;</span>
-                                                </div>
-                                                <textarea id="review-text" placeholder="Nhập đánh giá của bạn..."></textarea>
-                                                <button onclick="submitReview()">Gửi đánh giá</button>
-                                            </div>
-                                        </div>
+                                <div class="uudai">
+                                    <div class="box-more-promotion-title has-text-black has-text-weight-semibold" style="margin-left: 18px;">ƯU ĐÃI THÊM</div>
+                                    <div class="render-promotion fix-ul-height">
+                                        <ul>
+                                            <li class="item-promotion"><a href="https://cellphones.com.vn/mo-the-tin-dung-vib"><img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:0:0/q:90/plain/https://cellphones.com.vn/media/wysiwyg/Icon/vibb_bank.png" loading="lazy"></a><a href="https://cellphones.com.vn/mo-the-tin-dung-vib">Mở thẻ VIB nhận E-Voucher đến 600K</a></li>
+                                            <li class="item-promotion"><img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:0:0/q:90/plain/https://cellphones.com.vn/media/wysiwyg/Icon/image_1009_1__1.png" loading="lazy">&nbsp;<a href="https://cellphones.com.vn/uu-dai-doi-tac/vnpay">Giảm đến 500K khi thanh toán qua VNPAY-QR</a></li>
+                                            <li class="item-promotion"><a href="https://cellphones.com.vn/uu-dai-mo-the-hsbc"><img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:0:0/q:90/plain/https://cellphones.com.vn/media/wysiwyg/Icon-bank/HSBC-Logo.png" loading="lazy"></a>&nbsp;<a href="https://cellphones.com.vn/uu-dai-mo-the-hsbc">Mở thẻ HSBC nhận E-Voucher đến 2.5 triệu</a></li>
+                                            <li class="item-promotion"><img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:0:0/q:90/plain/https://cellphones.com.vn/media/wysiwyg/Icon/image_1010_1_.png" loading="lazy">&nbsp;<a href="https://cellphones.com.vn/uu-dai-doi-tac/momo">Nhập mã CPSMM giảm 2% - Tối đa 200.000 đồng</a></li>
+                                            <li class="item-promotion"><img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:40:0/q:90/plain/https://cellphones.com.vn/media/wysiwyg/DUMT_ZV0.png" width="40" alt="Kredivo" loading="lazy" title="Kredivo">&nbsp;<a href="https://cellphones.com.vn/uu-dai-doi-tac/kredivo" target="_blank">Giảm thêm 5% tối đa 200.000đ khi thanh toán qua Krediv</a>o</li>
+                                            <li class="item-promotion"><img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:0:0/q:90/plain/https://cellphones.com.vn/media/wysiwyg/Icon/image_904_1_.png" loading="lazy">&nbsp;&nbsp;<a href="https://cellphones.com.vn/uu-dai-thanh-toan-shopeepay">Nhập mã "SPPCPST5"&nbsp;Giảm ngay 60.000đ cho đơn từ 2.000.000 đồng.&nbsp;</a></li>
+                                        </ul>
+                                        <div id="eJOY__extension_root" class="eJOY__extension_root_class"></div>
                                     </div>
                                 </div>
-
                             </div>
-                        </div>
-                    </div>
-
-
-                    <div class="related-products-wrapper">
-                        <h2 class="related-products-title">Bài Viết Đánh Giá</h2>
-                        <div id="review-list">
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div role="tabpanel" class="col-sm-8" id="home">
+                <h2>Đặc điểm nổi bật</h2>
+                <p> {{$product->product_detail}}</p>
+            </div>
+            <div class="col-sm-4">
+                <div role="tabpanel" class="tab-pane fade in active" id="profile">
+                    <h1>Đánh giá sản phẩm</h1>
+                    <div class="product-review">
+
+                        <div id="star-rating">
+                            <span class="star " data-rating="1">&#9734;</span>
+                            <span class="star" data-rating="2">&#9734;</span>
+                            <span class="star" data-rating="3">&#9734;</span>
+                            <span class="star" data-rating="4">&#9734;</span>
+                            <span class="star" data-rating="5">&#9734;</span>
+                        </div>
+                        <textarea style="width: 310px;" id="review-text" placeholder="Nhập đánh giá của bạn..."></textarea>
+                        <button style="margin-top:10px;" onclick="submitReview()">Gửi đánh giá</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
 </div>
+
+
 <script>
     document.querySelectorAll('.star').forEach(function(star) {
         star.addEventListener('click', function() {
