@@ -5,6 +5,19 @@
 </div>
 <h2 style="text-align: center;">Kết quả tìm kiếm</h2>
 <h3>Tìm thấy {{count($product_timkiem)}} sản phẩm</h3>
+<div class="row">
+    <div class="col-md-4">
+        <label for="">Sắp Xếp Theo</label>
+        <form action="">
+            @csrf
+            <select name="sort" id="sort">
+                <option value="">--Lọc--</option>
+                <option value="">Sắp xếp theo tên A - Z</option>
+                <option value="">Sắp xếp theo tên Z - A</option>
+            </select>
+        </form>
+    </div>
+</div>
 <div class="single-product-area">
     <div class="container">
         <div class="row">

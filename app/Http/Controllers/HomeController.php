@@ -44,6 +44,17 @@ class HomeController extends Controller
             case 'register':
                 return view('auth.register');
 
+<<<<<<< HEAD
+=======
+            case 'profile':
+                return $this->showProfile();
+            case 'products':
+                $product = Product::orderBy('created_at', 'DESC')->get();
+                return view('products.index')->with('product', $product);
+            case 'profile_admin':
+                return view('layouts.profile_admin');
+
+>>>>>>> fb377314db9df9030380045d479bd0311005e2d8
             case 'profile':
                 return $this->showProfile();
             case 'products':
@@ -132,6 +143,21 @@ class HomeController extends Controller
             'totalQuantity' => $totalQuantity,
             'totalPrice' => $totalPrice
         ], compact('data_category'));
-
     }
+
+    public function locsanpham(Request $request)
+    {
+        $sortOrder = $request->query('sort', 'asc');
+        $products = Product::orderBy('product_name', $sortOrder)->paginate(8);
+        return view('products.arrange', ['products' => $products]);
+    }
+
+    public function locsanphamtimkiem(Request $request)
+    {
+        $sortOrder = $request->query('sort', 'asc');
+        $products = Product::orderBy('product_name', $sortOrder)->paginate(8);
+
+        return view('search.arrange', ['products' => $products]);
+    }
+
 }

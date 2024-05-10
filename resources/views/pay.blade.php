@@ -72,12 +72,12 @@
                                 <div class="total-line total-line-shipping clearfix">
                                     <span class="total-line-name pull-left">
                                         Giảm giá </span>
-                                    <span id="moneyCoupon" class="pull-right" value="0">0₫</span>
+                                    <span id="moneyCoupon" class="pull-right" value="0">₫</span>
                                 </div>
                                 <div class="total-line total-line-total clearfix">
                                     <span class="total-line-name pull-left">
                                         Tổng cộng </span>
-                                    <span id="totalMoney" class="total-line-price pull-right" value="4050000">
+                                    <span id="totalMoney" class="total-line-price pull-right" value="4050000" name="product_name">
                                         {{number_format($totalPrice,0, ',', '.')}} vnđ
                                     </span>
                                 </div>
@@ -85,9 +85,9 @@
                         </div>
                         <div class="form-group clearfix hidden-sm hidden-xs">
                             <div class="field__input-btn-wrapper mt10" style="margin-left: 70px;">
-                                <form action="{{ route('payment.process') }}" method="post">
+                                <form action="{{ route('pay','store') }}" method="post">
                                     @csrf
-                                    <input class="btn btn-success btn-checkout tp_button" data-loading-text="Đang xử lý" type="button" value="Đặt hàng">
+                                    <button name="redirect" class="btn btn-success btn-checkout tp_button" type="submit">Đặt hàng</button>
                                 </form>
                             </div>
                         </div>
@@ -336,13 +336,13 @@
                                                             <div class="product-thumbnail__wrapper">
                                                                 <img src="{{asset('img')}}/{{$item['product_image']}}" class="product-thumbnail__image">
                                                             </div>
-                                                            <span class="product-thumbnail__quantity" aria-hidden="true">{{ $item['quantity']}}</span>
+                                                            <span id="booking_quantity" class="product-thumbnail__quantity" aria-hidden="true" name="product_quantity">{{ $item['quantity']}}</span>
                                                         </div>
                                                     </td>
                                                     <td class="product-info">
-                                                        <span class="product-info-name">{{ $item['product_name'] }}</span>
+                                                        <span class="product-info-name" name="product_name">{{ $item['product_name'] }}</span>
                                                     </td>
-                                                    <td class="product-price text-right">
+                                                    <td class="product-price text-right" name="product_price">
                                                         {{number_format($item['product_price'],0, ',', '.')}} vnđ
                                                     </td>
                                                 </tr>

@@ -63,7 +63,7 @@
                                     @foreach($cartItems as $key => $value)
                                     <tr class="cart_item">
                                         <td class="product-remove">
-                                            <ahref="{{ route('cart.remove', ['productId' => $value['productId']]) }}" onclick="return confirm('Bạn có chắc chắn muốn xóa sản phẩm này?');" type="submit" title="Remove this item">×</ahref=>
+                                            <a href="{{ route('cart.remove', ['productId' => $value['productId']]) }}" onclick="return confirm('Bạn có chắc chắn muốn xóa sản phẩm này?');" type="submit" title="Remove this item">×</a>
                                         </td>
 
                                         <td class="product-thumbnail">
@@ -113,14 +113,12 @@
                                             <a onclick="return confirm('Chưa có sản phẩm nào trong giỏ hàng!');" style="border-radius: 10px; margin-right: -580px;margin-top: -50px;" type="submit" class="add_to_cart_button">Thanh Toán</a>
                                         </td>
                                         @endif
+                                        
                                     </tr>
                                 </tbody>
                             </table>
 
                         </form>
-
-                        <div class="cart-collaterals">
-                        </div>
                     </div>
                 </div>
             </div>

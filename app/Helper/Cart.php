@@ -40,6 +40,15 @@ class Cart
         }
         return $totalprice;
     }
+    
+    public function getTotalQuantity()
+    {
+        $totalQuantity = 0;
+        foreach ($this->items as $item) {
+            $totalQuantity += $item['quantity'];
+        }
+        return $totalQuantity;
+    }
     public function remove($productId)
     {
         $cart = session('cart', []); 
@@ -51,13 +60,5 @@ class Cart
             return redirect()->back()->with('message', 'Sản phẩm đã được xóa khỏi giỏ hàng');
         }
         return redirect()->back()->with('error', 'Sản phẩm không tồn tại trong giỏ hàng');
-    }
-    public function getTotalQuantity()
-    {
-        $totalQuantity = 0;
-        foreach ($this->items as $item) {
-            $totalQuantity += $item['quantity'];
-        }
-        return $totalQuantity;
     }
 }

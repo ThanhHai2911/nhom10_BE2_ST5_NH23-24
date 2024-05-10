@@ -1,6 +1,5 @@
 @extends('home')
 @section('content-index')
-
 <div class="promo-area">
     <div class="zigzag-bottom"></div>
     <div class="container">
