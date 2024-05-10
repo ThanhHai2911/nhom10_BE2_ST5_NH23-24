@@ -1,11 +1,7 @@
 <?php
-<<<<<<< HEAD
-use App\Http\Controllers\UserController;
-=======
 
 use App\Helper\SoSanh;
 use App\Http\Controllers\BookingControlle;
->>>>>>> fb377314db9df9030380045d479bd0311005e2d8
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CartLastController;
 use App\Http\Controllers\CategoryController;
@@ -21,13 +17,9 @@ use Illuminate\Http\Request;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\DB;
 use App\Http\Middleware\AdminMiddleware;
-<<<<<<< HEAD
-use App\Http\Controllers\AuthorityController;
-=======
 use App\Models\DonDaDatSession;
 use App\Models\Product;
 
->>>>>>> fb377314db9df9030380045d479bd0311005e2d8
 Paginator::useBootstrap();
 /*
 |--------------------------------------------------------------------------
@@ -103,30 +95,6 @@ Route::middleware('auth')->group(function () {
       
     });
 
-<<<<<<< HEAD
-
-//Category ADMIN
-    Route::controller(CategoryController::class)->prefix('products/category')->group(function () {
-        Route::get('', 'index')->name('products_category');
-        Route::get('create', 'create')->name('category.create');
-        Route::post('store', 'store')->name('category.store');
-        Route::get('show/{id}', 'show')->name('category.show');
-        Route::get('edit/{id}', 'edit')->name('category.edit');
-        Route::put('edit/{id}', 'update')->name('category.update');
-        Route::delete('destroy/{id}', 'destroy')->name('category.destroy');
-        Route::get('/profile_admin',[App\Http\Controllers\AuthController::class,'profile'])->name('profile');
-    });
-
-    //Uy quyen
-    Route::controller(AuthorityController::class)->prefix('products/authority')->group(function () {
-        Route::get('', 'index')->name('products_author');
-        Route::get('/{id}','author')->name('author');
-        Route::put('/{id}', 'update')->name('author.update');
-        Route::delete('destroy/{id}', 'destroy')->name('author.destroy');
-    });
-
-=======
->>>>>>> fb377314db9df9030380045d479bd0311005e2d8
 });
 Route::get('/profile_admin',[App\Http\Controllers\AuthController::class,'profile'])->name('profile');
 Route::get('products/profile_admin',[App\Http\Controllers\AuthController::class,'profile'])->name('profile');

@@ -44,8 +44,6 @@ class HomeController extends Controller
             case 'register':
                 return view('auth.register');
 
-<<<<<<< HEAD
-=======
             case 'profile':
                 return $this->showProfile();
             case 'products':
@@ -54,7 +52,6 @@ class HomeController extends Controller
             case 'profile_admin':
                 return view('layouts.profile_admin');
 
->>>>>>> fb377314db9df9030380045d479bd0311005e2d8
             case 'profile':
                 return $this->showProfile();
             case 'products':
