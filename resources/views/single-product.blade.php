@@ -109,7 +109,7 @@
     <div class="row">
         <div role="tabpanel" class="col-sm-8" id="home">
             <h2>Đặc điểm nổi bật</h2>
-            <p> {{$product->product_detail}}</p>
+            <p> {!!$product->product_detail!!}</p>
         </div>
         <div class="col-sm-4">
             <div role="tabpanel" class="tab-pane fade in active" id="profile">
