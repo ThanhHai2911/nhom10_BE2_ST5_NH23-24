@@ -9,6 +9,7 @@ use App\Models\Latestproduct;
 use App\Models\Product;
 use App\Models\TopSale;
 use App\Models\TopSeller;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -18,9 +19,10 @@ class HomeController extends Controller
 
     public static function getProductData()
     {
-        $product = Product::paginate(8);
+        $product = Product::orderBy('created_at','DESC')->paginate(8);
         $data_product_admin = Product::all();
-        $product_cart = Product::paginate(5);
+        $product_cart = Product::orderBy('created_at','DESC')->paginate(5);
+    
         $data_product = Product::paginate(3);
         $data_category = Categori::all();
         $category = Category::all();
@@ -42,19 +44,18 @@ class HomeController extends Controller
             case 'register':
                 return view('auth.register');
 
-            case 'profile':         
-                return $this->showProfile();    
-            case 'products':
-                        $product = Product::orderBy('created_at','DESC')->get();
-                    return view('products.index')->with('product',$product);
-            case 'profile_admin':
-                    return view('layouts.profile_admin');   
-
             case 'profile':
                 return $this->showProfile();
-            case 'admin_product':
-                return view('admin_product.index', $data);
+            case 'products':
+                $product = Product::orderBy('created_at', 'DESC')->get();
+                return view('products.index')->with('product', $product);
+            case 'profile_admin':
+                return view('layouts.profile_admin');
+               
+            case 'profile':
+                return $this->showProfile();
 
+           
             default:
 
                 break;
@@ -75,7 +76,7 @@ class HomeController extends Controller
         $category_product = Category::all();
         $category = Categori::all();
         $data_category = Category::where('id', $categoryproducts)->first();
-        $product = Product::where('product_type', $data_category->id)->paginate(8);
+        $product = Product::where('product_type', $data_category->id)->orderBy('created_at','DESC')->paginate(8);
         return view('category-product', compact('product', 'data_category', 'category', 'product_cart', 'category_product'));
     }
 
@@ -84,7 +85,7 @@ class HomeController extends Controller
         $category = Categori::all();
         $category_product = Category::all();
         $data_category = Category::where('type_id', $categoryproducts)->first();
-        $product = Product::where('type_name', $data_category->type_id)->paginate(8);
+        $product = Product::where('type_name', $data_category->type_id)->orderBy('created_at','DESC')->paginate(8);
         return view('product-category', compact('category_product', 'product', 'data_category', 'category'));
     }
     public function logoproduct($categoryproducts)
@@ -110,7 +111,7 @@ class HomeController extends Controller
         return view('profile.edit', compact('user'));
     }
 
-   
+
     public function searchproduct(Request $req)
     {
         $data_category = Categori::all();

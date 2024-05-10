@@ -15,32 +15,30 @@
   <!-- Divider -->
   <hr class="sidebar-divider my-0">
   
-  <!-- Nav Item - Dashboard -->
+  <!-- Nav Item - Products -->
   <li class="nav-item">
-    <a class="nav-link" href="{{ route('dashboard') }}">
+  <a class="nav-link" href="{{ route('products') }}">
       <i class="fas fa-fw fa-tachometer-alt"></i>
-      <span>Dashboard</span></a>
+      <span>Sản Phẩm</span></a>
   </li>
-  
+  <!-- Nav Item - category -->
   <li class="nav-item">
-    <a class="nav-link" href="{{ route('products') }}">
+  <a class="nav-link" href="{{ route('products_category') }}">
       <i class="fas fa-fw fa-tachometer-alt"></i>
-      <span>Product</span></a>
+      <span>Danh Mục</span></a>
   </li>
-  
-  <li class="nav-item">
-    <a class="nav-link" href="profile_admin">
+    <!-- Nav Item - Topseller -->
+    <li class="nav-item">
+     <a class="nav-link" href="{{ route('products_author') }}">
       <i class="fas fa-fw fa-tachometer-alt"></i>
-      <span>Profile</span></a>
+      <span>Ủy Quyền</span></a>
   </li>
   
   <!-- Divider -->
   <hr class="sidebar-divider d-none d-md-block">
   
   <!-- Sidebar Toggler (Sidebar) -->
-  <div class="text-center d-none d-md-inline">
-    <button class="rounded-circle border-0" id="sidebarToggle"></button>
-  </div>
+
   
   
 </ul>

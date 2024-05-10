@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categori;
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Category;
 class ProductController extends Controller
 {
     /**
@@ -24,7 +26,9 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('products.create');
+        $categori = Categori::all();
+        $category = Category::all();
+        return view('products.create',compact('categori','category'));
 
     }
 
@@ -36,31 +40,15 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        // $valid  = $request->validate([
-        //     'product_name' => 'required|string|max:255',
-        //     'product_type' => 'required|string|max:255',
-        //     'product_quantity' => 'required|int',
-        //     'product_price' => 'required|string|max:255',
-        //     'product_detail' =>  'required|string|max:1000',
-        //     'product_image' => 'required|string|max:255',
-        //     'type_name'=>'required|string|max:255',
-        //     'type_logo'=>'required|string|max:255'
-        // ]);
-      
-   
-        //  Product::create([
-        //     'product_name' => $valid['product_name'],
-        //     'product_type' => $valid['product_type'],
-        //     'product_quantity' => $valid['product_quantity'],
-        //     'product_price' => $valid['product_price'],
-        //     'product_detail' => $valid['product_detail'],
-        //     'product_image' => $valid['product_image'],
-        //     'type_name'=>$valid['type_name'],
-        //     'type_logo'=>$valid['type_logo']
-        // ]);
-
+        if($request->has('fileUpload')){
+            $file = $request->fileUpload;
+            // $ext = $request->fileUpload->extension();
+            $file_name =$file->getClientoriginalName();
+            $file->move(public_path('img'),$file_name);
+            // dd($file_name);
+        }
+        $request->merge(['product_image'=>$file_name]);
         Product::create($request->all());
-        // return redirect('products.index')->with('success','Thêm sản phẩm thành côngg!!!');
         return redirect()->route('products')->with('success','Thêm sản phẩm thành côngg!!!');
     }
 
@@ -97,7 +85,16 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
+        if($request->has('fileUpload')){
+            $file = $request->fileUpload;
+            // $ext = $request->fileUpload->extension();
+            $file_name =$file->getClientoriginalName();
+            $file->move(public_path('img'),$file_name);
+            // dd($file_name);
+        }
+       
         $product = Product::findOrFail($id);
+        $request->merge(['product_image'=>$file_name]);
         $product->update($request->all());
         return redirect()->route('products')->with('success','Update thành cônggg');
     }

@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Categori extends Model
 {
- 
+    public $timestamps = false;
+    protected $fillable = ['name'];
 }

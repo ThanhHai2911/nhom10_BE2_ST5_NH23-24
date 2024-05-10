@@ -12,7 +12,7 @@
     <div class="container">
         <div class="row">
             @foreach($product as $data)
-            <div class="col-md-3 col-sm-6" style="border-radius: 10px;background-color: #fbfbfb;margin-left: 10px; margin-top: 10px; width: 282px;">
+            <div class="col-md-3 col-sm-6" style="border-radius: 10px;background-color: #fbfbfb;margin-left: 10px; margin-top: 10px; width: 282px; max-height:440px">
                 <div class="single-shop-product">
                     <div class="product-upper">
                         <a href="{{route('single.product',$data->id)}}"> <img src="{{asset('img/' . $data->product_image)}}" alt=""></a>

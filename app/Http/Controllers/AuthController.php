@@ -8,19 +8,23 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
-use App\Models\Product;
+use App\Models\User;
 
 
 class AuthController extends Controller
 {
     public function profile(){
-        return view('/profile_admin');
+        return view('layouts.profile_admin');
     }
 
-    //  public function update(Request $request, $id){
-    //     $product = Product::findOrFail($id);
-    //     $product->update($request->all());
-    //  }
+     public function update(Request $request, $id){
+        $user = User::findOrFail($id);
+        $user->update([
+            'name' => $request->input('name'),
+        ]);
+       
+        return redirect()->route('products')->with('success','Update thành cônggg');
+     }
 
   
 }

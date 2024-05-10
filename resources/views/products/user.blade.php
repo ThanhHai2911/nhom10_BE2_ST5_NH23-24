@@ -4,8 +4,8 @@
   
 @section('contents')
     <div class="d-flex align-items-center justify-content-between">
-        <h1 class="mb-0">List Product</h1>
-        <a href="{{ route('products.create') }}" class="btn btn-primary">Add Product</a>
+        <h1 class="mb-0">List User</h1>
+        <a href="{{ route('products.create') }}" class="btn btn-primary">Add User</a>
     </div>
     <hr />
     @if(Session::has('success'))
@@ -26,13 +26,13 @@
             </tr>
         </thead>
         <tbody>+
-            @if($product->count() > 0)
-                @foreach($product as $rs)
+            @if($user->count() > 0)
+                @foreach($user as $rs)
                     <tr >
-                        <td class="align-middle">{{ $rs->id }}</td>
-                        <td class="align-middle"  width="200px">{{ $rs->product_name }}</td>
-                        <td class="align-middle">{{ $rs->product_quantity }}</td>
-                        <td class="align-middle" width="150px">{{ $rs->product_price }}</td>
+                        <td class="align-middle">{{ $loop->iteration }}</td>
+                        <td class="align-middle"  width="200px">{{ $rs->name }}</td>
+                        <td class="align-middle">{{ $rs->email }}</td>
+                        <td class="align-middle" width="150px">{{ $rs->password }}</td>
                         <td class="align-middle">
                             <div style="max-height: 500px;overflow-y: auto; ">
                                     <p>

@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CartLastController;
 use App\Http\Controllers\CategoryController;
@@ -15,6 +15,7 @@ use Illuminate\Http\Request;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\DB;
 use App\Http\Middleware\AdminMiddleware;
+use App\Http\Controllers\AuthorityController;
 Paginator::useBootstrap();
 /*
 |--------------------------------------------------------------------------
@@ -27,7 +28,7 @@ Paginator::useBootstrap();
 |
 */
 //Trang chu
-Route::get('/{page?}',[HomeController::class,'index']);
+Route::get('/{page?}',[HomeController::class,'index'])->name('index');
 
 //Chi Tiet San Pham
 Route::get('/single-product/{product}',[HomeController::class,'product'])->name('single.product');
@@ -60,8 +61,7 @@ Route::middleware('auth')->group(function () {
     Route::get('dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
-    Route::get('/profile_admin',[App\Http\Controllers\AuthController::class,'profile'])->name('profile');
-    Route::get('/profile_admin',[App\Http\Controllers\AuthController::class,'update'])->name('profile_update');
+   
 
 
 
@@ -74,10 +74,40 @@ Route::middleware('auth')->group(function () {
         Route::get('edit/{id}', 'edit')->name('products.edit');
         Route::put('edit/{id}', 'update')->name('products.update');
         Route::delete('destroy/{id}', 'destroy')->name('products.destroy');
+      
     });
- 
-  
+
+
+//Category ADMIN
+    Route::controller(CategoryController::class)->prefix('products/category')->group(function () {
+        Route::get('', 'index')->name('products_category');
+        Route::get('create', 'create')->name('category.create');
+        Route::post('store', 'store')->name('category.store');
+        Route::get('show/{id}', 'show')->name('category.show');
+        Route::get('edit/{id}', 'edit')->name('category.edit');
+        Route::put('edit/{id}', 'update')->name('category.update');
+        Route::delete('destroy/{id}', 'destroy')->name('category.destroy');
+        Route::get('/profile_admin',[App\Http\Controllers\AuthController::class,'profile'])->name('profile');
+    });
+
+    //Uy quyen
+    Route::controller(AuthorityController::class)->prefix('products/authority')->group(function () {
+        Route::get('', 'index')->name('products_author');
+        Route::get('/{id}','author')->name('author');
+        Route::put('/{id}', 'update')->name('author.update');
+        Route::delete('destroy/{id}', 'destroy')->name('author.destroy');
+    });
+
 });
+Route::get('/profile_admin',[App\Http\Controllers\AuthController::class,'profile'])->name('profile');
+Route::get('products/profile_admin',[App\Http\Controllers\AuthController::class,'profile'])->name('profile');
+Route::put('/profile_admin/{id}', [App\Http\Controllers\AuthController::class, 'update'])->name('update_profile');
+
+
+
+
+
+
 
 
 
@@ -109,7 +139,4 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-//Phan quyen
-Route::post('/admin_product',function(){
-    return view('index');
-})->middleware('phanquyen');
+

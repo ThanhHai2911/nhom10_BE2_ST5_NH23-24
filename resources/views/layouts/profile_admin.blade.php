@@ -5,7 +5,9 @@
     <h1 class="mb-0">Profile</h1>
     <hr />
  
-    <form method="POST" enctype="multipart/form-data" id="profile_setup_frm" action="" href="{{route('profile_update')}}">
+    <form method="POST" enctype="multipart/form-data" id="profile_setup_frm" action="{{route('update_profile',auth()->user()->id)}}" >
+    @csrf
+    @method('PUT')
     <div class="row">
         <div class="col-md-12 border-right">
             <div class="p-3 py-5">

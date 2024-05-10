@@ -40,26 +40,6 @@
 
 <body>
 
-    <div class="header-area">
-        <div class="container">
-            @if (Route::has('login'))
-            <div class="login">
-                @auth
-                <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">
-                    <div>{{ Auth::user()->name }}</div>
-                </a>
-                @else
-                <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
-
-                @if (Route::has('register'))
-                <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                @endif
-                @endauth
-            </div>
-            @endif
-        </div>
-    </div> <!-- End header area -->
-
     <div class="site-branding-area">
         <div class="container">
             <div class="row">
@@ -98,9 +78,34 @@
                         </form>
                     </li>
                     </li>
-                    <li style="margin-left: 190px;">
+                    <li style="margin-left: 50px;">
                         <a href="{{ route('cart.product','listproduct') }}"><i class="fa fa-shopping-cart"></i> <span class="product-count"></span></a>
                     </li>
+                    <li >
+                       @if (Route::has('login'))
+                                <div class="login">
+                                    @auth
+                                    <li style=" margin-left: 20px;">
+                                        <a href="{{ url('/profile') }}"
+                                                class="text-sm text-gray-700 dark:text-gray-500 underline">
+                                                <div>{{ Auth::user()->name }}</div>
+                                            </a>
+                                    </li>
+                                      
+                                    @else
+                                         <li style="margin-right:10px; margin-left: 20px; " >
+                        		<a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Đăng Nhập</a>
+                        		</li>
+
+                                        @if (Route::has('register'))
+                                             <li>
+                        			<a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Đăng Ký</a>
+                        				</li>
+                                        @endif
+                                    @endauth
+                                </div>
+                            @endif
+                       </li>
                 </ul>
             </div>
         </div>
