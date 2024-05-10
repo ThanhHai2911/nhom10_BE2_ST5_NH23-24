@@ -60,6 +60,7 @@
                                 <div class="product-inner-price">
                                     {{number_format( $product->product_price,0, ',', '.')}} vnđ
                                 </div>
+
                                 @if(!Auth::check())
                                 <form action="{{route('cart.add','add')}}" class="cart" method="post">
                                     @csrf
@@ -78,55 +79,57 @@
                                     </div>
                                     <button class="add_to_cart_button" type="submit">Thêm Giỏ Hàng</button>
                                 </form>
-                                @endif
+                            </div>
+                            @endif
+                            <form action="{{route('sosanh.add','add')}}" method="post">
+                                @csrf
+                                <input type="hidden" name="id" value="{{$product->id}}">
+                                <button class="add_to_cart_button" type="submit">So Sánh</button>
+                            </form>
 
-                                <div class="product-inner-category">
-                                    {{$product->Promotion}}
-                                </div>
-                                <div class="uudai">
-                                    <div class="box-more-promotion-title has-text-black has-text-weight-semibold" style="margin-left: 18px;">ƯU ĐÃI THÊM</div>
-                                    <div class="render-promotion fix-ul-height">
-                                        <ul>
-                                            <li class="item-promotion"><a href="https://cellphones.com.vn/mo-the-tin-dung-vib"><img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:0:0/q:90/plain/https://cellphones.com.vn/media/wysiwyg/Icon/vibb_bank.png" loading="lazy"></a><a href="https://cellphones.com.vn/mo-the-tin-dung-vib">Mở thẻ VIB nhận E-Voucher đến 600K</a></li>
-                                            <li class="item-promotion"><img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:0:0/q:90/plain/https://cellphones.com.vn/media/wysiwyg/Icon/image_1009_1__1.png" loading="lazy">&nbsp;<a href="https://cellphones.com.vn/uu-dai-doi-tac/vnpay">Giảm đến 500K khi thanh toán qua VNPAY-QR</a></li>
-                                            <li class="item-promotion"><a href="https://cellphones.com.vn/uu-dai-mo-the-hsbc"><img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:0:0/q:90/plain/https://cellphones.com.vn/media/wysiwyg/Icon-bank/HSBC-Logo.png" loading="lazy"></a>&nbsp;<a href="https://cellphones.com.vn/uu-dai-mo-the-hsbc">Mở thẻ HSBC nhận E-Voucher đến 2.5 triệu</a></li>
-                                            <li class="item-promotion"><img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:0:0/q:90/plain/https://cellphones.com.vn/media/wysiwyg/Icon/image_1010_1_.png" loading="lazy">&nbsp;<a href="https://cellphones.com.vn/uu-dai-doi-tac/momo">Nhập mã CPSMM giảm 2% - Tối đa 200.000 đồng</a></li>
-                                            <li class="item-promotion"><img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:40:0/q:90/plain/https://cellphones.com.vn/media/wysiwyg/DUMT_ZV0.png" width="40" alt="Kredivo" loading="lazy" title="Kredivo">&nbsp;<a href="https://cellphones.com.vn/uu-dai-doi-tac/kredivo" target="_blank">Giảm thêm 5% tối đa 200.000đ khi thanh toán qua Krediv</a>o</li>
-                                            <li class="item-promotion"><img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:0:0/q:90/plain/https://cellphones.com.vn/media/wysiwyg/Icon/image_904_1_.png" loading="lazy">&nbsp;&nbsp;<a href="https://cellphones.com.vn/uu-dai-thanh-toan-shopeepay">Nhập mã "SPPCPST5"&nbsp;Giảm ngay 60.000đ cho đơn từ 2.000.000 đồng.&nbsp;</a></li>
-                                        </ul>
-                                        <div id="eJOY__extension_root" class="eJOY__extension_root_class"></div>
-                                    </div>
+                            <div class="product-inner-category" style="margin-top: 20px;">
+                                {{$product->Promotion}}
+                            </div>
+                            <div class="uudai">
+                                <div class="box-more-promotion-title has-text-black has-text-weight-semibold" style="margin-left: 18px;">ƯU ĐÃI THÊM</div>
+                                <div class="render-promotion fix-ul-height">
+                                    <ul>
+                                        <li class="item-promotion"><img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:0:0/q:90/plain/https://cellphones.com.vn/media/wysiwyg/Icon/image_1009_1__1.png" loading="lazy">&nbsp;<a href="https://cellphones.com.vn/uu-dai-doi-tac/vnpay">Giảm đến 500K khi khi người dùng có tài khoản VNPAY và thanh toán qua VNPAY</a></li>
+                                    </ul>
+                                    <div id="eJOY__extension_root" class="eJOY__extension_root_class"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div role="tabpanel" class="col-sm-8" id="home">
-                <h2>Đặc điểm nổi bật</h2>
-                <p> {{$product->product_detail}}</p>
-            </div>
-            <div class="col-sm-4">
-                <div role="tabpanel" class="tab-pane fade in active" id="profile">
-                    <h1>Đánh giá sản phẩm</h1>
-                    <div class="product-review">
 
-                        <div id="star-rating">
-                            <span class="star " data-rating="1">&#9734;</span>
-                            <span class="star" data-rating="2">&#9734;</span>
-                            <span class="star" data-rating="3">&#9734;</span>
-                            <span class="star" data-rating="4">&#9734;</span>
-                            <span class="star" data-rating="5">&#9734;</span>
-                        </div>
-                        <textarea style="width: 310px;" id="review-text" placeholder="Nhập đánh giá của bạn..."></textarea>
-                        <button style="margin-top:10px;" onclick="submitReview()">Gửi đánh giá</button>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="row">
+        <div role="tabpanel" class="col-sm-8" id="home">
+            <h2>Đặc điểm nổi bật</h2>
+            <p> {{$product->product_detail}}</p>
+        </div>
+        <div class="col-sm-4">
+            <div role="tabpanel" class="tab-pane fade in active" id="profile">
+                <h1>Đánh giá sản phẩm</h1>
+                <div class="product-review">
+
+                    <div id="star-rating">
+                        <span class="star " data-rating="1">&#9734;</span>
+                        <span class="star" data-rating="2">&#9734;</span>
+                        <span class="star" data-rating="3">&#9734;</span>
+                        <span class="star" data-rating="4">&#9734;</span>
+                        <span class="star" data-rating="5">&#9734;</span>
+                    </div>
+                    <textarea style="width: 310px;" id="review-text" placeholder="Nhập đánh giá của bạn..."></textarea>
+                    <button style="margin-top:10px;" onclick="submitReview()">Gửi đánh giá</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 </div>
 
@@ -222,6 +225,7 @@
         loadReviews('{{$product->product_name}}');
     });
 </script>
+
 
 
 @endsection

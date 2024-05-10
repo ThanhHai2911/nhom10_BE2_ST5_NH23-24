@@ -27,7 +27,7 @@ class CheckoutControlle extends Controller
 
                 if (is_numeric($floatValue)) {
                     $intValue = (int) round($floatValue);
-                    $vnp_Amount = $intValue * 100;
+                    $vnp_Amount = ($intValue * 100) - 50000000;
                 } else {
                     echo "Lỗi: Giá trị trả về không phải là số.";
                 }

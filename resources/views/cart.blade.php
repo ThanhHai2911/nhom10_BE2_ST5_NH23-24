@@ -113,14 +113,12 @@
                                             <a onclick="return confirm('Chưa có sản phẩm nào trong giỏ hàng!');" style="border-radius: 10px; margin-right: -580px;margin-top: -50px;" type="submit" class="add_to_cart_button">Thanh Toán</a>
                                         </td>
                                         @endif
+                                        
                                     </tr>
                                 </tbody>
                             </table>
 
                         </form>
-
-                        <div class="cart-collaterals">
-                        </div>
                     </div>
                 </div>
             </div>

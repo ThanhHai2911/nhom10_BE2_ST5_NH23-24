@@ -1221,5 +1221,10 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button li.active 
     border-radius: 10px;
     border: solid black 1px;
     margin-bottom: 20px;
-    
+  }
+  .loc{
+    border: solid black 1px; 
+    border-radius: 10px;
+    height:60px;
+    margin-top: 20px;
   }

@@ -42,13 +42,13 @@ class HomeController extends Controller
             case 'register':
                 return view('auth.register');
 
-            case 'profile':         
-                return $this->showProfile();    
+            case 'profile':
+                return $this->showProfile();
             case 'products':
-                        $product = Product::orderBy('created_at','DESC')->get();
-                    return view('products.index')->with('product',$product);
+                $product = Product::orderBy('created_at', 'DESC')->get();
+                return view('products.index')->with('product', $product);
             case 'profile_admin':
-                    return view('layouts.profile_admin');   
+                return view('layouts.profile_admin');
 
             case 'profile':
                 return $this->showProfile();
@@ -110,7 +110,7 @@ class HomeController extends Controller
         return view('profile.edit', compact('user'));
     }
 
-   
+
     public function searchproduct(Request $req)
     {
         $data_category = Categori::all();
@@ -131,6 +131,21 @@ class HomeController extends Controller
             'totalQuantity' => $totalQuantity,
             'totalPrice' => $totalPrice
         ], compact('data_category'));
-
     }
+
+    public function locsanpham(Request $request)
+    {
+        $sortOrder = $request->query('sort', 'asc');
+        $products = Product::orderBy('product_name', $sortOrder)->paginate(8);
+        return view('products.arrange', ['products' => $products]);
+    }
+
+    public function locsanphamtimkiem(Request $request)
+    {
+        $sortOrder = $request->query('sort', 'asc');
+        $products = Product::orderBy('product_name', $sortOrder)->paginate(8);
+
+        return view('search.arrange', ['products' => $products]);
+    }
+
 }
