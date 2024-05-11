@@ -1,4 +1,3 @@
-
 <link rel="stylesheet" href="style.css">
 <x-app-layout>
     <x-slot name="header">
@@ -23,22 +22,24 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+
                                     <tr class="cart_item">
                                         <td class="product-name">
-                                            <a href=""></a>
-                                        </td>
 
-                                        <td class="product-price">
-                                            <span class="amount"></span>
                                         </td>
 
                                         <td class="product-quantity">
-                                            
+                               
+                                        </td>
+
+                                        <td class="product-price">
+
                                         </td>
 
                                         <td class="product-subtotal">
-                                            <span class="amount"></span>
+                                        
                                         </td>
+
                                     </tr>
                                 </tbody>
                             </table>
