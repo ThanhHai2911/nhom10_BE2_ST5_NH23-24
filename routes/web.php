@@ -6,6 +6,7 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\CartLastController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CheckoutControlle;
+use App\Http\Controllers\DonDaDatController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Middleware\IsAdminMiddleware;
 use Illuminate\Support\Facades\Route;
@@ -61,20 +62,12 @@ Route::get('/pay/{checkout}', [HomeController::class, 'checkout'])->name('checko
 Route::post('/pay/{store}', [BookingControlle::class, 'store'])->name('pay');
 Route::post('/vnpay_payment', [CheckoutControlle::class, 'vnpay_payment']);
 
-
-//Loc san pham
-Route::get('/shop-product',[HomeController::class,'locsanpham'])->name('products.arrange');
-Route::get('/search-product/{locsanphamtimkiem}',[HomeController::class,'locsanphamtimkiem'])->name('search.arrange');
-
-
-//Hien thi don da dat
-Route::post('/store-product-info', [ProductController::class, 'storeProductInfo']);
-Route::get('/dashboard', [ProductController::class, 'showProducts']);
-
 //So sanh san pham
 Route::post('/sosanh/{sosanh}',[SoSanhControlle::class,'sosanh'])->name('sosanh.add');
 Route::get('/sosanh/{listproduct}',[SoSanhControlle::class,'listproduct'])->name('sosanh.product');
 Route::get('/sosanh/removesosanh/{productId}', [SoSanhControlle::class, 'removesosanh'])->name('sosanh.remove');
+
+
 
 Route::middleware('auth')->group(function () {
     Route::get('dashboard', function () {

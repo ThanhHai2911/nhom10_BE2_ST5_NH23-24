@@ -137,19 +137,4 @@ class HomeController extends Controller
         ], compact('data_category'));
     }
 
-    public function locsanpham(Request $request)
-    {
-        $sortOrder = $request->query('sort', 'asc');
-        $products = Product::orderBy('product_name', $sortOrder)->paginate(8);
-        return view('products.arrange', ['products' => $products]);
-    }
-
-    public function locsanphamtimkiem(Request $request)
-    {
-        $sortOrder = $request->query('sort', 'asc');
-        $products = Product::orderBy('product_name', $sortOrder)->paginate(8);
-
-        return view('search.arrange', ['products' => $products]);
-    }
-
 }

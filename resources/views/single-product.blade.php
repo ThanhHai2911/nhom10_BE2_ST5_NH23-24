@@ -62,7 +62,12 @@
                                 </div>
 
                                 @if(!Auth::check())
-                                <form action="{{route('cart.add','add')}}" class="cart" method="post">
+                                <form action="{{route('sosanh.add','add')}}" method="post">
+                                    @csrf
+                                    <input type="hidden" name="id" value="{{$product->id}}">
+                                    <button class="add_to_cart_button" type="submit" style="margin-left: 230px;margin-bottom: -30px;">So Sánh</button>
+                                </form>
+                                <form action="{{route('cart.add','add')}}" class="cart" method="post" style="margin-top: -30px;">
                                     @csrf
                                     <input type="hidden" name="id" value="{{$product->id}}">
                                     <div class="quantity">
@@ -71,7 +76,12 @@
                                     <button class="add_to_cart_button" type="submit">Thêm Giỏ Hàng</button>
                                 </form>
                                 @else
-                                <form action="{{route('cart.add','add')}}" class="cart" method="post">
+                                <form action="{{route('sosanh.add','add')}}" method="post">
+                                    @csrf
+                                    <input type="hidden" name="id" value="{{$product->id}}">
+                                    <button class="add_to_cart_button" type="submit" style="margin-left: 230px;margin-bottom: -30px;">So Sánh</button>
+                                </form>
+                                <form action="{{route('cart.add','add')}}" class="cart" method="post" style="margin-top: -30px;">
                                     @csrf
                                     <input type="hidden" name="id" value="{{$product->id}}">
                                     <div class="quantity">
@@ -81,11 +91,7 @@
                                 </form>
                             </div>
                             @endif
-                            <form action="{{route('sosanh.add','add')}}" method="post">
-                                @csrf
-                                <input type="hidden" name="id" value="{{$product->id}}">
-                                <button class="add_to_cart_button" type="submit">So Sánh</button>
-                            </form>
+
 
                             <div class="product-inner-category" style="margin-top: 20px;">
                                 {{$product->Promotion}}

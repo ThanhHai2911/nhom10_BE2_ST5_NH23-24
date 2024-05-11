@@ -533,65 +533,6 @@ class ProductSeeder extends Seeder
                 'Promotion' => 'Ưu đãi tặng kèm gói Samsung Care+ 6 tháng'
             ],
 
-            [
-                'product_name' => 'Sony Xperia 5 IV',
-                'product_type' => '1',
-                'product_quantity' => 20,
-                'product_price' => 28000000,
-                'product_detail' => 'Sony Xperia 5 IV là chiếc điện thoại được ra mắt bởi Sony với vô vàn tính năng thông minh được tích hợp. Dung lượng pin khủng cho thời gian giải trí, làm việc hay học tập không bị gián đoạn. Cụm camera với độ phân giải cao cho hình ảnh được ghi lại vô cùng chân thật.',
-                'product_image' => 'sony.png',
-                'type_name' => '7',
-                'type_logo' => '7',
-                'Promotion' => 'Áp dụng chương trình thu cũ đổi mới hỗ trợ 2 triệu'
-            ],
-
-            [
-                'product_name' => 'OPPO Reno11 F 5G',
-                'product_type' => '1',
-                'product_quantity' => 30,
-                'product_price' => 8000000,
-                'product_detail' => 'OPPO Reno11 F 5G cung cấp trải nghiệm hiển thị, xử lý siêu mượt mà với màn hình AMOLED 6.7 inch hiện đại cùng chipset MediaTek Dimensity 7050 mạnh mẽ. Hệ thống quay chụp trên thế hệ Reno11 F 5G này được cải thiện hơn thông qua cụm 3 camera với độ phân giải lần lượt là 64MP, 8MP và 2MP. Ngoài ra, cung cấp năng lượng cho thế hệ OPPO smartphone này là viên pin 5000mAh cùng sạc nhanh 67W, mang tới trải nghiệm liền mạch suốt ngày dài.',
-                'product_image' => 'opporeno11.png',
-                'type_name' => '14',
-                'type_logo' => '14',
-                'Promotion' => 'Áp dụng chương trình thu cũ đổi mới hỗ trợ 1 triệu'
-            ],
-
-            [
-                'product_name' => 'Nokia 105 4G',
-                'product_type' => '1',
-                'product_quantity' => 25,
-                'product_price' => 400000,
-                'product_detail' => 'Nokia 105 4G Pro sở hữu màn hình IPS LCD có kích thước 1.77 inch đem lại cho người dùng khả năng hiển thị chữ rõ nét hơn. Cùng với đó, dung lượng pin 1450mAh đem lại khả năng sử dụng lâu dài trong nhiều ngày. Với sự trang bị chipset Unisoc T107 và bộ nhớ trong 128MB, sản phẩm đem lại trải nghiệm ổn định cho người dùng.',
-                'product_image' => 'nokia1054g.png',
-                'type_name' => '5',
-                'type_logo' => '5',
-                'Promotion' => 'Ưu đãi tặng kèm bảo hành bạc 3 tháng'
-            ],
-
-            [
-                'product_name' => 'Laptop Lenovo Yoga',
-                'product_type' => '2',
-                'product_quantity' => 25,
-                'product_price' => 18990000,
-                'product_detail' => 'Laptop Lenovo Yoga Duet 7 13ITL6 82MA009NVN là sản phẩm cao cấp được tích hợp 2 trong 1. Với laptop Lenovo Yoga này người dùng có thể sử dụng như một chiếc máy tính, vừa sử dụng như chiếc ipad vô cùng tiện lợi để mọi công việc được xử lý nhẹ nhàng và hiệu quả nhất.',
-                'product_image' => 'laptoplenovo.png',
-                'type_name' => '12',
-                'type_logo' => '12',
-                'Promotion' => 'Giảm giá cho sinh viên 5% cho tất cả sản phẩm laptop và máy tính bảng'
-            ],
-
-            [
-                'product_name' => 'MacBook Pro M2 Pro 2023',
-                'product_type' => '2',
-                'product_quantity' => 25,
-                'product_price' => 82000000,
-                'product_detail' => 'Macbook Pro 16 inch M2 Pro 32GB 1TB 2023 không chỉ sở hữu một kích thước lớn mà còn mạnh mẽ, uy lực hơn với thế hệ chip xử lý M2 Pro mới. Không chỉ hiệu năng mà khả năng xử lý đồ hoạ của Macbook Pro 2023 cũng đã được nâng lên một tầm cao mới để xoá nhoà sự khác biệt lớn nhất giữa laptop với các mẫu máy tính để bàn.',
-                'product_image' => 'macprom2.png',
-                'type_name' => '1',
-                'type_logo' => '1',
-                'Promotion' => 'Giảm giá cho sinh viên 5% cho tất cả sản phẩm laptop và máy tính bảng'
-            ],
 
             [
                 'product_name' => 'Laptop HP Gaming Victus',
