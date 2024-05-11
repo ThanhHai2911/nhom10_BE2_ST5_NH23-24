@@ -22,7 +22,6 @@ class HomeController extends Controller
         $product = Product::orderBy('created_at','DESC')->paginate(8);
         $data_product_admin = Product::all();
         $product_cart = Product::orderBy('created_at','DESC')->paginate(5);
-    
         $data_product = Product::paginate(3);
         $data_category = Categori::all();
         $category = Category::all();
