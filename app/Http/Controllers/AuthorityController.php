@@ -52,9 +52,18 @@ class AuthorityController extends Controller
 
     public function destroy($id)
     {
+        
+
+
         $user = User::findOrFail($id);
-        $user->delete();
-        return redirect()->back()->with('success','Xóa user thành cônggg');
+         
+        if($user->usertype === "user"){
+          $user->delete();
+          return redirect()->back()->with('success','Xóa user thành cônggg');
+        }else{
+            return redirect()->back()->with('success','Không thể xóa admin  ');
+        }
+      
     }
 
 }

@@ -1,7 +1,4 @@
 @extends('layouts.app_admin')
-  
-@section('title', 'Home Product')
-  
 @section('contents')
     <div class="d-flex align-items-center justify-content-between">
         <h1 class="mb-0">List Product</h1>
@@ -60,5 +57,9 @@
                 </tr>
             @endif
         </tbody>
+        
     </table>
+        <div style="text-align: center; ">
+         {{$product->links()}}
+         </div>
 @endsection

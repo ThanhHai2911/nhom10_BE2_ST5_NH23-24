@@ -95,8 +95,17 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
+        //mã sản phẩm
+        $product = Product::pluck('product_type');
+       
         $category = Categori::findOrFail($id);
+       if($product->contains($category->id)){
+        return redirect()->route('products_category')->with('success', 'Không thể xóa loại sản phẩm vì có sản phẩm ');
+      
+       }else{
         $category->delete();
         return redirect()->route('products_category')->with('success', 'Xóa loại sản phẩm thành cônggg');
+       }
+     
     }
 }

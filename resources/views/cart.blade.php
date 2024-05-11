@@ -80,7 +80,7 @@
 
                                         <td class="product-quantity">
                                             <div class="quantity buttons_added">
-                                                <input id="quantityInput" style="text-align: center;" type="number" class="input-text qty text" title="Qty" value="{{$value['quantity']}}" min="0" step="1">
+                                                <span>{{$value['quantity']}}</span>
                                             </div>
                                         </td>
 
