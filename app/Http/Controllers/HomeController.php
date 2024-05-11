@@ -44,24 +44,19 @@ class HomeController extends Controller
             case 'register':
                 return view('auth.register');
 
-            case 'profile':
-                return $this->showProfile();
-            case 'products':
-                $product = Product::orderBy('created_at', 'DESC')->get();
-                return view('products.index')->with('product', $product);
+                case 'products':
+                    $product = Product::orderBy('created_at', 'DESC')->paginate(10);
+                    return view('products.index')->with('product', $product);
             case 'profile_admin':
                 return view('layouts.profile_admin');
 
             case 'profile':
                 return $this->showProfile();
-            case 'products':
-                $product = Product::orderBy('created_at', 'DESC')->get();
-                return view('products.index')->with('product', $product);
+          
             case 'profile_admin':
                 return view('layouts.profile_admin');
                
-            case 'profile':
-                return $this->showProfile();
+         
 
            
             default:
