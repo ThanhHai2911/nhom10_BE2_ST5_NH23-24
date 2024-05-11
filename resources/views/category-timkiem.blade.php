@@ -88,7 +88,7 @@
                        @if (Route::has('login'))
                                 <div class="login">
                                     @auth
-                                    <li style=" margin-left: 20px;">
+                                    <li style="margin-left: 80px;">
                                         <a href="{{ url('/profile') }}"
                                                 class="text-sm text-gray-700 dark:text-gray-500 underline">
                                                 <div>{{ Auth::user()->name }}</div>

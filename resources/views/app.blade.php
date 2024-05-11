@@ -63,7 +63,11 @@
                     <!--Thêm Nav -->
                     <li>
                         <form role="timkiem" action="{{ route('timkiem.product', 'searchproduct') }}" method="get">
+<<<<<<< HEAD
                             <input style="border-radius: 10px; margin-top: 10px; margin-left: 80px; width:300px;" name="key" type="text" placeholder="Search products...">
+=======
+                            <input style="border-radius: 10px; margin-top: 10px; margin-left: 100px; width:300px;" name="key" type="text" placeholder="Search products...">
+>>>>>>> 4d2877fead1b5e6cb227a5d36d33bdf81390d400
                             <button style="border-radius: 10px; width:80px; height: 45px; margin-left: 10px;">Search</button>
                         </form>
                     </li>
@@ -75,7 +79,7 @@
                        @if (Route::has('login'))
                                 <div class="login">
                                     @auth
-                                    <li style=" margin-left: 20px;">
+                                    <li style=" margin-left: 120px;">
                                         <a href="{{ url('/profile') }}"
                                                 class="text-sm text-gray-700 dark:text-gray-500 underline">
                                                 <div>{{ Auth::user()->name }}</div>
