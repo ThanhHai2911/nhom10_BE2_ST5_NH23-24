@@ -10,6 +10,7 @@
                         <h1><a href="./"><img src="img/logo.png"></a></h1>
                     </div>
                     </a>
+                    
                 </div>
 
                 <!-- Navigation Links -->
@@ -34,6 +35,10 @@
                     <x-slot name="content">
                         <x-dropdown-link :href="route('profile.edit')">
                             {{ __('Profile') }}
+                        </x-dropdown-link>
+
+                        <x-dropdown-link :href="route('favorites_list')">
+                            {{ __('Danh sách yêu thích') }}
                         </x-dropdown-link>
 
                         <!-- Authentication -->

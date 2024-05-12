@@ -54,7 +54,8 @@ class HomeController extends Controller
           
             case 'profile_admin':
                 return view('layouts.profile_admin');
-               
+            case 'favorites_list':
+                return view('favorites-list');
          
 
            

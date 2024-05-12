@@ -125,7 +125,8 @@ Route::put('/profile_admin/{id}', [App\Http\Controllers\AuthController::class, '
 
 
 
-
+//Danh sách yêu thích
+Route::get('/favorites_list',[App\Http\Controllers\FavoritesListController::class,'index'])->name('favorites_list');
 
 
 
