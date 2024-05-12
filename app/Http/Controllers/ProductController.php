@@ -6,6 +6,7 @@ use App\Models\Categori;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Category;
+
 class ProductController extends Controller
 {
     /**
@@ -13,7 +14,7 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $req)
+    public function index(Request $req, $categoryproducts)
     {
         $category = Categori::all();
         $product = Product::where('product_name', 'like', '%' . $req->key . '%')
