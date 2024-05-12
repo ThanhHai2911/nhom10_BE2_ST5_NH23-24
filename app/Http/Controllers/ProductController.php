@@ -13,10 +13,13 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $req)
     {
-        $product = Product::orderBy('created_at','DESC')->paginate(8);
-        return view('products.index')->with('product',$product);
+        $category = Categori::all();
+        $product = Product::where('product_name', 'like', '%' . $req->key . '%')
+            ->orderBy('created_at','DESC')
+            ->paginate(8);
+        return view('products.indexadmin',compact('category'))->with('product',$product);
     }
 
     /**

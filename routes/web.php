@@ -1,6 +1,7 @@
 <?php
 
 use App\Helper\SoSanh;
+use App\Http\Controllers\AdminControlle;
 use App\Http\Controllers\BookingControlle;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CartLastController;
@@ -67,6 +68,12 @@ Route::post('/sosanh/{sosanh}',[SoSanhControlle::class,'sosanh'])->name('sosanh.
 Route::get('/sosanh/{listproduct}',[SoSanhControlle::class,'listproduct'])->name('sosanh.product');
 Route::get('/sosanh/removesosanh/{productId}', [SoSanhControlle::class, 'removesosanh'])->name('sosanh.remove');
 
+
+//Tim kiem san pham trong admin
+Route::get('/indexadmin/{index}',[ProductController::class,'index'])->name('timkiem.admin');
+
+//San pham theo danh muc admin
+//Route::get('/indexadmin/{index}',[ProductController::class,'index'])->name('category');
 
 
 Route::middleware('auth')->group(function () {

@@ -45,7 +45,7 @@ class HomeController extends Controller
 
                 case 'products':
                     $product = Product::orderBy('created_at', 'DESC')->paginate(10);
-                    return view('products.index')->with('product', $product);
+                    return view('products.indexadmin')->with('product', $product);
             case 'profile_admin':
                 return view('layouts.profile_admin');
 
