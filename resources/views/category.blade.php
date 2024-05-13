@@ -83,7 +83,7 @@
                         <div class="login">
                             @auth
                     <li style=" margin-left: 100px;">
-                        <a href="{{ url('/profile') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">
+                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">
                             <div>{{ Auth::user()->name }}</div>
                         </a>
                     </li>
@@ -99,7 +99,7 @@
                     </li>
                     @endif
                     @endauth
-                    <li style="margin-left: 100px;">
+                    <li style="margin-left: 80px;">
                         <a href="{{ route('cart.product', 'listproduct') }}"><i class="fa fa-shopping-cart"></i>
                             <span class="product-count">{{count($cart->getList())}}</span></a>
                     </li>

@@ -87,7 +87,7 @@
                             <div class="field__input-btn-wrapper mt10" style="margin-left: 70px;">
                                 <form action="{{ route('pay','store') }}" method="post">
                                     @csrf
-                                    <button name="redirect" class="btn btn-success btn-checkout tp_button" type="submit"class="button_wishlist"  onclick="add_wishlist(this.id);">Đặt hàng</button>
+                                    <button href="{{ route('checkout','checkout') }}" name="redirect" class="btn btn-success btn-checkout tp_button" type="submit"class="button_wishlist" >Đặt hàng</button>
                                 </form>
                             </div>
                         </div>
@@ -359,29 +359,5 @@
         </form>
     </div>
 </body>
-<script>
-  function add_wishlist(clicked_id) {
-    var id = clicked_id;
-    var name = document.getElementById('product_name' + id).value;
-    var quantity = document.getElementById('quantity' + id).value;
-    var price = document.getElementById('product_price' + id).value;
 
-    var newItem = {
-      'id': id,
-      'name': name,
-      'price': price,
-      'quantity': promotion,
-    };
-
-
-    var old_data = JSON.parse(localStorage.getItem('data')) || [];
-    var matches = $.grep(old_data, function(obj) {
-      return obj.id == id;
-    });
-
-
-    localStorage.setItem('data', JSON.stringify(old_data));
-
-  }
-</script>
 @endsection

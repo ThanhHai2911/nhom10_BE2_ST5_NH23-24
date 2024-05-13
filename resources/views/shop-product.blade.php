@@ -18,18 +18,6 @@
 @foreach($category as $data)
 <a href="{{route('product.category',$data->id)}}" style="margin-top: 20px;" class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="/canvas/shop/?add-to-cart=70">{{$data->type_name}}</a>
 @endforeach
-<div class="row">
-  <div class="col-md-4" style="margin-left: 10px;margin-top: 10px;">
-    <form action="">
-      @csrf
-      <select name="sort" id="sort">
-        <option value="">--Lọc--</option>
-        <option value="">Sắp xếp theo tên A - Z</option>
-        <option value="">Sắp xếp theo tên Z - A</option>
-      </select>
-    </form>
-  </div>
-</div>
 <div class="single-product-area">
   <div class="zigzag-bottom"></div>
   <div class="container">

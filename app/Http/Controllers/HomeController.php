@@ -30,8 +30,9 @@ class HomeController extends Controller
     }
 
 
-    public function index($page = "index", Cart $cart)
+    public function index($page = "index")
     {
+        $cart = new Cart();
         $data = self::getProductData();
         switch ($page) {
             case 'login':
