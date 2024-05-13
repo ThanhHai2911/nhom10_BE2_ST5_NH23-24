@@ -40,7 +40,7 @@
     <script>
         $(document).on('click', '.btn-delete', function () {
             var id = $(this).closest('tr').find('.id').text();
-            
+
             // Xóa mục từ localStorage
 
             removeItemFromLocalStorage(id);
@@ -71,8 +71,14 @@
                 var image = data[i].image;
                 var promotion = data[i].promotion;
 
+                  var routeUrl = "{{ route('single.product', ['product' => ':id']) }}"; 
+                  routeUrl = routeUrl.replace(':id', id);
+                  var price = parseFloat(data[i].price); // Convert price to float
+            var formattedPrice = price.toLocaleString('vi-VN', {  currency: 'VND' });
+
+
                 // Thêm dữ liệu từ localStorage vào phần tử #favotites_list
-                $('#favotites_list').append('<tr><td class="id">' + id + '</td><td class="product-name">' + name + '</td><td class="product-price">' + price + 'vnđ' + '</td><td class="product-image" ><img src="' + image + '" alt="' + name + '" width="200px" max-height="200px" ></td><td class="product-price">' + promotion + '</td><td><button type="submit" class="btn-delete">Delete</button></td></form></tr>');
+                $('#favotites_list').append('<tr><td class="id">' + id + '</td><td class="product-name"><a href="'+routeUrl+'">' + name + '</a></td><td class="product-price">' + formattedPrice + 'vnđ' + '</td><td class="product-image" ><a href="'+routeUrl+'"><img src="' + image + '" alt="' + name + '" width="200px" max-height="200px" ></a></td><td class="product-price">' + promotion + '</td><td><button type="submit" class="btn-delete">Delete</button></td></form></tr>');
             };
 
 
