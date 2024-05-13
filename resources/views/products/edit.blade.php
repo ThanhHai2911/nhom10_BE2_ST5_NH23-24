@@ -28,14 +28,20 @@
     <div class="row">
         <div class="col mb-3">
             <label class="form-label">Chi tiết sản phẩm</label>
-            <textarea class="form-control" name="product_detail"
-                placeholder="Descriptoin" id="summernote">{{ $product->product_detail }} </textarea>
+            <textarea class="form-control" name="product_detail" placeholder="Descriptoin"
+                id="summernote">{{ $product->product_detail }} </textarea>
         </div>
     </div>
     <div class="row">
+        <div class="col mb-3">
+            <label class="form-label">Khuyến mãi</label>
+            <input type="text" name="Promotion" class="form-control" placeholder="Price"
+                value="{{ $product->Promotion }}">
+        </div>
         <div class="col-2 mb-3">
-        <label class="form-label">Hình ảnh sản phẩm</label>
-            <img src="{{asset('img/' . $product->product_image)}}" alt="" width="160px" height="160px" id="previewImage">    
+            <label class="form-label">Hình ảnh sản phẩm</label>
+            <img src="{{asset('img/' . $product->product_image)}}" alt="" width="160px" height="160px"
+                id="previewImage">
         </div>
         <div class="col mb-3">
             <input type="file" id="fileInput" style="opacity: 0;" name="fileUpload">
@@ -50,7 +56,7 @@
              margin-bottom: 10px;
              cursor: pointer;">
                 Upload Image
-            </label>        
+            </label>
         </div>
     </div>
     <div class="row">
@@ -62,25 +68,25 @@
 <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 <script>
-     $('#summernote').summernote({
-      placeholder: '',
-      height: 300
+    $('#summernote').summernote({
+        placeholder: '',
+        height: 300
     });
-function chooseFile() {
-    document.getElementById('fileInput').click();
-}
-
-document.getElementById('fileInput').addEventListener('change', function() {
-    var file = this.files[0];
-    if (file) {
-        var reader = new FileReader();
-        reader.onload = function(event) {
-            var imgElement = document.getElementById('previewImage');
-            imgElement.src = event.target.result;
-            imgElement.style.display = 'block';
-        };
-        reader.readAsDataURL(file);
+    function chooseFile() {
+        document.getElementById('fileInput').click();
     }
-});
+
+    document.getElementById('fileInput').addEventListener('change', function () {
+        var file = this.files[0];
+        if (file) {
+            var reader = new FileReader();
+            reader.onload = function (event) {
+                var imgElement = document.getElementById('previewImage');
+                imgElement.src = event.target.result;
+                imgElement.style.display = 'block';
+            };
+            reader.readAsDataURL(file);
+        }
+    });
 </script>
 @endsection

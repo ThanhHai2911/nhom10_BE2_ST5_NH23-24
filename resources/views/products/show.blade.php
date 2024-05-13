@@ -62,6 +62,11 @@
     </div>
 </div>
 <div class="row">
+<div class="col mb-3">
+        <label class="form-label">Khuyến mãi</label>
+        <input type="text" name="created_at" class="form-control" placeholder="Created At"
+            value="{{ $product->Promotion }}" readonly>
+    </div>
     <div class="col mb-3">
         <label class="form-label">Created At</label>
         <input type="text" name="created_at" class="form-control" placeholder="Created At"
