@@ -12,6 +12,9 @@
                 <div class="product-content-right">
                     <div class="woocommerce">
                         <form method="post" action="#">
+                            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+                                {{ __('Đơn hàng đã đặt') }}
+                            </h2>
                             <table cellspacing="0" class="shop_table cart">
                                 <thead>
                                     <tr>
@@ -22,24 +25,29 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-
+                                    @foreach ($cart->getList() as $item)
                                     <tr class="cart_item">
                                         <td class="product-name">
-
+                                            {{ $item['product_name'] }}
                                         </td>
 
                                         <td class="product-quantity">
-                               
+                                            {{ $item['quantity']}}
                                         </td>
 
                                         <td class="product-price">
-
+                                            {{number_format($item['product_price'],0, ',', '.')}} vnđ
                                         </td>
 
                                         <td class="product-subtotal">
-                                        
+                                            {{number_format($item['product_price'] * $item['quantity'],0, ',', '.')}} vnđ
                                         </td>
-
+                                    </tr>
+                                    @endforeach
+                                    <tr>
+                                        <td colspan="6">
+                                            <h4 style=" margin-bottom: 15px; margin-top: 10px;">Tổng ({{count($cart->getList())}} sản phẩm): {{number_format($cart->getTotalPrice() ,0, ',', '.')}} vnđ</h4>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>

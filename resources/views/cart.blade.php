@@ -67,11 +67,11 @@
                                         </td>
 
                                         <td class="product-thumbnail">
-                                            <a href="{{route('single.product','product')}}"><img width="145" height="145" alt="poster_1_up" class="shop_thumbnail" src="{{asset('img')}}/{{$value['product_image']}}"></a>
+                                            <a href="{{route('single.product',$value['productId'])}}"><img width="145" height="145" alt="poster_1_up" class="shop_thumbnail" src="{{asset('img')}}/{{$value['product_image']}}"></a>
                                         </td>
 
                                         <td class="product-name">
-                                            <a href="{{route('single.product','product')}}">{{$value['product_name']}}</a>
+                                            <a href="{{route('single.product',$value['productId'])}}">{{$value['product_name']}}</a>
                                         </td>
 
                                         <td class="product-price">

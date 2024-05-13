@@ -87,7 +87,7 @@
                             <div class="field__input-btn-wrapper mt10" style="margin-left: 70px;">
                                 <form action="{{ route('pay','store') }}" method="post">
                                     @csrf
-                                    <button name="redirect" class="btn btn-success btn-checkout tp_button" type="submit">Đặt hàng</button>
+                                    <button href="{{ route('checkout','checkout') }}" name="redirect" class="btn btn-success btn-checkout tp_button" type="submit"class="button_wishlist" >Đặt hàng</button>
                                 </form>
                             </div>
                         </div>
@@ -359,4 +359,5 @@
         </form>
     </div>
 </body>
+
 @endsection

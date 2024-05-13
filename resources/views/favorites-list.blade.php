@@ -2,7 +2,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Đơn hàng đã đặt') }}
+            {{ __('Danh Sách Sản Phẩm Yêu Thích') }}
         </h2>
     </x-slot>
 
@@ -14,7 +14,6 @@
                         <form method="post" action="#">
                             <table cellspacing="0" class="shop_table cart">
                                 <thead>
-
                                     <tr>
                                         <th>ID</th>
                                         <th class="product-name">Tên Sản Phẩm</th>
@@ -22,12 +21,9 @@
                                         <th class="product-image"></th>
                                         <th class="product-subtotal">Khuyến mãi</th>
                                         <th class="delete"></th>
-
                                     </tr>
                                 </thead>
                                 <tbody id="favotites_list">
-
-
                                 </tbody>
                             </table>
                         </form>

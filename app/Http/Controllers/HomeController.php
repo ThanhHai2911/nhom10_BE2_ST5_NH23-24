@@ -32,8 +32,7 @@ class HomeController extends Controller
 
     public function index($page = "index")
     {
-
-
+        $cart = new Cart();
         $data = self::getProductData();
         switch ($page) {
             case 'login':
@@ -63,49 +62,49 @@ class HomeController extends Controller
 
                 break;
         }
-        return view($page, $data);
+        return view($page, $data, compact('cart'));
     }
 
-    public function product(Product $product)
+    public function product(Product $product,Cart $cart)
     {
         $product_cart = Product::paginate(5);
         $data_category = Categori::all();
-        return view('single-product', compact('product', 'data_category', 'product_cart'));
+        return view('single-product', compact('product', 'data_category', 'product_cart','cart'));
     }
 
-    public function categoryproducts($categoryproducts)
+    public function categoryproducts($categoryproducts,Cart $cart)
     {
         $product_cart = Product::paginate(5);
         $category_product = Category::all();
         $category = Categori::all();
         $data_category = Category::where('id', $categoryproducts)->first();
         $product = Product::where('product_type', $data_category->id)->orderBy('created_at','DESC')->paginate(8);
-        return view('category-product', compact('product', 'data_category', 'category', 'product_cart', 'category_product'));
+        return view('category-product', compact('product', 'data_category', 'category', 'product_cart', 'category_product','cart'));
     }
 
-    public function productcategory($categoryproducts)
+    public function productcategory($categoryproducts,Cart $cart)
     {
         $category = Categori::all();
         $category_product = Category::all();
         $data_category = Category::where('type_id', $categoryproducts)->first();
         $product = Product::where('type_name', $data_category->type_id)->orderBy('created_at','DESC')->paginate(8);
-        return view('product-category', compact('category_product', 'product', 'data_category', 'category'));
+        return view('product-category', compact('category_product', 'product', 'data_category', 'category','cart'));
     }
-    public function logoproduct($categoryproducts)
+    public function logoproduct($categoryproducts,Cart $cart)
     {
         $category = Categori::all();
         $category_product = Category::all();
         $data_category = Category::where('type_idlogo', $categoryproducts)->first();
         $product = Product::where('type_logo', $data_category->type_id)->paginate(8);
-        return view('logo-product', compact('product', 'data_category', 'category', 'category_product'));
+        return view('logo-product', compact('product', 'data_category', 'category', 'category_product','cart'));
     }
 
-    public function topselersproducts(TopSeller $topselersproducts)
+    public function topselersproducts(TopSeller $topselersproducts,Cart $cart)
     {
         $product_cart = Product::paginate(5);
         $data_category = Categori::all();
         $data_topselersproducts = TopSeller::all();
-        return view('topsellers-product', compact('topselersproducts', 'data_category', 'product_cart'));
+        return view('topsellers-product', compact('topselersproducts', 'data_category', 'product_cart','cart'));
     }
 
     protected function showProfile()
@@ -115,13 +114,13 @@ class HomeController extends Controller
     }
 
 
-    public function searchproduct(Request $req)
+    public function searchproduct(Request $req,Cart $cart)
     {
         $data_category = Categori::all();
         $product_timkiem = Product::where('product_name', 'like', '%' . $req->key . '%')
             ->orWhere('product_price', $req->key)
             ->get();
-        return view('search-product', compact('product_timkiem', 'data_category'));
+        return view('search-product', compact('product_timkiem', 'data_category','cart'));
     }
     public function checkout(Cart $cart)
     {

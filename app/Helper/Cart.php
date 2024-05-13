@@ -21,14 +21,20 @@ class Cart
 
     public function add($product, $quantity = 1)
     {
-        $item = [
-            'productId' => $product->id,
-            'product_name' => $product->product_name,
-            'product_price' => $product->product_price,
-            'product_image' => $product->product_image,
-            'quantity' => $quantity
-        ];
-        $this->items[$product->id] = $item;
+        if (array_key_exists($product->id, $this->items)) {
+            $this->items[$product->id]['quantity'] += $quantity;
+        } else {
+            $item = [
+                'productId' => $product->id,
+                'product_name' => $product->product_name,
+                'product_price' => $product->product_price,
+                'product_image' => $product->product_image,
+                'quantity' => $quantity
+            ];
+            $this->items[$product->id] = $item;
+        }
+    
+        // Lưu trữ giỏ hàng vào session
         session(['cart' => $this->items]);
     }
 
