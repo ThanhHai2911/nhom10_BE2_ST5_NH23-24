@@ -31,7 +31,7 @@
                         <td class="align-middle" width="150px">{{ $rs->product_price }}</td>
                         <td class="align-middle">
                             <div style="max-height: 500px;overflow-y: auto; ">
-                                    <p>
+                                    <p style="width: 200px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;">
                                     {{ $rs->product_detail }}
                                     </p>
                             </div>
