@@ -13,8 +13,7 @@
     <title>Ustora</title>
 
     <!-- Google Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet'
-        type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
 
@@ -68,53 +67,49 @@
                                 <button class="dropbtn">Danh Mục</button>
                                 <div class="dropdown-content">
                                     @foreach($data_category as $data)
-                                        <a href="{{route('category', $data->id)}}"
-                                            class="menu_categories">{{$data->name}}</a>
+                                    <a href="{{route('category', $data->id)}}" class="menu_categories">{{$data->name}}</a>
                                     @endforeach
                                 </div>
                             </div>
                         <li>
                             <form action="{{ route('timkiem.product', 'searchproduct') }}" method="get">
-                                <input style="border-radius: 10px; margin-top: 10px; margin-left: 80px; width:300px;"
-                                    name="key" type="text" placeholder="Search products...">
-                                <button
-                                    style="border-radius: 10px; width:80px; height: 45px; margin-left: 10px;">Search</button>
+                                <input style="border-radius: 10px; margin-top: 10px; margin-left: 80px; width:300px;" name="key" type="text" placeholder="Search products...">
+                                <button style="border-radius: 10px; width:80px; height: 45px; margin-left: 10px;">Search</button>
                             </form>
                         </li>
-                        <li style="margin-left: 50px;">
-                            <a href="{{ route('cart.product', 'listproduct') }}"><i class="fa fa-shopping-cart"></i>
-                                <span class="product-count"></span></a>
+                        <li>
+                            @if (Route::has('login'))
+                            <div class="login">
+                                @auth
+                        <li style=" margin-left: 120px;">
+                            <a href="{{ url('/profile') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">
+                                <div>{{ Auth::user()->name }}</div>
+                            </a>
                         </li>
-                       <li >
-                       @if (Route::has('login'))
-                                <div class="login">
-                                    @auth
-                                    <li style=" margin-left: 120px;">
-                                        <a href="{{ url('/profile') }}"
-                                                class="text-sm text-gray-700 dark:text-gray-500 underline">
-                                                <div>{{ Auth::user()->name }}</div>
-                                            </a>
-                                    </li>
-                                      
-                                    @else
-                                         <li style="margin-right:10px; margin-left: 20px; " >
-                        		<a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Đăng Nhập</a>
-                        		</li>
 
-                                        @if (Route::has('register'))
-                                             <li>
-                        			<a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Đăng Ký</a>
-                        				</li>
-                                        @endif
-                                    @endauth
-                                </div>
-                            @endif
-                       </li>
-                      
-                    </ul>
+                        @else
+                        <li style="margin-right:10px; margin-left: 20px; ">
+                            <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Đăng Nhập</a>
+                        </li>
+
+                        @if (Route::has('register'))
+                        <li>
+                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Đăng Ký</a>
+                        </li>
+                        @endif
+                        @endauth
+                        <li style="margin-left: 60px;">
+                            <a href="{{ route('cart.product', 'listproduct') }}"><i class="fa fa-shopping-cart"></i>
+                                <span class="product-count">{{count($cart->getList())}}</span></a>
+                        </li>
                 </div>
+                @endif
+                </li>
+
+                </ul>
             </div>
         </div>
+    </div>
     </div> <!-- End mainmenu area -->
 
     <div class="slider-area">
@@ -171,8 +166,7 @@
                         <h2 class="footer-wid-title">Danh mục nổi bật</h2>
                         <ul>
                             @foreach($data_category as $data)
-                                <a style="margin-left: 100px;" href="{{route('category', $data->id)}}"
-                                    class="menu_categories">{{$data->name}}</a>
+                            <a style="margin-left: 100px;" href="{{route('category', $data->id)}}" class="menu_categories">{{$data->name}}</a>
                             @endforeach
                         </ul>
                     </div>
@@ -192,9 +186,7 @@
                         <h2 class="footer-wid-title" style="text-align: center;">Map</h2>
                     </div>
                     <div class="footer-map">
-                        <iframe
-                            src="https://www.google.com/maps?q=Điện+thoại+di+động+Ustora,+21/2A+Phan+Huy+Ích,+Phường+12,+Gò+Vấp,+Thành+phố+Hồ+Chí+Minh,+Việt+Nam&output=embed"
-                            width="100%" height="260" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+                        <iframe src="https://www.google.com/maps?q=Điện+thoại+di+động+Ustora,+21/2A+Phan+Huy+Ích,+Phường+12,+Gò+Vấp,+Thành+phố+Hồ+Chí+Minh,+Việt+Nam&output=embed" width="100%" height="260" frameborder="0" style="border:0" allowfullscreen=""></iframe>
                     </div>
                 </div>
             </div>

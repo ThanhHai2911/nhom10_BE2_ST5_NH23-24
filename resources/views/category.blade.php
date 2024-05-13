@@ -78,37 +78,38 @@
                         </form>
                     </li>
                     </li>
-                    <li style="margin-left: 50px;">
-                        <a href="{{ route('cart.product','listproduct') }}"><i class="fa fa-shopping-cart"></i> <span class="product-count"></span></a>
+                    <li>
+                        @if (Route::has('login'))
+                        <div class="login">
+                            @auth
+                    <li style=" margin-left: 100px;">
+                        <a href="{{ url('/profile') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">
+                            <div>{{ Auth::user()->name }}</div>
+                        </a>
                     </li>
-                    <li >
-                       @if (Route::has('login'))
-                                <div class="login">
-                                    @auth
-                                    <li style=" margin-left: 120px;">
-                                        <a href="{{ url('/profile') }}"
-                                                class="text-sm text-gray-700 dark:text-gray-500 underline">
-                                                <div>{{ Auth::user()->name }}</div>
-                                            </a>
-                                    </li>
-                                      
-                                    @else
-                                         <li style="margin-right:10px; margin-left: 20px; " >
-                        		<a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Đăng Nhập</a>
-                        		</li>
 
-                                        @if (Route::has('register'))
-                                             <li>
-                        			<a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Đăng Ký</a>
-                        				</li>
-                                        @endif
-                                    @endauth
-                                </div>
-                            @endif
-                       </li>
-                </ul>
+                    @else
+                    <li style="margin-right:10px; margin-left: 20px; ">
+                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Đăng Nhập</a>
+                    </li>
+
+                    @if (Route::has('register'))
+                    <li>
+                        <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Đăng Ký</a>
+                    </li>
+                    @endif
+                    @endauth
+                    <li style="margin-left: 100px;">
+                        <a href="{{ route('cart.product', 'listproduct') }}"><i class="fa fa-shopping-cart"></i>
+                            <span class="product-count">{{count($cart->getList())}}</span></a>
+                    </li>
             </div>
+            @endif
+            </li>
+
+            </ul>
         </div>
+    </div>
     </div>
     </div> <!-- End mainmenu area -->
 

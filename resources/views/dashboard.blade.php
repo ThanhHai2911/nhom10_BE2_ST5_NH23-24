@@ -49,5 +49,38 @@
             </div>
         </div>
     </div>
+    <script>
+        $(document).on('click', '.btn-delete', function () {
+            var id = $(this).closest('tr').find('.id').text();
+            removeItemFromLocalStorage(id);
+            $(this).closest('tr').remove();
+        });
 
+        function removeItemFromLocalStorage(id) {
+            var data = JSON.parse(localStorage.getItem('data'));
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].id === id) {
+                    data.splice(i, 1);
+                    break;
+                }
+            }
+            localStorage.setItem('data', JSON.stringify(data));
+        }
+
+
+        function view() {
+            var data = JSON.parse(localStorage.getItem('data'));
+            data.reverse();
+            console.log(data);
+            for (var i = 0; i < data.length; i++) {
+                var id = data[i].id;
+                var name = data[i].name;
+                var price = data[i].price;
+                var image = data[i].image;
+                var promotion = data[i].promotion;
+                $('#favotites_list').append('<tr><td class="id">' + id + '</td><td class="product-name">' + name + '</td><td class="product-price">' + price + 'vnđ' + '</td><td class="product-image" ><img src="' + image + '" alt="' + name + '" width="200px" max-height="200px" ></td><td class="product-price">' + promotion + '</td><td><button type="submit" class="btn-delete">Delete</button></td></form></tr>');
+            };
+        }
+        view();
+    </script>
 </x-app-layout>

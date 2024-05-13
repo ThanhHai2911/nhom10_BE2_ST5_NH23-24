@@ -49,7 +49,6 @@ class BookingControlle extends Controller
 
         // session_start();
 
-
         $checkoutController = new CheckoutControlle();
         $checkoutController->vnpay_payment($cart->getTotalPrice());
 
