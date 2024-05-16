@@ -102,7 +102,7 @@
                     </li>
                     @endif
                     @endauth
-                    <li style="margin-left: 100px;">
+                    <li style="margin-left: 60px;">
                         <a href="{{ route('cart.product', 'listproduct') }}"><i class="fa fa-shopping-cart"></i>
                             <span class="product-count">{{count($cart->getList())}}</span></a>
                     </li>
