@@ -22,6 +22,7 @@ use App\Http\Middleware\AdminMiddleware;
 use App\Models\DonDaDatSession;
 use App\Models\Product;
 use App\Http\Controllers\AuthorityController;
+use App\Http\Controllers\Auth\ForgotPasswordController;
 
 Paginator::useBootstrap();
 /*
@@ -140,4 +141,20 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
+// // Route cho trang quên mật khẩu
+Route::get('/auth/otp', [ForgotPasswordController::class, 'showOtpForm'])->name('auth.otp');
+Route::get('/forgot-password', [ForgotPasswordController::class, 'showLinkRequestForm'])
+    ->name('password.request');
+Route::post('/forgot-password', [ForgotPasswordController::class, 'sendResetLinkEmail'])
+    ->name('password.email');
+
+// Route cho trang nhập mã OTP
+Route::get('/auth/reset-password', [ForgotPasswordController::class, 'showResetForm'])
+    ->name('password.reset');
+Route::post('/check-otp', [ForgotPasswordController::class, 'checkOtp'])
+    ->name('password.checkOtp');
+
+// Route cho trang đặt lại mật khẩu
+Route::post('/auth/reset-password', [ForgotPasswordController::class, 'update'])
+    ->name('password.update');
 
