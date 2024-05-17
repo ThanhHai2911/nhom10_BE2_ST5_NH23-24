@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Booking;
 use App\Models\Product;
 use App\Helper\Cart;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 
@@ -37,8 +38,7 @@ class BookingControlle extends Controller
      */
     public function store(Request $request, $totalPrice, Cart $cart)
     {
-        // $user = User::findOrFail($booking_user_id);
-        // $tour = Tour::findOrFail($booking_tour_id);
+
         // $booking->booking_customer_name = $user->name;
         // $booking->booking_customer_email = $user->email;
         // $booking->booking_customer_quantity = $request->input('booking_quantity');

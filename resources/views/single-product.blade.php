@@ -60,7 +60,6 @@
                                 <div class="product-inner-price">
                                     {{number_format( $product->product_price,0, ',', '.')}} vnđ
                                 </div>
-
                                 @if(!Auth::check())
                                 <form action="{{route('sosanh.add','add')}}" method="post">
                                     @csrf
@@ -85,13 +84,12 @@
                                     @csrf
                                     <input type="hidden" name="id" value="{{$product->id}}">
                                     <div class="quantity">
-                                        <input type="number" size="4" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
+                                        <input id="soluong" type="number" size="4" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
                                     </div>
                                     <button class="add_to_cart_button" type="submit">Thêm Giỏ Hàng</button>
                                 </form>
                             </div>
                             @endif
-
 
                             <div class="product-inner-category" style="margin-top: 20px;">
                                 {{$product->Promotion}}

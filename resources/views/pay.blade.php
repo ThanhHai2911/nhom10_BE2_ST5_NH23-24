@@ -342,7 +342,7 @@
                                                     <td class="product-info">
                                                         <span class="product-info-name" name="product_name">{{ $item['product_name'] }}</span>
                                                     </td>
-                                                    <td class="product-price text-right" name="product_price">
+                                                    <td class="product-price text-right" name="product_price" >
                                                         {{number_format($item['product_price'],0, ',', '.')}} vnđ
                                                     </td>
                                                 </tr>
