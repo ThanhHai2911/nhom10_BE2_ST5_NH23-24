@@ -42,7 +42,7 @@
             {{$data->Promotion}}
           </div>
         </div>
-        <div style="margin-left: 20px;margin-bottom: 20px;margin-top: -20px;">
+        <div style="margin-left: 20px;margin-bottom: 20px;margin-top: -50px;">
           <i class="fa fa-star" style="color: #FFD43B;"></i>
           <i class="fa fa-star" style="color: #FFD43B;"></i>
           <i class="fa fa-star" style="color: #FFD43B;"></i>
