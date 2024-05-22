@@ -156,6 +156,6 @@ Route::post('/check-otp', [ForgotPasswordController::class, 'checkOtp'])
 
 // Route cho trang đặt lại mật khẩu
 Route::post('/auth/reset-password', [ForgotPasswordController::class, 'update'])
-    ->name('password.update');
+    ->name('password.update_reset');
 
 
