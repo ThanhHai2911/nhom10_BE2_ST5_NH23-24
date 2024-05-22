@@ -33,8 +33,6 @@ class Cart
             ];
             $this->items[$product->id] = $item;
         }
-    
-        // Lưu trữ giỏ hàng vào session
         session(['cart' => $this->items]);
     }
 

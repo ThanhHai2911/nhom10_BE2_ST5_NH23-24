@@ -158,3 +158,4 @@ Route::post('/check-otp', [ForgotPasswordController::class, 'checkOtp'])
 Route::post('/auth/reset-password', [ForgotPasswordController::class, 'update'])
     ->name('password.update');
 
+

@@ -39,8 +39,6 @@
 </head>
 
 <body>
-
-
     <div class="site-branding-area">
         <div class="container">
             <div class="row">

@@ -23,4 +23,5 @@ class CheckIfAuthenticated
 
         return $next($request);
     }
+
 }

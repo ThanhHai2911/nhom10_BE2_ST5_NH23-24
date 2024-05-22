@@ -11,12 +11,12 @@ use Illuminate\Http\Request;
 
 class SoSanhControlle extends Controller
 {
-    public function listproduct(SoSanh $soSanh, Product $product)
+    public function listproduct(SoSanh $soSanh, Product $product, Cart $cart)
     {
         $sosanhItems = $soSanh->getList();
         $product_cart = Product::paginate(5);
         $data_category = Categori::all();
-        return view('sosanh', compact('soSanh', 'product_cart', 'data_category', 'product', 'sosanhItems'));
+        return view('sosanh', compact('soSanh', 'product_cart', 'data_category', 'product', 'sosanhItems','cart'));
     }
 
 
